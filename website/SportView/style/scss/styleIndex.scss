@@ -1,0 +1,620 @@
+
+@media (min-width: 1024px){
+  #section{
+    display: flex;
+  }
+  .bodyBlock{
+    border: none;
+    width: 528px;
+  }
+  #recommen{
+    width: 503px;
+    overflow-y: scroll;
+    border-left: 1px solid black;
+  }
+  #menuImg{
+    display: none;
+  }
+  .menuText{
+    display: flex;
+    border-left: 1px solid black;
+  }
+}
+@media (max-width: 1023px){
+  #section{
+    display: block;
+    overflow: auto;
+    height: auto;
+  }
+  .bodyBlock{
+    border: 1px solid black;
+    border-top: none;
+    margin: 0 auto;
+    width: 528px;
+  }
+  #recommen{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    margin: 0 auto;
+    width: 528px;
+  }
+  #footer{
+    height: auto;
+  }
+  .menuText{
+    display: flex;
+    border-left: 1px solid black;
+  }
+  #menuImg{
+    display: none;
+  }
+
+}
+@media (max-width: 565px){
+
+  .bodyBlock{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  #bodyBackBlock{
+    display: none;
+  }
+  #bodyBeforeBlock{
+    display: none;
+  }
+  #recommen{
+    width: 100%;
+    border: none;
+  }
+  #menuImg{
+    display: flex;
+  }
+  .menuText{
+    display: none;
+  }
+
+}
+@media (max-width: 430px){
+
+  .bodyBlock{
+    width: 370px;
+    border: none;
+  }
+  #recommen{
+    // border-top: 1px solid black;
+    border-left: none;
+    border-right: none;
+  }
+  #menuImg{
+    display: flex;
+  }
+  .menuText{
+    display: none;
+  }
+
+}
+@media (max-width: 375px){
+
+  .bodyBlock{
+    width: 320px;
+    border: none;
+  }
+  #recommen{
+    border: none;
+  }
+  #menuImg{
+    display: flex;
+  }
+  .menuText{
+    display: none;
+  }
+
+}
+
+#section{
+
+  #musclesBlockPhone{
+    display: none;
+    width: 100%;
+    min-height: 100px;
+    // background-color: rgb(62, 86, 115);
+
+    .itemMenuPhone:not(:last-child) {
+      border-bottom: 1px solid #555;
+    }
+    .itemMenuPhone{
+      width: 100%;
+
+      .titleMenuPhone {
+        font-weight: 700;
+        padding: 10px 20px;
+        background-color: #cecece;
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .menuPhone {
+        display: none;
+        padding: 10px 30px;
+
+        p{
+          font-size: 25px;
+          font-weight: 900;
+        }
+
+        ol{
+          margin-left: 15px;
+
+          li{
+            // list-style-type: none;
+            font-size: 20px;
+          }
+
+        }
+
+      }
+
+    }
+    .itemMenu.active {
+      border-bottom: 1px solid #555;
+    }
+
+  }
+
+
+  .bodyBlock{
+    height: 864px;
+    padding: 10px;
+    overflow: hidden;
+
+    img{
+      position: relative;
+      transition: 0.4s ease;
+      opacity: 0.7;
+
+      &:hover{
+        opacity: 1;
+        cursor: pointer;
+      }
+
+    }
+
+  }
+
+  #bodyBeforeBlock{
+    display: block;
+
+    .head{
+      height: 118px;
+      left: 41%;
+    }
+    .neck{
+      height: 75px;
+      left: 84px;
+      top: 54px;
+    }
+    .breast{
+      height: 113px;
+      left: -103px;
+      top: 151px;
+      z-index: 1;
+    }
+    .shoulderLeft{
+      height: 88px;
+      width: 97px;
+      left: 108px;
+      top: -35px;
+    }
+    .shoulderRight{
+      height: 93px;
+      width: 96px;
+      left: 210px;
+      top: -31px;
+    }
+    .bicepsLeft{
+      left: -121px;
+      top: 55px;
+      height: 124px;
+      width: 77px;
+    }
+    .bicepsRight{
+      height: 124px;
+      width: 77px;
+      left: 76px;
+      top: 59px;
+    }
+    .forearmLeft{
+      height: 147px;
+      width: 107px;
+      left: -341px;
+      top: 165px;
+    }
+    .forearmRight{
+      height: 147px;
+      width: 117px;
+      left: 386px;
+      top: -76px;
+    }
+    .wristLeft{
+      height: 124px;
+      width: 84px;
+      left: -158px;
+      top: 8px;
+    }
+    .wristRight{
+      height: 124px;
+      width: 77px;
+      left: 257px;
+      top: 20px;
+    }
+    .press{
+      height: 247px;
+      width: 117px;
+      left: -92px;
+      top: -18px;
+      z-index: 1;
+    }
+    .obliqueLeft{
+      height: 219px;
+      left: -261px;
+      top: -76px;
+    }
+    .obliqueRight{
+      height: 215px;
+      left: 303px;
+      top: -392px;
+    }
+    .quadricepsLeft{
+      height: 289px;
+      width: 130px;
+      left: 69px;
+      top: -138px;
+    }
+    .quadricepsRight{
+      height: 305px;
+      width: 144px;
+      left: 35px;
+      top: -129px;
+    }
+    .shinLeft{
+      height: 241px;
+      left: -199px;
+      top: 57px;
+    }
+    .shinRight{
+      height: 237px;
+      left: 297px;
+      top: -172px;
+    }
+    .iconRevert{
+      width: 42px;
+      top: -1026px;
+      left: -77px;
+      opacity: 1;
+
+      &:hover{
+        transform: rotate(180deg);
+      }
+
+    }
+
+  }
+
+  #bodyBackBlock{
+    display: none;
+
+    .head{
+      height: 135px;
+      left: 41%;
+      top: -99px;
+    }
+    .shoulderLeft{
+      height: 83px;
+      width: 92px;
+      left: 5px;
+      top: 2px;
+    }
+    .shoulderRight{
+      height: 83px;
+      width: 92px;
+      left: 115px;
+      top: -3px;
+    }
+    .trapezoid{
+      height: 237px;
+      left: -131px;
+      top: 118px;
+    }
+    .roundleft{
+      height: 90px;
+      left: 144px;
+      top: -73px;
+    }
+    .roundRight{
+      height: 90px;
+      left: 234px;
+      top: -72px;
+    }
+    .tricepsLeft{
+      height: 120px;
+      width: 89px;
+      left: -53px;
+      top: -28px;
+    }
+    .tricepsRight{
+      height: 123px;
+      width: 83px;
+      left: 137px;
+      top: -28px;
+    }
+    .spine{
+      height: 202px;
+      width: 202px;
+      left: 152px;
+      top: -94px;
+      z-index: 3;
+    }
+    .forearmLeft{
+      height: 107px;
+      width: 71px;
+      top: -167px;
+      left: -169px;
+    }
+    .forearmRight{
+      height: 122px;
+      width: 92px;
+      top: -170px;
+      left: 103px;
+    }
+    .brushLeft{
+      height: 80px;
+      left: -399px;
+      top: -109px;
+    }
+    .brushRight{
+      height: 80px;
+      left: 450px;
+      top: -308px;
+    }
+    .ass{
+      height: 145px;
+      left: 80px;
+      top: -229px;
+      z-index: 2;
+    }
+    .twoHeadedLeft{
+      height: 198px;
+      left: -123px;
+      top: -81px;
+      z-index: 1;
+    }
+    .twoHeadedRight{
+      height: 198px;
+      left: -112px;
+      top: -85px;
+      z-index: 1;
+    }
+    .suralLeft{
+      left: 104px;
+      top: -140px;
+      height: 261px;
+    }
+    .suralRight{
+      height: 261px;
+      left: 158px;
+      top: -133px;
+    }
+    .iconRevert{
+      height: 42px;
+      left: -204px;
+      top: -993px;
+      opacity: 1;
+
+      &:hover{
+        transform: rotate(180deg);
+      }
+
+    }
+
+  }
+
+
+
+  #recommen{
+    padding-top: 20px;
+
+    h2{
+      font-size: 30px;
+      color: #f44336;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    div{
+      padding: 10px 0;
+      width: 100%;
+      min-height: 10px;
+      border-bottom: 1px solid black;
+
+      h3{
+        font-size: 25px;
+        color: #f44336;
+        text-align: center;
+        margin-bottom: 10px;
+
+      }
+
+      span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+
+        a{
+          color: black;
+          text-decoration: none;
+          text-align: center;
+          font-size: 25px;
+          transition: .4s ease;
+
+          &:hover{
+            cursor: pointer;
+            background-color: #f44336;
+            color: #dbdbdb;
+            padding: 5px;
+            border-radius: 5px;
+          }
+
+        }
+
+        img{
+          width: 40px;
+          border-radius: 50%;
+          margin-left: 10px;
+        }
+
+        .imgWhite{
+          width: 39px;
+          border: 1px solid black;
+        }
+
+      }
+
+    }
+
+    #recomVideoChanel{
+      border-top: 1px solid black;
+
+    }
+
+  }
+
+  #anatomyTrainingClose{
+    z-index: 2;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 29, 29, 0.7);
+
+    &:hover{
+      cursor: pointer;
+    }
+
+  }
+
+  #anatomyTraining{
+    z-index: 3;;
+    padding-top: 20px;
+    display: none;
+    width: 90%;
+    height: 90%;
+    background-color: #888888;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    overflow-y: scroll;
+
+    #anatomyTrainingText{
+      width: 100%;
+      height: 50px;
+      font-size: 40px;
+      text-align: center;
+
+    }
+
+    #anatomyTrainingContent{
+      width: 100%;
+      min-height: 100px;
+      padding-top: 20px;
+
+      #trainingContentP{
+        font-size: 34px;
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: 900;
+      }
+
+      .videoTraining{
+        min-height: 20px;
+        min-width: 20px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+      }
+
+      .wrapMenu {
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+        background-color: #777;
+        border: 1px solid black;
+      }
+      .itemMenu:not(:last-child) {
+        border-bottom: 1px solid black;
+      }
+      .titleMenu {
+        font-weight: 500;
+        font-size: 36px;
+        color: #fff;
+        cursor: pointer;
+        background: #333;
+        -webkit-user-select: none;
+
+      }
+      .menu {
+        display: none;
+        width: 100%;
+        background-color: #808080;
+        padding: 30px 0;
+        font-size: 32px;
+
+        h2{
+          font-size: 40px;
+          margin-bottom: 5px;
+        }
+
+        .trainingVideo{
+          margin: 10px 0 30px 0;
+          width: 100%;
+
+          iframe{
+            width: 60%;
+            height: 500px;
+            border: 1px solid black;
+
+          }
+
+        }
+
+        .trainingExercisesText{
+          width: 80%;
+          margin: 0 auto;
+          padding-left: 20px;
+
+          .OlElemClass{
+            margin: 0 auto;
+            line-height: 32px;
+
+            .trainingLi{
+              margin-bottom: 15px;
+              text-align: left;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

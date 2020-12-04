@@ -1,0 +1,555 @@
+@media (min-width: 1024px) {
+  #section {
+    display: flex;
+  }
+
+  .bodyBlock {
+    border: none;
+    width: 528px;
+  }
+
+  #recommen {
+    width: 503px;
+    overflow-y: scroll;
+    border-left: 1px solid black;
+  }
+
+  #menuImg {
+    display: none;
+  }
+
+  .menuText {
+    display: flex;
+    border-left: 1px solid black;
+  }
+}
+@media (max-width: 1023px) {
+  #section {
+    display: block;
+    overflow: auto;
+    height: auto;
+  }
+
+  .bodyBlock {
+    border: 1px solid black;
+    border-top: none;
+    margin: 0 auto;
+    width: 528px;
+  }
+
+  #recommen {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    margin: 0 auto;
+    width: 528px;
+  }
+
+  #footer {
+    height: auto;
+  }
+
+  .menuText {
+    display: flex;
+    border-left: 1px solid black;
+  }
+
+  #menuImg {
+    display: none;
+  }
+}
+@media (max-width: 565px) {
+  .bodyBlock {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+
+  #bodyBackBlock {
+    display: none;
+  }
+
+  #bodyBeforeBlock {
+    display: none;
+  }
+
+  #recommen {
+    width: 100%;
+    border: none;
+  }
+
+  #menuImg {
+    display: flex;
+  }
+
+  .menuText {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .bodyBlock {
+    width: 370px;
+    border: none;
+  }
+
+  #recommen {
+    border-left: none;
+    border-right: none;
+  }
+
+  #menuImg {
+    display: flex;
+  }
+
+  .menuText {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .bodyBlock {
+    width: 320px;
+    border: none;
+  }
+
+  #recommen {
+    border: none;
+  }
+
+  #menuImg {
+    display: flex;
+  }
+
+  .menuText {
+    display: none;
+  }
+}
+#section #musclesBlockPhone {
+  display: none;
+  width: 100%;
+  min-height: 100px;
+}
+#section #musclesBlockPhone .itemMenuPhone:not(:last-child) {
+  border-bottom: 1px solid #555;
+}
+#section #musclesBlockPhone .itemMenuPhone {
+  width: 100%;
+}
+#section #musclesBlockPhone .itemMenuPhone .titleMenuPhone {
+  font-weight: 700;
+  padding: 10px 20px;
+  background-color: #cecece;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+#section #musclesBlockPhone .itemMenuPhone .menuPhone {
+  display: none;
+  padding: 10px 30px;
+}
+#section #musclesBlockPhone .itemMenuPhone .menuPhone p {
+  font-size: 25px;
+  font-weight: 900;
+}
+#section #musclesBlockPhone .itemMenuPhone .menuPhone ol {
+  margin-left: 15px;
+}
+#section #musclesBlockPhone .itemMenuPhone .menuPhone ol li {
+  font-size: 20px;
+}
+#section #musclesBlockPhone .itemMenu.active {
+  border-bottom: 1px solid #555;
+}
+#section .bodyBlock {
+  height: 864px;
+  padding: 10px;
+  overflow: hidden;
+}
+#section .bodyBlock img {
+  position: relative;
+  transition: 0.4s ease;
+  opacity: 0.7;
+}
+#section .bodyBlock img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+#section #bodyBeforeBlock {
+  display: block;
+}
+#section #bodyBeforeBlock .head {
+  height: 118px;
+  left: 41%;
+}
+#section #bodyBeforeBlock .neck {
+  height: 75px;
+  left: 84px;
+  top: 54px;
+}
+#section #bodyBeforeBlock .breast {
+  height: 113px;
+  left: -103px;
+  top: 151px;
+  z-index: 1;
+}
+#section #bodyBeforeBlock .shoulderLeft {
+  height: 88px;
+  width: 97px;
+  left: 108px;
+  top: -35px;
+}
+#section #bodyBeforeBlock .shoulderRight {
+  height: 93px;
+  width: 96px;
+  left: 210px;
+  top: -31px;
+}
+#section #bodyBeforeBlock .bicepsLeft {
+  left: -121px;
+  top: 55px;
+  height: 124px;
+  width: 77px;
+}
+#section #bodyBeforeBlock .bicepsRight {
+  height: 124px;
+  width: 77px;
+  left: 76px;
+  top: 59px;
+}
+#section #bodyBeforeBlock .forearmLeft {
+  height: 147px;
+  width: 107px;
+  left: -341px;
+  top: 165px;
+}
+#section #bodyBeforeBlock .forearmRight {
+  height: 147px;
+  width: 117px;
+  left: 386px;
+  top: -76px;
+}
+#section #bodyBeforeBlock .wristLeft {
+  height: 124px;
+  width: 84px;
+  left: -158px;
+  top: 8px;
+}
+#section #bodyBeforeBlock .wristRight {
+  height: 124px;
+  width: 77px;
+  left: 257px;
+  top: 20px;
+}
+#section #bodyBeforeBlock .press {
+  height: 247px;
+  width: 117px;
+  left: -92px;
+  top: -18px;
+  z-index: 1;
+}
+#section #bodyBeforeBlock .obliqueLeft {
+  height: 219px;
+  left: -261px;
+  top: -76px;
+}
+#section #bodyBeforeBlock .obliqueRight {
+  height: 215px;
+  left: 303px;
+  top: -392px;
+}
+#section #bodyBeforeBlock .quadricepsLeft {
+  height: 289px;
+  width: 130px;
+  left: 69px;
+  top: -138px;
+}
+#section #bodyBeforeBlock .quadricepsRight {
+  height: 305px;
+  width: 144px;
+  left: 35px;
+  top: -129px;
+}
+#section #bodyBeforeBlock .shinLeft {
+  height: 241px;
+  left: -199px;
+  top: 57px;
+}
+#section #bodyBeforeBlock .shinRight {
+  height: 237px;
+  left: 297px;
+  top: -172px;
+}
+#section #bodyBeforeBlock .iconRevert {
+  width: 42px;
+  top: -1026px;
+  left: -77px;
+  opacity: 1;
+}
+#section #bodyBeforeBlock .iconRevert:hover {
+  transform: rotate(180deg);
+}
+#section #bodyBackBlock {
+  display: none;
+}
+#section #bodyBackBlock .head {
+  height: 135px;
+  left: 41%;
+  top: -99px;
+}
+#section #bodyBackBlock .shoulderLeft {
+  height: 83px;
+  width: 92px;
+  left: 5px;
+  top: 2px;
+}
+#section #bodyBackBlock .shoulderRight {
+  height: 83px;
+  width: 92px;
+  left: 115px;
+  top: -3px;
+}
+#section #bodyBackBlock .trapezoid {
+  height: 237px;
+  left: -131px;
+  top: 118px;
+}
+#section #bodyBackBlock .roundleft {
+  height: 90px;
+  left: 144px;
+  top: -73px;
+}
+#section #bodyBackBlock .roundRight {
+  height: 90px;
+  left: 234px;
+  top: -72px;
+}
+#section #bodyBackBlock .tricepsLeft {
+  height: 120px;
+  width: 89px;
+  left: -53px;
+  top: -28px;
+}
+#section #bodyBackBlock .tricepsRight {
+  height: 123px;
+  width: 83px;
+  left: 137px;
+  top: -28px;
+}
+#section #bodyBackBlock .spine {
+  height: 202px;
+  width: 202px;
+  left: 152px;
+  top: -94px;
+  z-index: 3;
+}
+#section #bodyBackBlock .forearmLeft {
+  height: 107px;
+  width: 71px;
+  top: -167px;
+  left: -169px;
+}
+#section #bodyBackBlock .forearmRight {
+  height: 122px;
+  width: 92px;
+  top: -170px;
+  left: 103px;
+}
+#section #bodyBackBlock .brushLeft {
+  height: 80px;
+  left: -399px;
+  top: -109px;
+}
+#section #bodyBackBlock .brushRight {
+  height: 80px;
+  left: 450px;
+  top: -308px;
+}
+#section #bodyBackBlock .ass {
+  height: 145px;
+  left: 80px;
+  top: -229px;
+  z-index: 2;
+}
+#section #bodyBackBlock .twoHeadedLeft {
+  height: 198px;
+  left: -123px;
+  top: -81px;
+  z-index: 1;
+}
+#section #bodyBackBlock .twoHeadedRight {
+  height: 198px;
+  left: -112px;
+  top: -85px;
+  z-index: 1;
+}
+#section #bodyBackBlock .suralLeft {
+  left: 104px;
+  top: -140px;
+  height: 261px;
+}
+#section #bodyBackBlock .suralRight {
+  height: 261px;
+  left: 158px;
+  top: -133px;
+}
+#section #bodyBackBlock .iconRevert {
+  height: 42px;
+  left: -204px;
+  top: -993px;
+  opacity: 1;
+}
+#section #bodyBackBlock .iconRevert:hover {
+  transform: rotate(180deg);
+}
+#section #recommen {
+  padding-top: 20px;
+}
+#section #recommen h2 {
+  font-size: 30px;
+  color: #f44336;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#section #recommen div {
+  padding: 10px 0;
+  width: 100%;
+  min-height: 10px;
+  border-bottom: 1px solid black;
+}
+#section #recommen div h3 {
+  font-size: 25px;
+  color: #f44336;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#section #recommen div span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+#section #recommen div span a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  transition: 0.4s ease;
+}
+#section #recommen div span a:hover {
+  cursor: pointer;
+  background-color: #f44336;
+  color: #dbdbdb;
+  padding: 5px;
+  border-radius: 5px;
+}
+#section #recommen div span img {
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+#section #recommen div span .imgWhite {
+  width: 39px;
+  border: 1px solid black;
+}
+#section #recommen #recomVideoChanel {
+  border-top: 1px solid black;
+}
+#section #anatomyTrainingClose {
+  z-index: 2;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 29, 29, 0.7);
+}
+#section #anatomyTrainingClose:hover {
+  cursor: pointer;
+}
+#section #anatomyTraining {
+  z-index: 3;
+  padding-top: 20px;
+  display: none;
+  width: 90%;
+  height: 90%;
+  background-color: #888888;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  overflow-y: scroll;
+}
+#section #anatomyTraining #anatomyTrainingText {
+  width: 100%;
+  height: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+#section #anatomyTraining #anatomyTrainingContent {
+  width: 100%;
+  min-height: 100px;
+  padding-top: 20px;
+}
+#section #anatomyTraining #anatomyTrainingContent #trainingContentP {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+#section #anatomyTraining #anatomyTrainingContent .videoTraining {
+  min-height: 20px;
+  min-width: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#section #anatomyTraining #anatomyTrainingContent .wrapMenu {
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  background-color: #777;
+  border: 1px solid black;
+}
+#section #anatomyTraining #anatomyTrainingContent .itemMenu:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+#section #anatomyTraining #anatomyTrainingContent .titleMenu {
+  font-weight: 500;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  background: #333;
+  -webkit-user-select: none;
+}
+#section #anatomyTraining #anatomyTrainingContent .menu {
+  display: none;
+  width: 100%;
+  background-color: #808080;
+  padding: 30px 0;
+  font-size: 32px;
+}
+#section #anatomyTraining #anatomyTrainingContent .menu h2 {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+#section #anatomyTraining #anatomyTrainingContent .menu .trainingVideo {
+  margin: 10px 0 30px 0;
+  width: 100%;
+}
+#section #anatomyTraining #anatomyTrainingContent .menu .trainingVideo iframe {
+  width: 60%;
+  height: 500px;
+  border: 1px solid black;
+}
+#section #anatomyTraining #anatomyTrainingContent .menu .trainingExercisesText {
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+#section #anatomyTraining #anatomyTrainingContent .menu .trainingExercisesText .OlElemClass {
+  margin: 0 auto;
+  line-height: 32px;
+}
+#section #anatomyTraining #anatomyTrainingContent .menu .trainingExercisesText .OlElemClass .trainingLi {
+  margin-bottom: 15px;
+  text-align: left;
+}

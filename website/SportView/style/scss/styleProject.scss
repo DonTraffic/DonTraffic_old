@@ -1,0 +1,41 @@
+@media (max-width: 924px){
+
+  #footer{
+    height: auto;
+  }
+
+}
+#section{
+  padding: 20px 10px;
+  background-color: #dbdbdb;
+  height: auto;
+  overflow: visible;
+
+  p{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 900;
+    color: #f44336;
+  }
+
+  #information{
+    min-height: 100px;
+    width: 80%;
+    background-color: #cccccc;
+    margin: 20px auto 0 auto;
+    padding: 10px;
+
+    p{
+      margin-bottom: 10px;
+      font-weight: 100;
+      color: black;
+    }
+
+    .data{
+      margin-top: 20px;
+      font-weight: 900;
+    }
+
+  }
+
+}

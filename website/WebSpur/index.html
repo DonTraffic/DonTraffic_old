@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.min.css" type="text/css"/>
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <link rel="icon" href="image/icon/icon.png">
+  <title>WebSpur</title>
+  <script src="JavaScript/script.js"></script>
+  <script src="library/stickjaw/stickjaw.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="library/parallax/parallax.min.js">
+
+  </script>
+</head>
+<body>
+  <div id="progress"></div>
+<main>
+
+  <header>
+    <h1>WebSpur</h1>
+    <h2>Это мой "Дневник Программиста" а так же будущая шпаргалка. <br>
+    Но ты, Зритель, тоже можешь ей пользоваться. <br>
+    Надеюсь дизайн не вырвеглазненький.</h2>
+  </header>
+
+  <div id="upBar" onclick="return upBarClick()"
+  onmouseover="return upBarAnimationOn()"
+  onmouseout="return upBarAnimationOff()">
+    <img id="upBarImage" src="image/svg/upArrow.svg">
+  </div>
+
+  <section id="navigation">
+    <p>Блок быстрой навигации по страничке</p><hr noshade />
+    <div id="wrapperNavButton">
+      <a href="#tegsHTML">Теги HTML</a>
+      <a href="#stylesCSS">Стили CSS</a>
+      <a href="#flexSection">Flex</a>
+      <a href="#gridSection">Grid</a>
+      <a href="#adaptation">Адаптация на сайте</a>
+      <a href="#pseudoClass">Псевдоклассы</a>
+      <a href="#backgroundSection">Фон</a>
+      <a href="#inputSection">input</a>
+      <a href="#animationSection">Анимация</a>
+      <a href="#scrollbarSection">Scrollbar</a>
+      <a href="#parallaxSection">Паралакс</a>
+      <a href="#imageSection">Изображения</a>
+      <a href="#cycleSection" class="navJS">Циклы</a>
+      <a href="#logOperationsSections" class="navJS">Логические операторы</a>
+      <a href="#arraySection" class="navJS">Массивы</a>
+      <a href="#commandGIT" class="navGIT">Команды GIT</a>
+    </div>
+  <br /></section>
+
+  <section id="tegsHTML">
+    <p>Теги HTML</p><hr noshade />
+    <b>position:</b> absolute | fixed | relative | static | inherit;
+    - устанавливает способ позиционирования элемента.<br />
+    <div class="indent">absolute - указывает, что элемент абсолютно
+      позиционирован, при этом другие элементы отображаются на веб-странице
+      словно абсолютно позиционированного элемента и нет. Положение элемента
+      задается свойствами left, top, right и bottom, также на положение влияет
+      значение свойства position родительского элемента. Так, если у родителя
+      значение position установлено как static или родителя нет, то отсчет
+      координат ведется от края окна браузера. Если у родителя значение
+      position задано как fixed, relative или absolute, то отсчет координат
+      ведется от края родительского элемента.<br />
+       fixed - По своему действию это значение близко к absolute, но в отличие
+      от него привязывается к указанной свойствами left, top, right и bottom
+      точке на экране и не меняет своего положения при прокрутке веб-страницы.
+      <br />
+       relative - оложение элемента устанавливается относительно его исходного
+      места.<br />
+    </div><br / >
+    <b>opacity</b> - прозрачность элемента. (Чем больше значение, тем главнее
+    элемени)<br /><br />
+    <b>overflow:</b> auto | hidden | scroll | visible | inherit -
+    отображение собержимого контента в блоке.
+    <div class="indent">
+      <b>visible</b> - отображается все содержание элемента, даже за пределами
+      установленной высоты и ширины.<br />
+      <b>hidden</b> - отображается только область внутри элемента, остальное
+      будет скрыто.<br />
+      <b>scroll</b> - всегда добавляются полосы прокрутки.<br />
+    </div><br />
+    <b>line-height:</b> - Межстрочный отступ.<br /><br />
+
+  </section>
+
+  <section id="stylesCSS">
+    <p>CSS стили</p><hr noshade />
+    Тут будут разные стили из CSS.<br /> <br />
+    <b>box-sizing:</b> content-box | border-box | padding-box | inherit; -
+    изменения алгоритма расчета ширины и высоты элемента <br />
+    <div class="indent">content-box - Свойства width и height задают ширину и
+      высоту контента и
+    не включают в себя значения отступов, полей и границ.<br />
+    border-box - Свойства width и height включают в себя значения полей и
+    границ, но не отступов. <br />
+    padding-box - Свойства width и height включают в себя значения полей,
+    но не отступов и границ.<br />
+    inherit - Наследует значение родителя.<br /></div><br />
+    <b>line-height: ;</b> - устанавливает межстрочный интервал<br /><br />
+    <b>cursor:</b> default | <a style="cursor:help;">help</a> |
+      <a style="cursor:pointer;">pointer</a> | <a style="cursor:progress;">progress</a> |
+      <a style="cursor:text;">text</a> | <a style="cursor:wait;">wait</a> |
+      <a title="Может не поддерживаться браузером">url('путь')</a><br /><br />
+    <b>font-weight:</b> <a style="font-weight:bold">bold</a>|
+      <a style="font-weight:bolder">bolder|</a>
+      <a style="font-weight:lighter">lighter|</a>
+      <a style="font-weight:normal">normal|</a>
+      <a style="font-weight:100">100|</a>
+      <a style="font-weight:500">500|</a>
+      <a style="font-weight:900">900</a><br />
+      bold - полужирное начертание<br />
+      normal - нормальное начертание<br />
+      Значения bolder и lighter изменяют жирность относительно насыщенности родителя<br />
+      И единици измерения от 100 до 900 с шагом 100. <br /> <br />
+      <b>user-select</b>:none: - Управляет поведением выделения текста и других
+      элементов на странице, в частности, позволяет запретить выделение текста.
+  </section>
+
+  <section id="flexSection">
+    <p>Flex</p><hr noshade />
+    flex это прям оч нужная штука, щас убедишься<br /><br />
+    <b>flex-wrap:</b> - Флексы выстраиваются в несколько строк<br />
+      <span class="indent">nowrap - выстраиваються в одну линию</span><br />
+      <span class="indent">wrap - выстраиваються в несколько линий</span><br /><br />
+    <b>flex-flow:</b> - просто совмещает в себе flex-direction и slex-wrap (row nowrap)<br /><br />
+    <b>flex-direction:</b> - направление флекс элементов<br />
+
+    <div class="flexExamples">
+      <div id="flexDirectionElement">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </div>
+      <div id="flexDirectionButton">
+        <span class="flexDirectionButtonElement" onclick=" flexFunElement('row', 0, flexDirectionArray)" style="font-weight:900;">row</span>
+        <span class="flexDirectionButtonElement" onclick=" flexFunElement('row-reverse', 1, flexDirectionArray)">row-revert</span>
+        <span class="flexDirectionButtonElement" onclick=" flexFunElement('column', 2, flexDirectionArray)">column</span>
+        <span class="flexDirectionButtonElement" onclick=" flexFunElement('column-reverse', 3, flexDirectionArray)">column-revert</span>
+      </div>
+    </div><br />
+
+    <b>order:number:</b> - устанавливает порядок следования элементов<br />
+
+      <div class="flexExamples">
+
+        <div id="orderScene">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+        </div>
+
+        <div id="controllerOrder">
+          К элементу № <input id="numElement" type="number">
+          применить order: <input id="numOrder" type="number">
+        </div>
+
+        <button type="button" id="buttonOrder" onclick="orderFun()">Применить</button>
+      </div><br />
+
+    <b>align-content:</b> - распростронения пространства между и вокруг флекса, одязательное значение flex-wrap:wrap и подобное<br />
+
+    <div class="flexExamples">
+
+      <div class="divExampleButton" style="border-bottom: 1px solid #4a4a4a;margin-bottom: 2px;">
+        <span onclick="flexFunElement('stretch', 0, alignContentArray)" class="alignContentElement" style="font-weight:900;">stretch</span>
+        <span onclick="flexFunElement('flex-start', 1, alignContentArray)" class="alignContentElement">flex-start</span>
+        <span onclick="flexFunElement('flex-end', 2, alignContentArray)" class="alignContentElement">flex-end</span>
+        <span onclick="flexFunElement('center', 3, alignContentArray)" class="alignContentElement">center</span>
+      </div>
+
+      <div id="exampleFlex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </div>
+
+      <div class="divExampleButton" style="border-top: 1px solid #4a4a4a;margin-top: 2px;">
+        <span onclick="flexFunElement('space-between', 4, alignContentArray)" class="alignContentElement">space-between</span>
+        <span onclick="flexFunElement('space-around', 5, alignContentArray)" class="alignContentElement">space-around</span>
+        <span onclick="flexFunElement('space-evenly', 6, alignContentArray)" class="alignContentElement">space-evenly</span>
+      </div>
+
+    </div><br />
+
+    <b>align-self:</b> - align-items для одного элемента (или отдельных)<br />
+
+    <div class="flexExamples">
+        <div id="alignSelfElement">
+          <div class="alignSelfElementDiv">1</div>
+          <div class="alignSelfElementDiv">2</div>
+          <div class="alignSelfElementDiv">3</div>
+          <div class="alignSelfElementDiv">4</div>
+          <div class="alignSelfElementDiv">5</div>
+          <div class="alignSelfElementDiv">6</div>
+        </div>
+        <div id="alignSelfInput">
+          Для элемента № <input type="number" id="alignSelfInputValue" onclick="this.select();"> применить:
+        </div>
+        <div id="alignSelfButton">
+          <span class="alignSelfButtonElement" onclick=" alignSelfFun('stretch', 0)" style="font-weight:900;">stretch</span>
+          <span class="alignSelfButtonElement" onclick=" alignSelfFun('flex-start', 1)">flex-start</span>
+          <span class="alignSelfButtonElement" onclick=" alignSelfFun('flex-end', 2)">flex-end</span>
+          <span class="alignSelfButtonElement" onclick=" alignSelfFun('center', 3)">center</span>
+        </div>
+      </div><br />
+
+    <b>flex-grow:</b> - Определяет, сколько пространства может занимать флекс внутри контейнера.
+    В качестве значения принимаются числа, они задают пропорции каждого флекса.
+    К примеру, если для всех элементов установлено значение 1, то они получатся равного размера.
+    Если какой-то элемент получил значение 2, то его размер будет в два раза больше остальных.
+
+    <div class="flexExamples">
+      <div id="flexGrowElement">
+        <div class="flexGrowElementDiv">1</div>
+        <div class="flexGrowElementDiv">2</div>
+        <div class="flexGrowElementDiv">3</div>
+      </div>
+      <div id="flexGrowInput">
+        Для элемента № <input type="number" id="flexGrowInputNumber" class="flexGrowInputValue" onclick="this.select();">
+        применить значение <input type="number" id="flexGrowInputValueId" class="flexGrowInputValue" onclick="this.select();">
+      </div>
+      <button type="button" id="flexGrowButton" onclick="flexGrowFun()">Применить</button>
+    </div><br />
+
+  </section>
+
+  <section id="gridSection">
+    <p>Grid</p><hr noshade />
+    Начнём с основ, разделим блок на Grid зоны<br />
+    Упращу себе жизнь не праписывая по 2 раза, orientation = rows или columns<br />
+    Для этого нужно прописать <b>display:grid;</b>
+    Теперь расчертим секции <br/>
+    <b>grid-template-orientation: % или fr;</b><br />
+
+    <div class="blockGrid">
+
+      <div class="gridTemplateStatus">
+        columns = <span id="gridTemplateColStatus">3</span> rows = <span id="gridTemplateRowStatus">2</span>
+      </div>
+
+      <div class="gridTemplateScene">
+        <div class="gridTemplateElement"></div>
+      </div>
+
+      <div id="gridTemplatePanel">
+
+        <span>columns =<input type="number" placeholder="fr" id="gridTemplateCol" onclick="this.select();"></span>
+
+        <script type="text/javascript">
+          gridTemplateCol.onblur = function() {
+            var element = document.getElementById('gridTemplateCol').value;
+            var value = "repeat(" + element + ", 1fr)"
+            document.getElementsByClassName('gridTemplateScene')[0].style.gridTemplateColumns = value;
+            document.getElementById('gridTemplateColStatus').innerHTML = element;
+          };
+        </script>
+
+        <span>rows =<input type="number" placeholder="fr" id="gridTemplateRow" onclick="this.select();"></span>
+
+        <script type="text/javascript">
+          gridTemplateRow.onblur = function() {
+            var element = document.getElementById('gridTemplateRow').value;
+            var value = "repeat(" + element + ", 1fr)"
+            document.getElementsByClassName('gridTemplateScene')[0].style.gridTemplateRows = value;
+            document.getElementById('gridTemplateRowStatus').innerHTML = element;
+          };
+        </script>
+
+        <div id="containerChangeBlock">
+          <div class="gridTemplataChangeBlock" onclick="gridRemoveBlock()">
+            <img src="image/svg/minus.svg">
+          </div>
+          <div class="gridTemplataChangeBlock" onclick="gridAddBlock()">
+            <img src="image/svg/plus.svg">
+          </div>
+        </div>
+
+      </div>
+
+    </div><br/>
+
+    <b>grid-orientation-(start или end):</b> - для позиционирования отдельных элементов<br/><br/>
+
+    <b>grid-template-areas:</b> - важная вещь в выстраивании сетки, значение писать так:<br/>
+    <div id="gridAreasSyntax">
+      <span>"1</span>
+      <span>1</span>
+      <span>2"</span>
+      <span>"3</span>
+      <span>3</span>
+      <span>4"</span>
+      <span>"3</span>
+      <span>3</span>
+      <span>4";</span>
+    </div>
+    потом, каждый номер присваивать соответствующему элементу, .name1{grid-area:name1}. Цифры кстати нельзя, нужно соблюдать правила.
+
+
+  </section>
+
+  <section id="adaptation">
+    <p>Блок адаптации</p><hr noshade />
+    И так, начнём с адаптивной рабочей области. Для этого просто делаем у неё
+    максимальную ширину (Например в 1280px (max-width:1280px)) и задаём что
+    бы она занимала 100%
+    доступной ширины (width:100%).<br />
+    Так же я предпочитаю использовать библиотеку
+    <a href="https://github.com/xakplant/stickjaw"><b>Stickjaw</b></a>, одна
+    из её функций, это изменение высоты относительно ширины.<br />
+    Пример: высота будет 0.5 от ширины в 30%. data-proportion-h="0.5"
+    <div id="exampleProportionHeight" data-proportion-h="0.5">
+      <p>height = <span id="heightProportionSpan">180</span> </p>
+    </div>
+    Пример: Можно задать ширину как у другого элемента
+    data-proportion-targer-w="1" data-proportion-target="ID элемента"
+    <div id="exampleProportionWidth"
+    data-proportion-targer-w="1"
+    data-proportion-target="exampleProportionHeight"
+    data-proportion-targer-h="1">
+      <p>width = <span id="widthProportionSpan">360</span></p>
+    </div><br />
+  </section>
+
+  <section id="pseudoClass">
+    <p>Псевдоклассы</p><hr noshade />
+    <b>:after</b> - добавляет текс после элемента, можно сделать подсказку.<br />
+    <div id="pseudoClassAfter" data-title="Собачка :)" data-proportion-h="1">
+      <img src="image/dogs/dog2.jpg" alt="">
+    </div>
+    <b>:hover</b> - срабатывает при навелении курсора. Я думаю им можно сделать
+    более лудьшую и плавную подсказку. Правда не без своих минусов.
+    <br/><br>
+
+    <a id="pseudoClassHover" data-proportion-h="1">
+      <div id="pseudoClassHoverDiv">
+        <div id="pseudoClassHoverDivTwo" data-proportion-h="0.2">
+          <p id="pseudoClassHoverP">Сoбачка</p>
+        </div>
+      </div>
+    </a>
+
+  </section>
+
+  <section id="backgroundSection">
+    <p>Фон</p><hr noshade />
+    Думаю, ты уже увидел фон странички, это <b>background-image</b> и ещё немного
+    текста, но об этом я сейчас расскажу.<br />
+    Устанавливается фон картинкой, через <b>background-image:url();</b>
+    <span id="backgroundSectionButton" onclick="return buttonGifFunction()">
+      Использовать GIF
+    </span><br />
+    Так же, выравнивание через <b>background-position:center;</b><br />
+    Фиксированное положение <b>background-attachment:fixed;</b><br />
+    Маштабируем этим <b>background-size:cover;</b>(сохранение пропорций, чтобы
+    его ширина или высота равнялась ширине или высоте блока)<br />
+    Ну и что бы не повтарялось, <b>background-repeat: no-repeat;</b><br />
+  </section>
+
+  <section id="inputSection">
+    <p>input</p><hr noshade />
+    Решил выделить input в отдельную секцию, потому что он обширный и проще всё
+    показать, а не прописать текстом.<br />
+    input это поле ввода, вот пример
+    <input type="text" id="inputExample" placeholder="Просто поле ввода"><br />
+    input это не только поле, но и кнопки, флажки и подобное. <br /><b>type:</b><br />
+    <div class="indent">
+      button - <input type="button" id="inputButton" value="Кнопка"><br />
+      <label for="CustomCheckbox" id="CustomCheckboxLabelOne">checkbox -</label>
+      <input type="checkbox" id="CustomCheckbox">
+        <label id="CustomCheckboxLabelTwo" for="CustomCheckbox"></label><br />
+      file - <input type="file"><br />
+      image - <input type="image"><br />
+      password - <input type="password"><br />
+    </div>
+    <br /><br />
+  </section>
+
+  <section id="animationSection">
+    <p>Анимация</p><hr noshade>
+    Начнём с простой анимации, точнее с @keyframes <br>
+    Синтаксис keyframes name { 25%{} 50%{} 75%{}} - можно больше или меньше<br>
+    Сделаем анимацию с плавным изменением цвета фона:
+    <div id="aminationScene" data-proportion-h="0.5">
+      <div id="animCodeBlock">
+        div{<br>
+        <span class="indent">animation: aminBackgroundColor 5s ease infinite;<span><br>
+        }<br>
+
+        @keyframes aminBackgroundColor{<br>
+          <span class="indent">0%{background-color: rgb(61, 139, 58);<div class="colorPiked" style="background-color: rgb(61, 139, 58);"></div>}<span><br>
+          <span class="indent">25%{background-color: rgb(25, 170, 148);<div class="colorPiked" style="background-color: rgb(25, 170, 148);"></div>}<span><br>
+          <span class="indent">50%{background-color: rgb(58, 100, 139);<div class="colorPiked" style="background-color: rgb(58, 100, 139);"></div>}<span><br>
+          <span class="indent">75%{background-color: rgb(111, 58, 139);<div class="colorPiked" style="background-color: rgb(111, 58, 139);"></div>}<span><br>
+          <span class="indent">100%{background-color: rgb(181, 78, 33);<div class="colorPiked" style="background-color: rgb(181, 78, 33);"></div>}<span><br>
+        }
+
+      </div>
+      <div id="animBlock">
+        Анимация
+      </div>
+    </div>
+  </section>
+
+  <section id="scrollbarSection">
+    <p>Scrollbar</p><hr noshade>
+    Сейчас, будем делать пользовательский скрол бар<br />
+    <b>::-webkit-scrollbar </b> : скролбар ;<br />
+    Давай изменим его ширину, какую ты хочешь?<br />
+      <input type="text" id="scrollbarInput" placeholder="Цифру"><button
+      type="button" onclick="return scrollbarButtonFun()" id="scrollbarButton">
+        Вот эту
+      </button>
+      <img src="image/svg/reset.svg" id="scrollbarResetIcon"
+        onclick="scrollbarImgResetFun()">
+  </section>
+
+  <section id="parallaxSection">
+    <p>parallax</p><hr noshade>
+    Паралакс очень интересная и нужная тема, для него я использую библиотеку
+    parallax.js, вот один из примеров:
+
+    <div id="parallaxSceneCosmos" data-proportion-h="0.3">
+      <div id="parallaxStars" data-depth="0.1">
+        <img src="image/parallax/stars.webp">
+      </div>
+      <div id="parallaxSun" data-depth="0.3" data-proportion-w="1">
+        <img src="image/parallax/sun.webp">
+      </div>
+      <div id="parallaxPlanet" data-depth="0.6">
+        <img src="image/parallax/planet.webp">
+      </div>
+      <div id="parallaxMars" data-depth="0.5">
+        <img src="image/parallax/mars.webp">
+      </div>
+      <div id="parallaxNeptun" data-depth="0.2">
+        <img src="image/parallax/neptun.webp">
+      </div>
+    </div>
+
+    <script type="text/javascript">//Паралакс и распаложение элементов в нём
+      var scene = document.getElementById('parallaxSceneCosmos');
+      var parallax = new Parallax(scene, {
+        invertX: false,
+        invertY: false
+      });
+
+      document.getElementById('parallaxSun').style.top = "5%";
+      document.getElementById('parallaxSun').style.left = "35%";
+      document.getElementById('parallaxPlanet').style.top = "60%";
+      document.getElementById('parallaxPlanet').style.left = "15%";
+      document.getElementById("parallaxMars").style.top = "10%";
+      document.getElementById("parallaxMars").style.left = "75%";
+      document.getElementById("parallaxNeptun").style.top = "10%";
+      document.getElementById("parallaxNeptun").style.left = "10%";
+    </script>
+
+  </section>
+
+  <section id="imageSection">
+    <p>Изображения</p><hr noshade>
+    <p>Увеличение</p>
+    <div id="imageSectionDivTitsAnime" data-proportion-h="1.123">
+      <img src="image/anime/tits.png" id="imageSectionImageTitsAnime"
+        ondragstart="return false;">
+    </div>
+
+    <p style="margin:10px;">Паралакс</p>
+    <div id="parallaxSceneChan" data-proportion-h='1'>
+      <div id="parallaxWall"></div>
+      <div id="parallaxChan" data-depth="20">
+        <img src="image/anime/chan.png">
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var scene = document.getElementById('parallaxSceneChan');
+      var widthSize = document.getElementById('imageSection').scrollWidth;
+    </script>
+
+  </section>
+
+  <section id="cycleSection">
+    <p>Циклы</p><hr noshade />
+    <span class="indent"><span class="JS">for(var i=0; i>5; i++){function};</span> "for(начало; условие; шаг)"</span><br>
+    <span class="indent"><span class="JS">while(i>5){function}</span></span><br>
+    <span class="indent"><span class="JS">do {alert( i ); i++;} while (i < 3);</span></span>
+      Выполняем "do" пока верно условие  while<br>
+  </section>
+
+  <section id="logOperationsSections">
+    <p>Логические операторы</p><hr noshade>
+    оператор "И" = &&<br>
+    оператор "ИЛИ" = ||<br>
+    оператор "НЕ" = ! <br>
+
+  </section>
+
+  <section id="arraySection">
+    <p>Массивы</p><hr noshade />
+    Обьявить массив - <span class="JS">var array = [];</span><br>
+    Заменить элемент массива - <span class="JS">array[0] = "hi";</span><br>
+    Общее число масивов, можно вывести командой - <span class="JS">alert(array.length);</span><br>
+    Многомерный масив - <span class="JS">var array[ [1, 2], [3, 4], [5, 6], ];</span> <br>
+    Обращение к такому масиву - <span class="JS">alert( array[1][0] );</span> - выведет "3" <br>
+    <span class="indent">
+      unshift - добавляет элемент в начало, <span class="JS">array.unshift("hi", "hello")</span> <br>
+      push - добавляет элемент в конец, <span class="JS">array.push("hi")</span> <br>
+      shift - удаляет первый элемент, возвращает его и сдвигает очередь, <span class="JS">array.shift()</span><br>
+      pop - удаляет последний элемент и выводит его, <span class="JS">array.pop()</span> <br>
+
+    </span>
+  </section>
+
+  <section id="commandGIT">
+    <p>Команды GIT</p><hr noshade />
+    Тут я собиру команды которые мне интересны, потому что я понимаю, что потом я их не найду <br>
+    <span class="GIT">git config --global user.name имя</span> - сменить имя<br />
+    <span class="GIT">git config --global user.gmail почта</span> - сменить почту<br />
+    <span class="GIT">git config --list</span> - выведет установленные правила (имя, почту, ..)<br />
+    <span class="GIT">ls</span> - список файлов в текущей деректории<br />
+    <span class="GIT">ls -a</span> - показ всех файлов, даже скрытых<br />
+    <span class="GIT">cd название директории</span> - перейти в другую директорию (можно ввести несколько символов и нажать Tab для авто заполнения)<br />
+    <span class="GIT">cd ..</span> - выйти на уровень выше в директории<br />
+    <span class="GIT">mkdir название</span> - создать папку<br />
+    <span class="GIT">touch название.расширение</span> - создать файл<br />
+    <span class="GIT">cp название кудаСкопировать</span> - копировать файл<br />
+    <span class="GIT">mv название новоеНазвание</span> - переименовать файл/папку<br />
+    <span class="GIT">echo "вывод"</span> - вывести что-то в терминал<br />
+    <span class="GIT">echo "вывод" > название.расширение</span> - вывести в файл<br />
+    <span class="GIT">cat название</span> - посмотреть содержимое файлаы<br />
+    <span class="GIT">rm название</span> - удалить файл<br />
+    <span class="GIT">git init</span> - создать репазиторий в выбранной папке<br />
+    <span class="GIT">git status</span> - текущее состояние репазитория<br />
+    <span class="GIT">git remote add название ссылкаНаГитХаб</span> - что бы связать репозитории (в названии пишется в основном "origin")<br />
+    <span class="GIT">git remote -v</span> - проверить подключение репазитория<br />
+    <span class="GIT">git add название</span> - добавить файл в индекс изменений (коммит)<br />
+    <span class="GIT">git rm --cached</span> - удалить файл из индекса изменений (коммита)<br />
+    <span class="GIT">git commit</span> - сообщение к комиту<br />
+    <span class="GIT">git commit -am 'сообщение'</span> - сообщение к комиту<br />
+    <span class="GIT">git restore название</span> - удалить файл из коммита<br />
+    <span class="GIT">.gitkeep</span> - сохронять пустые дириктории в общей дериктории<br />
+    <span class="GIT">.gitignore 'сообщение'</span> - игрнорировать файлы в деректории<br />
+    <span class="GIT">git log</span> - посмотреть историю коммитов<br />
+    <span class="GIT">git log --oneline</span> - сокращённая история коммитов<br />
+    <span class="GIT">git reset хеш</span> - сбростекущего состояния коммита<br />
+    <span class="GIT">git reflog</span> - история всех операций<br />
+    <span class="GIT">git revert</span> - отмена последствий коммита<br />
+    <span class="GIT">git branch</span> - просмотреть ветви репозитория<br />
+    <span class="GIT">git branch название</span> - создать ветку<br />
+    <span class="GIT">git branch -d название</span> - удалить ветку<br />
+    <span class="GIT">git checkout название</span> - переключиться на ветку<br />
+    <span class="GIT">ssh-keygen</span> - сгенерировать SSH ключ<br />
+    <span class="GIT">git clone SSHпуть названиеПапки</span> - клонировать репозиторий<br />
+    <span class="GIT">git push</span> - загрузить все изменения<br />
+    <span class="GIT">git push --delete origin название</span> - удалить ветки с удалённого репозитория<br />
+    <span class="GIT">git pull</span> - скачать все изменения<br />
+    <span class="GIT">git fetch</span> - подгрузить информацию о ветках<br />
+    <span class="GIT">git merge название</span> - соединить ветки<br />
+    <span class="GIT">git checkout название</span> - переключиться на ветку<br />
+    <span class="GIT">git tag версия</span> - присвоить версию программе<br />
+    <span class="GIT">git tag (--list)</span> - проверить версию данного коммита<br />
+    <span class="GIT">git push --tags</span> - загрузить версию в репозиторий<br />
+    <span class="GIT">git tag -d версия</span> - удалить тег версии<br />
+    <span class="GIT">git push --delete origin версия</span> - удалить версию из репозитория<br />
+  </section>
+
+  <footer>
+    Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+  </footer>
+
+  </main>
+
+  <script> /* library Stickjaw */
+      /*var SJ_init = {
+          options: {
+              hlw: true,
+              wlh: true,
+              hlt: true,
+              wlt: true,
+              alo: true,
+          },
+          settings: {
+              windowResize: true
+          }
+      }*/
+
+      var SJ_init = {
+          options: {
+              hlw: true,
+              wlh: true,
+              hlt: true,
+              wlt: true,
+              alo: true,
+              ohlt: true,
+              owlt: true
+          },
+          settings: {
+              windowResize: true,
+              writeHystory: true
+          }
+      }
+
+
+
+      var e = new SJ(SJ_init);
+
+
+
+      SJ.loop([
+                  {
+                      method: 'hlw',
+                      currentTarget: 'my',
+                      proportion: 2,
+                      target: null
+                  },
+                  {
+                      method: 'wlh',
+                      currentTarget: 'sT',
+                      proportion: 2,
+                      target: null
+                  },
+                  {
+                      method: 'hlt',
+                      currentTarget: 'sT',
+                      proportion: 2,
+                      target: 'appone'
+                  },
+                  {
+                      method: 'wlt',
+                      currentTarget: 'sT',
+                      proportion: 2,
+                      target: 'appone'
+                  }
+          ]);
+
+      function progress(prop){
+          SJ.loop([{method: 'hlw',
+              currentTarget: 'my',
+              proportion: prop,
+              target: null}]);
+      }
+
+      var prop = 0.01;
+
+      window.addEventListener('load', function(){
+
+
+             setInterval(function(){
+                 if(prop <= 2){
+                     progress(prop);
+                      prop = prop + 0.01;
+                 }
+
+
+          }, 1, prop);
+
+
+      }, false);
+
+
+  </script> <!-- libraby Stickjaw -->
+
+  <script type="text/javascript">//изначальное значение webkit scrollbar
+    document.body.style.setProperty("--scrollbarWidth", "3px");
+  </script>
+  <script type="text/javascript">//изначально положение parallaxChan и parallaxSceneChan
+    document.getElementById('parallaxSceneChan').style.position = "inherit";
+    document.getElementById('parallaxChan').style.left = "50px";
+  </script>
+  <script type="text/javascript">
+    var widthSceneChan = document.getElementById('parallaxSceneChan').scrollWidth;
+  </script>
+  <script>
+      $(document).ready(funParallaxChanDecrease());
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1040 @@
+//анимации для upBar
+@keyframes box {
+ 25% { top: -5px; }
+ 50% { top: 0px; }
+ 75% { top: -5px; }
+ 100% { top: 0px; }
+}
+
+@mixin inputStyle{
+  width: 40px;
+  height: 28px;
+  background-color: #888888;
+  border: 1px solid black;
+  font-size: 23px;
+  text-align: center;
+  margin: 4px 8px;
+}
+
+*{
+  scroll-behavior: smooth;
+  cursor: default;
+  box-sizing: border-box;
+
+  &::selection{
+    color: rgb(136, 136, 136);
+    background-color: rgb(50, 50, 50);
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  b{
+    font-weight: bold;
+  }
+
+}
+
+body{
+
+  //убираем стрелки у input type="number"
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+  //стилизация полосы прокрутки
+  &::-webkit-scrollbar-thumb {
+    background-color:#474747;
+    border-radius: 10px;
+    &:hover{
+      background-color:#292929;
+    }
+  }
+  &::-webkit-scrollbar{//а????
+    width: var( --scrollbarWidth );
+    background-color:rgba(0, 0, 0 ,0);
+  }
+
+  background-color:rgb(52, 52, 52);
+  background-image: url(../image/background/forest.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  #progress{
+    position: fixed;
+    top: 0;
+    background-color: #5b5b5b;
+    height: 5px;
+    width: 10%;
+  }
+
+  main{
+    width: 100%;
+    max-width: 1280px;
+    min-height: 400px;
+    background-color: rgb(91, 91, 91);
+    margin: 0 auto;
+
+    header{
+      width: 100%;
+      min-height: 100px;
+      background-color: rgb(106, 106, 106);
+      text-align: center;
+      padding: 25px 0 10px 0;
+      margin-bottom: 5px;
+      line-height: 35px;
+
+      h1{
+        margin-bottom: 10px;
+        font-size: 50px;
+      }
+
+      h2{
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+
+    }
+
+    section{
+      min-height: 100px;
+      width: 100%;
+      background-color: rgb(112, 112, 112);
+      font-size: 25px;
+      padding: 10px 40px;
+      box-sizing: border-box;
+      margin: 0 0 5px 0;
+      line-height: 35px;
+
+
+      p{
+        font-size: 35px;
+        text-align: center;
+        font-weight: bold;
+
+      }
+
+      hr{
+        margin: 10px auto 20px auto;
+      	padding: 0;
+      	height: 0;
+      	border: none;
+      	border-top: 2px dashed #5b5b5b;
+        width: 85%;
+
+      }
+
+      .indent{
+        margin-left: 20px;
+      }
+
+      .JS{
+        background-color: #ab884e;
+        padding: 4px;
+      }
+
+      .GIT{
+        background-color: #4e6d4e;
+        padding: 4px;
+      }
+
+    }
+
+    #upBar{
+      position: fixed;
+      height: 100%;
+      width: 5%;
+      top: 0;
+      left: 0;
+      background-color: #707070;
+      display: flex;
+      opacity: 0;
+      transition: .4s ease;
+
+      &:hover{
+        opacity: 0.8;
+      }
+
+      img{
+        margin: 0 auto;
+        width: 60%;
+        position: relative;
+        top: 0;
+
+      }
+
+    }
+
+    #navigation{
+
+      #wrapperNavButton{
+        width: 100%;
+        min-height: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        a{
+          height: 40px;
+          min-width: 10px;
+          border: none;
+          padding: 0 10px;
+          font-size: 25px;
+          background-color: #868686;
+          transition: .3s ease;
+          color: rgb(41, 41, 41);
+          font-family: sans-serif;
+          text-decoration: none;
+          margin: 1px;
+
+          &:hover{
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+            border-radius: 4px;
+            background-color: rgb(157, 157, 157);
+          }
+
+          &:focus {
+            outline: 0;
+            outline-offset: 0;
+          }
+
+          &:active{
+            background-color: rgb(180, 180, 180);
+            border-radius: 3px;
+
+          }
+
+        }
+
+        .navJS{
+          background-color: #ab884e;
+        }
+
+        .navGIT{
+          background-color: #4e6d4e;
+        }
+
+      }
+
+    }
+
+    #flexSection{
+
+      .flexExamples{
+        min-height: 40px;
+        max-width: 620px;
+        background-color: #676767;
+        margin:  10px 20px;
+        border: 1px solid #4a4a4a;
+
+
+
+        #flexDirectionElement{
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+
+          div{
+            border: 1px solid black;
+            margin: 1px;
+            width: 100px;
+            text-align: center;
+          }
+
+        }
+        #flexDirectionButton{
+          border-top: 1px solid #4a4a4a;
+          margin-top: 3px;
+          padding-bottom: 2px;
+          display: flex;
+          justify-content: space-around;
+
+          span{
+            transition: .4s ease;
+
+            &:hover{
+              font-size: 27px;
+            }
+
+          }
+
+        }
+
+
+        #orderScene{
+          width: 100%;
+          border-bottom: 1px solid #4a4a4a;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+
+          .flex-item {
+            width: 100px;
+            text-align: center;
+            border: 1px solid black;
+            margin: 1px;
+          }
+
+        }
+
+        #controllerOrder{
+          width: 100%;
+          min-height: 37px;
+          font-size: 25px;
+          text-align: center;
+
+          input{
+            width: 40px;
+            background-color: #888888;
+            border: 1px solid black;
+            font-size: 23px;
+            text-align: center;
+          }
+        }
+
+        #buttonOrder{
+          height: 37px;
+          width: 100%;
+          background-color: #676767;
+          border: none;
+          border-top: 1px solid #4a4a4a;
+          font-size: 20px;
+          transition: .4s ease;
+
+          &:hover{
+            cursor: pointer;
+            background-color: #787878;
+          }
+        }
+
+
+
+        span{
+          margin: 0 3px;
+          transition: .4s ease;
+
+          &:hover{
+            font-size: 28px;
+            cursor: pointer;
+          }
+
+        }
+
+        .divExampleButton{
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+        }
+
+        #exampleFlex{
+          min-height: 150px;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          div{
+            width: 200px;
+            border: 1px solid black;
+            margin: 1px;
+            text-align: center;
+          }
+
+        }
+
+      }
+
+
+
+      #alignSelfElement{
+        display: flex;
+        width: 100%;
+        height: 150px;
+        justify-content: center;
+
+        div{
+          border: 1px solid black;
+          margin: 1px;
+          width: 100px;
+          text-align: center;
+        }
+
+      }
+
+      #alignSelfInput{
+        border-top: 1px solid #4a4a4a;
+        margin-top: 3px;
+        padding-bottom: 2px;
+        display: flex;
+        justify-content:  center;
+
+        input{
+          @include inputStyle;
+        }
+
+      }
+
+      #alignSelfButton{
+        border-top: 1px solid #4a4a4a;
+        margin-top: 3px;
+        padding-bottom: 2px;
+        display: flex;
+        justify-content: space-around;
+
+        span{
+          transition: .4s ease;
+
+          &:hover{
+            font-size: 27px;
+          }
+
+        }
+
+      }
+
+
+
+
+      #flexGrowElement{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 3px 3px 0 3px;
+
+        div{
+          border: 1px solid black;
+          margin: 1px;
+          width: 100px;
+          text-align: center;
+          flex-grow: 1;
+        }
+
+      }
+
+      #flexGrowInput{
+        border-top: 1px solid #4a4a4a;
+        margin-top: 3px;
+        padding-bottom: 2px;
+        display: flex;
+        justify-content:  center;
+
+        input{
+          @include inputStyle;
+        }
+
+      }
+
+      #flexGrowButton{
+        height: 37px;
+        width: 100%;
+        background-color: #676767;
+        border: none;
+        border-top: 1px solid #4a4a4a;
+        font-size: 20px;
+        transition: .4s ease;
+
+        &:hover{
+          cursor: pointer;
+          background-color: #787878;
+        }
+      }
+
+
+    }
+
+    #gridSection{
+
+      .blockGrid{
+
+        min-height: 40px;
+        max-width: 620px;
+        background-color: #676767;
+        margin: 10px 20px;
+        border: 1px solid #4a4a4a;
+
+
+        .gridTemplateStatus{
+          min-height: 50px;
+          width: 100%;
+          border-bottom: 1px solid #4a4a4a;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+
+          span{
+            margin: 0 7px;
+          }
+
+        }
+
+        .gridTemplateScene{
+          min-height: 200px;
+          width: 100%;
+          border-bottom: 1px solid #4a4a4a;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 1fr 1fr;
+          grid-gap: 3px;
+          padding: 3px;
+
+          .gridTemplateElement{
+            background-color: #4e4e4e;
+            border: 1px solid black;
+          }
+
+        }
+
+
+        #gridTemplatePanel{
+          display: grid;
+          grid-template-columns: 2fr 2fr 1fr ;
+          min-height:50px;
+          width: 100%;
+          justify-items: center;
+          align-items: center;
+
+          input{
+            @include inputStyle;
+          }
+
+          #containerChangeBlock{
+            margin-top: 6px;
+
+            .gridTemplataChangeBlock{
+              display: inline-block;
+              height: 30px;
+              width: 50px;
+              background-color: #888888;
+              text-align: center;
+              padding: 2px 0;
+
+              img{
+                height: 100%;
+
+                &:hover{
+                  cursor: pointer;
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      #gridAreasSyntax{
+        margin: 20px 10px;
+        width: 160px;
+        height: 160px;
+        background-color: #656565;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+
+      }
+
+    }
+
+    #adaptation{
+
+      a{
+        text-decoration: none;
+        color: black;
+      }
+
+      #exampleProportionHeight, #exampleProportionWidth{
+        background-color: rgb(71, 70, 70);
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p{
+          font-weight: normal;
+        }
+
+      }
+
+      #exampleProportionHeight{
+        width: 30%;
+
+      }
+
+      #exampleProportionWidth{
+        height: 60px;
+
+      }
+
+    }
+
+    #pseudoClass{
+
+      #pseudoClassAfter{
+        width: 20%;
+        margin: 20px auto;
+        position: relative;
+
+        &:hover::after {
+          content: attr(data-title); /* Выводим текст */
+          position: absolute;
+          left: 0; right: 0; bottom: 0;
+          z-index: 1;
+          background: rgba(75, 75, 75, 0.9);
+          font-size: 20px;
+          padding: 5px 10px;
+          text-align: center;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+
+        img{
+          width: 100%;
+          border-radius: 10px;
+        }
+
+      }
+
+      #pseudoClassHover{
+        width: 20%;
+        display: block;
+        margin: 0 auto;
+        width: 20%;
+        background: #bfe2ff;
+        border-radius: 10px;
+        z-index: 3;
+        background-image: url(../image/dogs/dog2.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+
+        #pseudoClassHoverDiv{
+          width: 100%;
+          height: 100%;
+          display:flex;
+          position: relative;
+          z-index: 3;
+          padding-top: 80%;
+          text-align: center;
+          opacity: 0;
+          transition: .4s;
+
+          &:hover{
+            opacity: 0.8;
+          }
+
+          #pseudoClassHoverDivTwo{
+            position: relative;
+            width: 100%;
+            display: flex;
+            background-color: #937b7b;
+            justify-content: center;
+            align-items: center;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    #backgroundSection{
+      background-image: url(../image/background/forestThree.jpg);
+      background-position: center;
+      background-size: cover;
+
+      span{
+        background-color: #757575;
+        border-radius: 15px;
+        padding: 6px;
+        transition: .4s;
+        display: inline-block;
+        user-select: none;
+
+        &:hover{
+          background-color: #969696;
+          padding:6px 10px;
+          cursor: pointer;
+
+        }
+
+      }
+
+    }
+
+    #inputSection{
+
+      #inputExample{
+        background-color: #707070;
+        padding: 2px;
+        font-size: 18px;
+        border: solid #4c4c4c;
+        border-radius: 10px;
+        color: black;
+
+        &:focus{
+          background-color: #696969;
+          border: solid #3d3d3d;
+        }
+
+        &::-webkit-input-placeholder { /* Chrome */
+          color: black;
+        }
+
+      }
+
+      #inputButton{
+        background-color: #6c6b6b;
+        padding: 1px 5px;
+        font-size: 18px;
+        border: solid #333333 1px;
+        border-radius: 10px;
+        color: black;
+
+        &:active{
+          background-color: #828282;
+          border-color: #5d5d5d;
+        }
+
+      }
+
+      #CustomCheckbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      }
+
+      #CustomCheckboxLabelOne{
+        user-select: none;
+      }
+
+      #CustomCheckbox+#CustomCheckboxLabelTwo {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+      }
+      #CustomCheckbox+#CustomCheckboxLabelTwo::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #333333;
+        background-color: #6c6b6b;
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 70% 70%;
+        position: relative;
+        top: 4px;
+      }
+      #CustomCheckbox:checked+#CustomCheckboxLabelTwo::before {
+        border-color: #5d5d5d;
+        background-color: #828282;
+        background-image: url(../image/svg/tick.svg);
+      }
+
+    }
+
+    @keyframes aminBackgroundColor{
+      0%{background-color: rgb(61, 139, 58);}
+      25%{background-color: rgb(25, 170, 148);}
+      50%{background-color: rgb(58, 100, 139);}
+      75%{background-color: rgb(111, 58, 139);}
+      100%{background-color: rgb(181, 78, 33);}
+    }
+
+    #animationSection{
+
+      #aminationScene{
+        max-width: 800px;
+        min-width: 20px;
+        border-radius: 10px;
+        margin: 10px auto;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        #animCodeBlock{
+          width: 60%;
+          font-size: 20px;
+          overflow-y: scroll;
+
+          //стилизация полосы прокрутки
+          &::-webkit-scrollbar-thumb {
+            background-color:#474747;
+            border-radius: 10px;
+            &:hover{
+              background-color:#292929;
+            }
+          }
+          &::-webkit-scrollbar{//а????
+            width: 5px;
+            background-color:rgba(0, 0, 0 ,0);
+          }
+          &::-webkit-scrollbar-corner{
+            display: none;
+          }
+
+          .colorPiked{
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+
+          }
+
+        }
+
+        #animBlock{
+          width: 40%;
+          border-left: 1px solid black;
+          animation: aminBackgroundColor 5s ease infinite;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+      }
+
+    }
+
+    #scrollbarSection{
+      #scrollbarInput, #scrollbarButton{
+        font-size: 18px;
+        padding: 2px 5px;
+        background-color: #707070;
+        border: solid #4c4c4c;
+        border-radius: 10px;
+        color: black;
+
+        &::-webkit-input-placeholder{
+          color: #4c4c4c;
+        }
+
+      }
+
+      #scrollbarInput{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: 0;
+      }
+      #scrollbarButton{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+
+      #scrollbarResetIcon{
+        width: 30px;
+        position: relative;
+        top: 9px;
+        transition: .6s ease;
+        margin-left: 10px;
+
+        &:hover{
+          cursor: pointer;
+          transform: rotate(360deg);
+        }
+
+      }
+
+    }
+
+    #parallaxSection{
+
+      #parallaxSceneCosmos{
+        width: 100%;
+        background-image: url(../image/parallax/cosmos.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        border: 3px solid black;
+        border-radius: 15px;
+
+        img{
+          height: 100%;
+        }
+
+        #parallaxStars{
+          width: 120%;
+          height: 120%;
+          z-index: 1;
+          position: absolute;
+
+        }
+
+        #parallaxSun{
+          height: 90%;
+          z-index: 2;
+
+        }
+
+        #parallaxPlanet{
+          height: 50%;
+          z-index: 3;
+
+          img{
+            transform: rotate(130deg);
+          }
+
+        }
+
+        #parallaxMars{
+          height: 40%;
+          z-index: 4;
+
+          img{
+            transform: rotate(-50deg);
+          }
+
+        }
+
+        #parallaxNeptun{
+          height: 40%;
+          z-index: 1;
+
+          img{
+            transform: rotate(-170deg);
+          }
+
+        }
+
+      }
+
+    }
+
+    #imageSection{
+
+      #imageSectionDivTitsAnime{
+        margin: 6px auto;
+        max-width: 400px;
+        min-width: 20px;
+        overflow: hidden;
+        background-color: #52414b;
+        border: 3px solid black;
+        border-radius: 15px;
+
+        #imageSectionImageTitsAnime{
+          width: 100%;
+          transition: all .6s ease;
+          position: relative;
+          bottom: 0;
+
+          &:hover{
+            transform: scale(1.6);
+            bottom: 22%;
+            cursor: crosshair;
+          }
+
+        }
+
+      }
+
+      #parallaxSceneChan{
+        background-color: #52414b;
+        border: solid 3px black;
+        border-radius: 15px;
+        max-width: 400px;
+        min-width: 20px;
+        overflow: hidden;
+        margin: 0 auto;
+
+        #parallaxWall{
+          background-color: rgb(68, 68, 68);
+          height: 100%;
+          width: 50%;
+          float: left;
+          position: absolute;
+          z-index: 2;
+        }
+
+        #parallaxChan{
+          height: 100%;
+          width: 200px;
+          display: inline-block;
+          position: relative;
+          z-index: 1;
+          left: 10px;
+
+          img{
+            height: 100%;
+          }
+
+        }
+
+      }
+
+    }
+
+    #imageSection{
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+
+      #parallaxScene{
+        background-color: #52414b;
+        border: solid 3px black;
+        border-radius: 15px;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        overflow: hidden;
+
+        #parallaxWall{
+          background-color: rgb(68, 68, 68);
+          height: 100%;
+          width: 200px;
+          float: left;
+          position: absolute;
+          z-index: 2;
+        }
+
+        #parallaxChan{
+          height: 100%;
+          width: 200px;
+          display: inline-block;
+          position: relative;
+          z-index: 1;
+          left: 10px;
+
+          img{
+            height: 100%;
+          }
+
+        }
+
+      }
+
+    }
+
+    footer{
+      min-height: 300px;
+      width: 100%;
+      background-color: rgb(112, 112, 112);
+      font-size: 25px;
+      padding: 10px 40px;
+      box-sizing: border-box;
+
+    }
+
+  }
+
+}
