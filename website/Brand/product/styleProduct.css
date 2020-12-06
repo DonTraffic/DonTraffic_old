@@ -18,11 +18,8 @@
 .catalog .sidebar details[open] summary {
   color: #ef5b70;
 }
-.catalog .sidebar details[open] summary::after {
-  content: "";
-  width: 9px;
-  height: 6px;
-  background-image: url(image/arrowOpen.png);
+.catalog .sidebar details[open] summary i {
+  transform: rotate(180deg);
 }
 .catalog .sidebar details summary {
   border-left: 5px solid #ef5b70;
@@ -33,24 +30,13 @@
   padding: 15px;
   text-transform: uppercase;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   justify-content: space-between;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
 }
 .catalog .sidebar details summary:hover {
   cursor: pointer;
 }
 .catalog .sidebar details summary::-webkit-details-marker {
   display: none;
-}
-.catalog .sidebar details summary::after {
-  content: "";
-  width: 9px;
-  height: 6px;
-  background-image: url(image/arrowClose.png);
 }
 .catalog .sidebar details button {
   font-size: 14px;

@@ -28,12 +28,8 @@
       &[open] summary{
         color: #ef5b70;
 
-        &::after{
-          content: '';
-          width: 9px;
-          height: 6px;
-          background-image: url(image/arrowOpen.png);
-
+        i{
+          transform: rotate(180deg);
         }
 
       }
@@ -46,11 +42,8 @@
         font-weight: 700;
         padding: 15px;
         text-transform: uppercase;
-        @include flexAlign;
+        display: flex;
         justify-content: space-between;
-        background-position: center;
-        background-repeat: repeat;
-        background-size: cover;
 
         &:hover{
           cursor: pointer;
@@ -58,13 +51,6 @@
 
         &::-webkit-details-marker{
           display: none;
-        }
-
-        &::after{
-          content: '';
-          width: 9px;
-          height: 6px;
-          background-image: url(image/arrowClose.png);
         }
 
       }
