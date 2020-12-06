@@ -10,8 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-  <link rel="shortcut icon" href="image/index/logo.png" type="image/png">
-  <link rel="stylesheet" href="style/css/style.css">
+  <link rel="shortcut icon" href="image/logo.png" type="image/png">
+  <link rel="stylesheet" href="index/styleIndex.css">
+  <link rel="stylesheet" href="style.css">
   <title>Brand</title>
 </head>
 <body>
@@ -19,15 +20,15 @@
   <header>
     <div class="content">
       <div class="headerLogo">
-        <img src="image/index/logo.png" alt="logo">
+        <img src="image/logo.png" alt="logo">
         <span class="text">bran<b>d</b></span>
       </div>
 
       <div class="headerSearch">
-        <span class="buttonMenu">
+        <div class="buttonMenu">
           <p>Browse</p>
-          <img src="image/index/arrowButtomBlack.png" alt="arrow">
-        </span>
+          <img src="image/arrowButtomBlack.png" alt="arrow">
+        </div>
         <input type="text" placeholder="Search for item...">
         <span class="buttomSearch">
           <i class="fas fa-search"></i>
@@ -35,11 +36,11 @@
       </div>
 
       <div class="headerBasket">
-        <img src="image/index/basket.png" alt="basket">
-        <span>
+        <img src="image/basket.png" alt="basket">
+        <div class="containerAccount">
           <p>My account</p>
-          <img src="image/index/arrowButtomWhite.png" alt="arrow">
-        </span>
+          <img src="image/arrowButtomWhite.png" alt="arrow">
+        </div>
       </div>
 
     </div>
@@ -66,10 +67,10 @@
   <section class="slider">
     <div class="content">
       <span class="partition"></span>
-      <span>
+      <div>
         <b>THE BRAND</b>
         <p>OF LUXERIOUS <b>FASHION</b></p>
-      </span>
+      </div>
     </div>
   </section>
 
@@ -106,8 +107,6 @@
 
     <div class="container">
 
-      <div class="priseContainer">
-
         <div class="card items1">
           <div class="textContent">
             <p>Mango  People  T-shirt</p>
@@ -135,10 +134,6 @@
             <p class="pricesText">$52.00</p>
           </div>
         </div>
-
-      </div>
-
-      <div class="priseContainer">
 
         <div class="card items5">
           <div class="textContent">
@@ -168,8 +163,6 @@
           </div>
         </div>
 
-      </div>
-
     </div>
 
     <a class="buttonMenu" href="#">Browse All Product &#8594;</a>
@@ -188,7 +181,7 @@
     <div class="BlockFeature">
       <div class="grid-container">
         <div class="blockIcon">
-          <img class="icon1" src="image/index/iconTruck.png" alt="truck">
+          <img class="icon1" src="image/iconTruck.png" alt="truck">
         </div>
         <div class="blockName">
           Free Delivery
@@ -201,7 +194,7 @@
       </div>
       <div class="grid-container">
         <div class="blockIcon">
-          <img class="icon2" src="image/index/iconSales.png" alt="truck">
+          <img class="icon2" src="image/iconSales.png" alt="truck">
         </div>
         <div class="blockName">
           Free Delivery
@@ -214,7 +207,7 @@
       </div>
       <div class="grid-container">
         <div class="blockIcon">
-          <img class="icon3" src="image/index/iconQuality.png" alt="truck">
+          <img class="icon3" src="image/iconQuality.png" alt="truck">
         </div>
         <div class="blockName">
           Free Delivery
@@ -229,42 +222,40 @@
   </section>
 
   <section class="subscribe">
-    <div class="layerFon">
-      <div class="content">
-        <div class="reviewBlock">
-          <span class="container">
-            <span class="imgBlock">
-              <img src="image/index/womenReview.jpg" alt="review">
-            </span>
-            <span>
-              <span class="textBlock">
-                <p>
-                  “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
-                  a pulvinar purus condimentum a. Aliquam condimentum
-                  mattis neque sed pretium”
-                </p>
-              </span>
-              <span class="nameBlock">
-                <p class="topText">Bin Burhan</p>
-                <p class="pricesText">Dhaka, Bd</p>
-              </span>
-              <span class="sliderBlock">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </span>
+    <div class="content">
+      <div class="reviewBlock">
+        <div class="container">
+          <span class="imgBlock">
+            <img src="image/womenReview.jpg" alt="review">
           </span>
-        </div>
-        <div class="subscribeBlock">
-          <div class="content">
-            <p class="topText">Subscribe</p>
-            <p class="pricesText">FOR OUR NEWLETTER AND PROMOTION</p>
-            <span>
-              <input type="text" name="email" placeholder="Enter Your Email">
-              <button type="button" name="Subscribe">Subscribe</button>
+          <div>
+            <div class="textBlock">
+              <p>
+                “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                a pulvinar purus condimentum a. Aliquam condimentum
+                mattis neque sed pretium”
+              </p>
+            </div>
+            <div class="nameBlock">
+              <p class="topText">Bin Burhan</p>
+              <p class="pricesText">Dhaka, Bd</p>
+            </div>
+            <span class="sliderBlock">
+              <span></span>
+              <span></span>
+              <span></span>
             </span>
           </div>
+        </div>
+      </div>
+      <div class="subscribeBlock">
+        <div class="content">
+          <p class="topText">Subscribe</p>
+          <p class="pricesText">FOR OUR NEWLETTER AND PROMOTION</p>
+          <span>
+            <input type="text" name="email" placeholder="Enter Your Email">
+            <button type="button" name="Subscribe">Subscribe</button>
+          </span>
         </div>
       </div>
     </div>
@@ -298,7 +289,7 @@
         <a href="#">Brows All</a>
       </div>
       <div class="brand">
-        <img src="image/index/logo.png" alt="logo">
+        <img src="image/logo.png" alt="logo">
         <span class="textLogo">bran<b>d</b></span>
       </div>
       <div class="text">
