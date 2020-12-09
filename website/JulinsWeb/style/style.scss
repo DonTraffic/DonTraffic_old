@@ -1,0 +1,260 @@
+@media (min-width: 350px){
+
+  .registration{
+
+    .container{
+      border-radius: 30px;
+      min-width: 50%;
+
+    }
+
+  }
+
+  .registrForm{
+
+    input{
+      width: 300px;
+
+    }
+
+  }
+
+}
+
+@media (max-width: 349px){
+
+  .registration{
+
+    .container{
+      border-radius: 0px;
+      min-width: 100%;
+
+    }
+
+  }
+
+  .registrForm{
+
+    input{
+      width: 250px;
+    }
+
+  }
+
+}
+
+@mixin flexAlign{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin fonAlign{
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+$mainColor: #b6428f;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: .4s ease;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  &::selection {
+   color: #fff;
+   background-color: #595959;
+}
+
+}
+
+body {
+  background-color: $mainColor;
+  background-image: url(../img/fon.png);
+  @include fonAlign;
+  background-position: center;
+}
+
+#fullpage{
+  max-width: 1140px;
+  min-height: 400px;
+  margin: 0 auto;
+}
+
+.registration{
+  width: 100%;
+  @include flexAlign;
+
+  .container{
+    min-height: 100px;
+    background-image: url(../gif/fon.gif);
+    @include fonAlign;
+    padding: 160px 30px 40px 30px;
+    box-shadow: 0px 0px 22px 19px rgba(34, 60, 80, 0.23);
+    @include flexAlign;
+    flex-direction: column;
+
+    h1{
+      font-family: 'Dancing Script', cursive;
+      font-size: 50px;
+      text-align: center;
+    }
+
+    h2{
+      font-family: 'Dancing Script', cursive;
+      font-size: 25px;
+      text-align: center;
+      font-weight: 100;
+    }
+
+    .registrForm{
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+      input{
+        background-color: rgba(255, 255, 255, 0);
+        margin-top: 15px;
+        border: none;
+        border-bottom: 1px solid #000;
+        padding: 5px;
+
+        &::-webkit-input-placeholder{
+          color: black;
+        }
+
+        &:hover{
+          padding-left: 10px;
+          cursor: pointer;
+        }
+
+        &:focus{
+          padding-left: 10px;
+          background-color: rgba(99, 33, 116, 0.6);
+          border-radius: 5px;
+          color: #fff;
+
+          &::-webkit-input-placeholder{
+            color: #fff;
+          }
+
+        }
+
+      }
+
+      button{
+        background-color: rgba(0, 0, 0, 0);
+        margin-top: 35px;
+        border: 1px solid black;
+        border-radius: 30px;
+        padding: 5px;
+        font-size: 25px;
+        padding: 5px 10px;
+
+        &:hover{
+          cursor: pointer;
+          background-color: $mainColor;
+          color: #fff;
+          border-radius: 5px;
+        }
+
+      }
+
+    }
+
+    h3{
+      margin-top: 30px;
+      font-size: 25px;
+      font-weight: 100;
+
+    }
+
+    button{
+      background-color: rgba(0, 0, 0, 0);
+      margin-top: 15px;
+      border: 1px solid black;
+      border-radius: 30px;
+      padding: 5px;
+      font-size: 25px;
+      padding: 5px 10px;
+
+      &:hover{
+        cursor: pointer;
+        background-color: $mainColor;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+    }
+
+    .socialToils{
+      margin-top: 10px;
+      @include flexAlign;
+      height: 40px;
+      width: 200px;
+
+      i{
+        width: 100%;
+        height: 100%;
+        color: black;
+        font-size: 25px;
+        @include flexAlign;
+
+        &:hover{
+          color: $mainColor;
+          cursor: pointer;
+        }
+
+      }
+
+    }
+
+    @keyframes moveArrow{
+      0%{ bottom: 5px;}
+      50%{ bottom: -5px;}
+      100%{ bottom: 5px;}
+    }
+
+    .fa-angle-double-down{
+      font-size: 30px;
+      margin-top: 15px;
+      position: relative;
+      animation: moveArrow 2s ease infinite;
+      color: black;
+
+      &:hover{
+        color: $mainColor;
+        cursor: pointer;
+      }
+
+    }
+
+  }
+
+}
+
+.information{
+
+  .container{
+    height: 1000px;
+    background-image: url(../gif/fon.gif);
+    padding: 160px 30px 80px 30px;
+    box-shadow: 0px 0px 22px 19px rgba(34, 60, 80, 0.23);
+    @include flexAlign;
+    flex-direction: column;
+  }
+
+}
