@@ -1,4 +1,21 @@
+@mixin flexAlign{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin fonAlign{
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (min-width: 427px){
+
+  .container{
+    padding: 160px 30px 40px 30px;
+
+  }
 
   .registration{
 
@@ -19,9 +36,23 @@
 
   }
 
+  .enterRegistrPC{
+    @include flexAlign;
+    flex-direction: column;
+  }
+
+  .enterRegistrMob{
+    display: none;
+  }
+
 }
 
 @media (max-width: 426px){
+
+  .container{
+    padding: 60px 30px 40px 30px;
+
+  }
 
   .registration{
 
@@ -39,6 +70,15 @@
       width: 250px;
     }
 
+  }
+
+  .enterRegistrPC{
+    display: none;
+  }
+
+  .enterRegistrMob{
+    @include flexAlign;
+    flex-direction: column;
   }
 
 }
