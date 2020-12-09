@@ -1,0 +1,44 @@
+@media (min-width: 427px){
+
+  .registration{
+
+    .container{
+      border-radius: 30px;
+      min-width: 50%;
+
+    }
+
+  }
+
+  .registrForm{
+
+    input{
+      width: 300px;
+
+    }
+
+  }
+
+}
+
+@media (max-width: 426px){
+
+  .registration{
+
+    .container{
+      border-radius: 0px;
+      min-width: 100%;
+
+    }
+
+  }
+
+  .registrForm{
+
+    input{
+      width: 250px;
+    }
+
+  }
+
+}
