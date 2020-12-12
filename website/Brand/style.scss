@@ -21,8 +21,9 @@
 
 .hidden{
   position: absolute;
-  left: -99999;
+  right: -999;
   opacity: 0;
+  z-index: -100;
 }
 
 *{
@@ -62,14 +63,11 @@ header{
     height: 100%;
     max-width: 1140px;
 
-    div{
-      height: 51px;
-      padding: 0 20px;
-    }
-
     .headerLogo{
       @include flexAlign;
       padding-left: 0;
+      height: 51px;
+      padding: 0 20px;
 
       img{
         height: 51px;
@@ -96,29 +94,113 @@ header{
       @include flexAlign;
       justify-content: flex-start;
       flex-grow: 2;
+      height: 51px;
+      padding: 0 20px;
 
-      .buttonMenu{
-        width: 87px;
+      .buttonMenuContainer{
+        position: relative;
         height: 38px;
-        border-radius: 3px 0 0 3px;
-        border: 1px solid #e6e6e6;
-        background-color: #cdcdcc;
-        background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%);
-        @include flexAlign;
-        justify-content: center;
+        transition: .4s ease;
 
-        p{
-          color: #222222;
-          font-size: 14px;
-          font-weight: 300;
-          margin-right: 8px;
+        .buttonMenu{
+          width: 87px;
+          height: 38px;
+          border-radius: 3px 0 0 3px;
+          border: 1px solid #e6e6e6;
+          background-color: #cdcdcc;
+          background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%);
+          @include flexAlign;
+          justify-content: center;
+          transition: .4s ease;
+
+          p{
+            color: #222222;
+            font-size: 14px;
+            font-weight: 300;
+            margin-right: 8px;
+          }
+
+          i{
+            color: #838383;
+          }
+
+          &:hover{
+            background-image: none;
+            background-color: #f16d7f;
+            cursor: pointer;
+
+            p, i{
+              color: #fff;
+            }
+
+          }
+
         }
 
-        i{
-          color: #838383;
+        .dropSearchMenu{
+          border-radius: 5px;
+          background-color: rgb(255, 255, 255);
+          position: absolute;
+          transform: rotateX(90deg);
+          transform-origin: top;
+          transition: .4s ease;
+          height: auto;
+          opacity: 0;
+          padding: 15px;
+          padding-top: 0;
+          box-shadow:0px 0px 21px 1px rgba(0,0,0,0.08);
+
+          .topText{
+            color: #232323;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-top: 15px;
+
+          }
+
+          .hr{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 1px;
+            background-color: #e8e8e8;
+            margin-bottom: 5px;
+          }
+
+          .seconText{
+            color: #4f4f4f;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: none;
+            display: block;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 7px;
+            transition: .4s ease;
+
+            &:hover{
+              color: #f16d7f;
+              cursor: pointer;
+              background-color: #e8e8e8;
+            }
+
+          }
+
+        }
+
+        &:hover{
+
+          .dropSearchMenu{
+            transform: rotateX(0deg);
+            opacity: 1;
+          }
+
         }
 
       }
+
       input{
         width: 280px;
         height: 38px;
@@ -157,6 +239,8 @@ header{
     .headerBasket{
       padding-right: 0;
       @include flexAlign;
+      height: 51px;
+      padding: 0 20px;
 
       img{
         width: 32px;
@@ -164,23 +248,171 @@ header{
         margin-right: 26px;
       }
 
-      .containerAccount{
+      .buttonAccountContainer{
+        background-color: red;
         width: 130px;
         height: 38px;
-        background-color: #f16d7f;
-        @include flexAlign;
-        justify-content: center;
-        padding: 0;
+        position: relative;
 
-        p{
-          color: #ffffff;
-          font-size: 15px;
-          font-weight: 400;
+        .buttonAccount{
+          width: 130px;
+          height: 38px;
+          @include flexAlign;
+          justify-content: center;
+          background-color: #f16d7f;
+          border: 0;
+
+          p{
+           color: #ffffff;
+           font-size: 15px;
+           font-weight: 400;
+          }
+
+          i{
+           margin: 0 0 0 8px;
+           color: #ffffff;
+          }
+
         }
 
-        i{
-          margin: 0 0 0 8px;
-          color: #ffffff;
+        .dropAccountBasket{
+          position: absolute;
+          transform: rotateX(90deg);
+          transform-origin: top;
+          transition: .4s ease;
+          opacity: 0;
+          border-radius: 5px;
+          background-color: #ffffff;
+          box-shadow:0px 0px 21px 1px rgba(0,0,0,0.08);
+          padding: 20px;
+          padding-bottom: 10px;
+
+          .basketCart{
+            display: flex;
+            height: 85px;
+            display: flex;
+            justify-content: space-around;
+
+            .imgCart{
+              width: auto;
+              margin-right: 15px;
+
+              img{
+                width: 72px;
+                height: 85px;
+                margin: 0;
+              }
+
+            }
+
+            .infCart{
+              min-width: 100px;
+              display: flex;
+              flex-direction: column;
+              white-space: nowrap;
+
+              .topText{
+                color: #222222;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+              }
+
+              .starsAccount{
+                margin-bottom: 5px;
+
+                i{
+                  font-size: 10px;
+                  color: #e4af48;
+                }
+
+              }
+
+              .quanAndPriceAccoun{
+                color: #f16d7f;
+                font-size: 12px;
+                font-weight: 400;
+              }
+
+            }
+
+            .delCart{
+              @include flexAlign;
+
+              i{
+                font-size: 16px;
+                color: #c0c0c0;
+                transition: .4s ease;
+
+                &:hover{
+                  cursor: pointer;
+                  color: black;
+                }
+
+              }
+
+            }
+
+          }
+
+          .hr{
+            height: 1px;
+            background-color: #ededed;
+            margin: 16px 0;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+          }
+
+          .totalBasketAccount{
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+
+            p{
+              text-transform: uppercase;
+              color: #222222;
+              font-size: 16px;
+              font-weight: 700;
+            }
+
+          }
+
+          button{
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+            margin-bottom: 10px;
+            background-color: #fff;
+            color: #4a4a4a;
+            border: 1px solid #eaeaea;
+            transition: .4s ease;
+
+            &:hover{
+              cursor: pointer;
+              border: 1px solid #f16d7f;
+              color: #f16d7f;
+            }
+
+          }
+
+        }
+
+        &:hover{
+
+          .buttonAccount{
+            cursor: pointer;
+          }
+
+          .dropAccountBasket{
+            transform: rotateX(0deg);
+            opacity: 1;
+          }
+
         }
 
       }
@@ -214,12 +446,30 @@ nav{
       list-style-type: none;
       text-transform: uppercase;
       height: 100%;
-      width: auto;
+      padding: 0 20px;
+      width: 100%;
       @include flexAlign;
+      justify-content: center;
+      transition: .4s ease;
+      white-space: nowrap;
 
       a{
+        transition: .4s ease;
         text-decoration: none;
         color: #222222;
+        width: 100%;
+        text-align: center;
+
+      }
+
+      &:hover{
+        background-color: #e8e8e8;
+        cursor: pointer;
+
+        a{
+          color: #ef5b70;
+        }
+
       }
 
     }
@@ -227,6 +477,15 @@ nav{
   }
 
 }
+
+
+@import 'singlePage/_singlePage.scss';
+
+@import 'product/_product.scss';
+
+@import 'index/_index.scss';
+
+
 
 .arrivals{
   height: 148px;
@@ -400,6 +659,7 @@ nav{
 
 
 .subscribe{
+  background-image: url(image/fonBeach.jpg);
   margin: 0 auto 0 auto;
   width: 100%;
   min-height: 438px;
