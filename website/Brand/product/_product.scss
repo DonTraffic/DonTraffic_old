@@ -10,6 +10,19 @@
   background-size: contain;
 }
 
+nav{
+
+  .content{
+
+    .navLiProduct:hover{
+      background-color: #f8f3f4;
+
+    }
+
+  }
+
+}
+
 .catalog{
   max-width: 1140px;
   @include flexAlign;
@@ -30,6 +43,13 @@
 
         i{
           transform: rotate(180deg);
+          z-index: -1;
+        }
+
+        &:hover{
+          i{
+            z-index: 0;
+          }
         }
 
       }
@@ -37,6 +57,7 @@
       summary{
         border-left: 5px solid #ef5b70;
         border-bottom: 1px solid #ebebeb;
+        background-color: rgba(255, 255, 255, 0);
         color: #6f6e6e;
         font-size: 14px;
         font-weight: 700;
@@ -44,9 +65,12 @@
         text-transform: uppercase;
         display: flex;
         justify-content: space-between;
+        transition: .4s ease;
 
         &:hover{
           cursor: pointer;
+          background-color: #f8f3f4;
+          color: #ef5b70;
         }
 
         &::-webkit-details-marker{

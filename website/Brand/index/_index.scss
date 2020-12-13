@@ -118,7 +118,7 @@
 
 }
 
-.feturedItems{
+.featuredItems{
   max-width: 1140px;
   min-height: 100px;
   margin: 0 auto;
@@ -151,11 +151,112 @@
     .card{
       height: 364px;
       width: 263px;
-      display: flex;
-      align-items: flex-end;
+
+      .hoverCartFetured{
+        height: 80%;
+        width: 100%;
+        transition: .4s ease;
+        background-color: rgba(57, 55, 55, 0.7);
+        @include flexAlign;
+        opacity: 0;
+
+        .gridContainer {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-gap: 8px;
+          grid-template-areas:
+            "addCart addCart"
+            "revert like";
+
+          .cartFun{
+            @include flexAlign;
+            border-radius: 3px;
+            border: 1px solid #ffffff;
+            transition: .4s ease;
+            padding: 5px 10px;
+
+            &:hover{
+              border: 1px solid #f16d7f;
+              background-color: black;
+              cursor: pointer;
+            }
+
+            img{
+              margin-right: 5px;
+            }
+
+          }
+
+          .addCart {
+            grid-area: addCart;
+            min-width: 123px;
+            min-height: 39px;
+
+            p{
+              color: #fff;
+            }
+
+          }
+          .revert {
+            grid-area: revert;
+            min-width: 57px;
+            min-height: 38px;
+
+            img{
+              margin: 0;
+            }
+
+          }
+          .like {
+            grid-area: like;
+            min-width: 57px;
+            min-height: 38px;
+
+            i{
+              color: #fff;
+            }
+
+          }
+
+        }
+
+      }
+
+      &:hover{
+        cursor: pointer;
+
+        .hoverCartFetured{
+          opacity: 1;
+        }
+
+      }
 
       .textContent{
-        height: 85px;
+        height: 25%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px 15px;
+        background-color: white;
+
+        p{
+          font-size: 13px;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .pricesText{
+          color: #f16d7f;
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+      }
+
+      .textContent{
+        height: 20%;
         width: 100%;
         display: flex;
         flex-direction: column;

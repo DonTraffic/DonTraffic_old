@@ -31,10 +31,46 @@
       </div>
 
       <div class="headerSearch">
-        <div class="buttonMenu">
-          <p>Browse</p>
-          <i class="fas fa-caret-down"></i>
+        <div class="buttonMenuContainer">
+
+          <button type="button" name="button" class="buttonMenu">
+            <p>Browse</p>
+            <i class="fas fa-caret-down"></i>
+          </button>
+
+          <div class="dropSearchMenu">
+
+              <p class="topText">Women</p>
+              <span class="hr"></span>
+              <a class="seconText">Dresses</a>
+              <a class="seconText">Tops</a>
+              <a class="seconText">Sweaters/Knits</a>
+              <a class="seconText">Jackets/Coats</a>
+              <a class="seconText">Blazers</a>
+              <a class="seconText">Denim</a>
+              <a class="seconText">Leggings/Pants</a>
+              <a class="seconText">Skirts/Shorts</a>
+              <a class="seconText">Accessories</a>
+              <a class="seconText">Bags/Purses</a>
+              <a class="seconText">Swimwear/Underwear</a>
+              <a class="seconText">Nightwear</a>
+              <a class="seconText">Shoes</a>
+              <a class="seconText">Beauty</a>
+
+              <p class="topText">Men</p>
+              <span class="hr"></span>
+              <a class="seconText">Tees/Tank tops</a>
+              <a class="seconText">Shirts/Polos</a>
+              <a class="seconText">Sweaters</a>
+              <a class="seconText">Sweatshirts/Hoodies</a>
+              <a class="seconText">Blazers</a>
+              <a class="seconText">Blazers</a>
+              <a class="seconText">Jackets/vests</a>
+
+          </div>
+
         </div>
+
         <input type="text" placeholder="Search for item...">
         <span class="buttomSearch">
           <i class="fas fa-search"></i>
@@ -43,9 +79,65 @@
 
       <div class="headerBasket">
         <img src="../image/basket.png" alt="basket">
-        <div class="containerAccount">
-          <p>My account</p>
-          <i class="fas fa-caret-down"></i>
+        <div class="buttonAccountContainer">
+          <button class="buttonAccount">
+            <p>My account</p>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropAccountBasket">
+
+            <div class="basketCart">
+              <div class="imgCart">
+                <img src="../image/accountBasketImg1.jpg" alt="imgCart">
+              </div>
+              <div class="infCart">
+                <p class="topText">Rebox Zane</p>
+                <span class="starsAccount">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </span>
+                <span class="quanAndPriceAccoun">
+                  <b class="quantityBasketAccoun">1</b>  x  <b class="priceBasketAccoun">$250</b>
+                </span>
+              </div>
+              <div class="delCart"><i class="fas fa-times-circle"></i></div>
+            </div>
+            <span class="hr"></span>
+
+            <div class="basketCart">
+              <div class="imgCart">
+                <img src="../image/accountBasketImg2.jpg" alt="imgCart">
+              </div>
+              <div class="infCart">
+                <p class="topText">Rebox Zane</p>
+                <span class="starsAccount">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </span>
+                <span class="quanAndPriceAccoun">
+                  <b class="quantityBasketAccoun">1</b>  x  <b class="priceBasketAccoun">$250</b>
+                </span>
+              </div>
+              <div class="delCart"><i class="fas fa-times-circle"></i></div>
+            </div>
+            <span class="hr"></span>
+
+            <div class="totalBasketAccount">
+              <p>total</p>
+              <p>$500.00</p>
+            </div>
+
+            <button class="checkoutCartAccount" name="checkout">checkout</button>
+
+            <button class="goToCartAccount" name="goToCart">go to cart</button>
+
+          </div>
         </div>
       </div>
 
@@ -55,13 +147,13 @@
   <nav>
 
     <ol class="content">
-      <li><a href="">Home</a></li>
-      <li><a href="">Man</a></li>
-      <li><a href="">Women</a></li>
-      <li><a href="">Kids</a></li>
-      <li><a href="">Accoseriese</a></li>
-      <li><a href="">Featured</a></li>
-      <li><a href="">Hot Deals</a></li>
+      <li class="navLiProduct"><a href="../index.html">Home</a></li>
+      <li class="navLiProduct active"><a href="">Man</a></li>
+      <li class="navLiProduct"><a href="">Women</a></li>
+      <li class="navLiProduct"><a href="">Kids</a></li>
+      <li class="navLiProduct"><a href="">Accoseriese</a></li>
+      <li class="navLiProduct"><a href="">Featured</a></li>
+      <li class="navLiProduct"><a href="">Hot Deals</a></li>
     </ol>
 
   </nav>
@@ -104,44 +196,51 @@
     </div>
     <p class="price">$561</p>
     <span class="linebottom"></span>
-    <div class="filter">
+    <form class="formSinglePageInform" action="index.html" method="post">
 
-      <div class="color">
-        <p>CHOOSE COLOR</p>
-        <div class="selected">
-          <span class="pigment"></span>
-          <b>Red</b>
-          <i class="fas fa-angle-down"></i>
+      <div class="filter">
+
+        <div class="color">
+          <p>CHOOSE COLOR</p>
+          <div class="selected">
+            <span class="pigment"></span>
+            <b>Red</b>
+            <i class="fas fa-angle-down"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="color">
-        <p>CHOOSE SIZE</p>
-        <div class="selected">
-          <b>XXL</b>
-          <i class="fas fa-angle-down"></i>
+        <div class="color">
+          <p>CHOOSE SIZE</p>
+          <div class="selected">
+            <b>XXL</b>
+            <i class="fas fa-angle-down"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="color">
-        <p>QUANTITY</p>
-        <div class="selected">
-          <b>2</b>
-          <i class="fas fa-angle-down"></i>
+        <div class="color">
+          <p>QUANTITY</p>
+          <div class="selected">
+            <b>2</b>
+            <i class="fas fa-angle-down"></i>
+          </div>
         </div>
-      </div>
 
-    </div>
-    <button type="button" name="button" class="addCart">
-      <img src="../image/basketWhite.png" alt="basket" class="basketHover">
-      <img src="../image/basketPink.png" alt="basket" class="basket">
-      <p>Add to Cart</p>
-    </button>
+      </div>
+      <button type="button" name="button" class="addCart">
+        <img src="../image/basketWhite.png" alt="basket" class="basketHover">
+        <img src="../image/basketPink.png" alt="basket" class="basket">
+        <p>Add to Cart</p>
+      </button>
+
+    </form>
+
   </section>
 
   <section class="youLike">
     <p class="textTop">you may like also</p>
-    <div class="featureItems">
+    <div class="featuredItems">
+
+      <div class="container">
 
         <div class="card items1">
           <div class="cardHover">
@@ -226,6 +325,8 @@
             <p class="pricesText">$52.00</p>
           </div>
         </div>
+
+      </div>
 
     </div>
 
