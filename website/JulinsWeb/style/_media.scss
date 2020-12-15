@@ -82,3 +82,39 @@
   }
 
 }
+
+
+
+//
+
+@media (max-width: 1140px){
+
+  .registrBestAccountPeopleNone{
+    display: none;
+  }
+
+}
+
+@media (max-width: 780px){
+
+  .topGirlRegistr{
+    flex-wrap: wrap;
+  }
+
+  .topManRegistr{
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (max-width: 426px){
+
+  .information{
+
+    .container{
+      border-radius: 0px;
+    }
+    
+  }
+
+}

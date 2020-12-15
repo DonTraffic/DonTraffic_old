@@ -1,4 +1,4 @@
-@import '_media';
+
 
 .adminPanel{
   position: fixed;
@@ -33,3 +33,6 @@ $mainColor: rgb(182, 67, 143);
 }
 
 @import '../registrPage/_registrPage';
+
+
+@import '_media';
