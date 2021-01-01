@@ -3,9 +3,39 @@
 .adminPanel{
   position: fixed;
   top: 20%;
-  left: 0;
-  background-color: rgba(168, 130, 141, 0.5);
+  left: -90px;
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 10;
+  display: flex;
+  border-radius: 0 10px 10px 0;
+  transition: .4s ease;
+
+  &:hover{
+    left: 0px;
+  }
+
+  .content{
+    width: 80%;
+    padding: 10px;
+
+    p{
+      margin-bottom: 5px;
+    }
+
+  }
+
+  .arrowAdmin{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+  }
+
 }
 
 $mainColor: rgb(182, 67, 143);
@@ -32,7 +62,4 @@ $mainColor: rgb(182, 67, 143);
 
 }
 
-@import '../registrPage/_registrPage';
-
-
-@import '_media';
+@import '_registrPage';

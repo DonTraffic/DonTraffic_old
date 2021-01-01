@@ -8,23 +8,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- style  -->
-  <link rel="stylesheet" href="../style/style.css">
-  <link href="../library/blockScroll/jquery.fullPage.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
 
 <!-- script -->
-  <script src="../script/jQuery.js"></script>
-  <script src="../script/script.js"></script>
+  <script src="script/jQuery.js"></script>
   <script src="https://kit.fontawesome.com/88f86b5120.js" crossorigin="anonymous"></script>
-  <!-- library scrollBlock -->
-  <script src="../library/blockScroll/jquery.fullPage.min.js"></script>
 
-  <title>registration</title>
+  <!-- library scrollBlock -->
+  <script src="library/blockScroll/jquery.fullPage.min.js"></script>
+  <link href="library/blockScroll/jquery.fullPage.css" type="text/css" rel="stylesheet">
+
+  <title>Registration</title>
 </head>
 <body class="registrPageBody">
 
   <div class="adminPanel">
-    <p>adminPanel</p>
-    <a href="../photoEditor/photo-editor.html">photoEditor</a>
+    <div class="content">
+      <p>adminPanel</p>
+      <a href="../photoEditor/photo-editor.html">photoEditor</a>
+    </div>
+    <div class="arrowAdmin">
+      <i class="fas fa-angle-double-right"></i>
+    </div>
   </div>
 
   <div id="fullpage">
@@ -58,7 +63,7 @@
       </div>
     </section>
 
-      <section class="information section" data-anchor="informationAnchor">
+    <section class="information section" data-anchor="informationAnchor">
       <div class="container">
         <h2>Топы людей</h2>
 
@@ -66,7 +71,7 @@
 
             <div class="accounGenderNameRegistr accounGenderNameRegistrWoman">
               Девушки
-              <img src="../img/woman.svg" alt="womanSvg">
+              <img src="img/woman.svg" alt="womanSvg">
             </div>
 
             <div class="registrBestAccountContainer">
@@ -164,7 +169,7 @@
 
             <div class="accounGenderNameRegistr accounGenderNameRegistrTop">
               Парни
-              <img src="../img/man.svg" alt="manSvg">
+              <img src="img/man.svg" alt="manSvg">
             </div>
 
             <div class="registrBestAccountContainer">
@@ -258,7 +263,7 @@
 
             <div class="accounGenderNameRegistr accounGenderNameRegistrBottom">
               Парни
-              <img src="../img/man.svg" alt="manSvg">
+              <img src="img/man.svg" alt="manSvg">
             </div>
 
           </div>
@@ -267,7 +272,45 @@
 
     </section>
 
+    <section class="test section" data-anchor="testAnchor">
+      <div class="container">
+        <div class="sliderGrid">
+
+          <div class="arrow arrowLeft"><i class="fas fa-angle-left"></i></div>
+          <div class="arrow arrowRight"><i class="fas fa-angle-right"></i></div>
+          <div class="imageSlider">
+
+            <div class="registrBestAccountPeopleSlider" onclick="funRegSligerHover()">
+              <div class="registrBestAccountPeopleSliderHover">
+                <h3>Ника Потапова</h3>
+                <div class="registrBestAccountPeopleSliderHoverGrid">
+                  <div class="likeBestAccountRegistrSlider">
+                    <i class="far fa-heart" class="likeBARSlider"></i>
+                  </div>
+                  <div class="mailBestAccountRegistrSlider">
+                    <i class="far fa-envelope"></i>
+                  </div>
+                  <div class="linkBestAccountRegistrSlider">
+                    Перейти
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <button class="revertGender" onclick="funRegSligerGender()">
+            <p class="revertGenderText">Девушки</p>
+            <i class="fas fa-retweet"></i>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
   </div>
+
+<!-- script -->
+  <script src="script/script.js"></script>
 
 <!-- library blockScroll -->
 
@@ -276,9 +319,9 @@
       $('#fullpage').fullpage();
       menu: '#navigation'
     });
-    new fullpage('#fullpage', {
-    	anchors:['informationAn']
-    });
+    // new fullpage('#fullpage', {
+    // 	anchors:['informationAn']
+    // });
   </script>
 
 </body>
