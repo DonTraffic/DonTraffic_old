@@ -15,7 +15,7 @@
   height: 600px;
   width: 100%;
   background-color: #e8e8e8;
-  background-image: url(image/backgroundOne.jpg);
+  background-image: url(../image/backgroundOne.jpg);
   background-repeat: no-repeat;
   background-position: center;
   @include flexAlign;
@@ -94,23 +94,23 @@
 
   .forMen {
     grid-area: forMen;
-    background-image: url(image/forMen.jpg);
+    background-image: url(../image/forMen.jpg);
     @include fonAlign;
   }
   .women {
     grid-area: women;
-    background-image: url(image/women.jpg);
+    background-image: url(../image/women.jpg);
     @include fonAlign;
   }
   .forKids {
     grid-area: forKids;
-    background-image: url(image/forKids.jpg);
+    background-image: url(../image/forKids.jpg);
     @include fonAlign;
   }
   .accesories {
     grid-area: accesories;
-    background-image: url(image/accesories.jpg);
-    background-size: 362px;
+    background-image: url(../image/accesories.jpg);
+    background-size: px;
     background-position: right;
     background-repeat: no-repeat;
     background-color: #dadad2;
@@ -281,35 +281,35 @@
     }
 
     .items1 {
-      background-image: url(image/items1.jpg);
+      background-image: url(../image/items1.jpg);
       @include fonAlign;
     }
     .items2 {
-      background-image: url(image/items2.jpg);
+      background-image: url(../image/items2.jpg);
       @include fonAlign;
     }
     .items3 {
-      background-image: url(image/items3.jpg);
+      background-image: url(../image/items3.jpg);
       @include fonAlign;
     }
     .items4 {
-      background-image: url(image/items4.jpg);
+      background-image: url(../image/items4.jpg);
       @include fonAlign;
     }
     .items5 {
-      background-image: url(image/items5.jpg);
+      background-image: url(../image/items5.jpg);
       @include fonAlign;
     }
     .items6 {
-      background-image: url(image/items6.jpg);
+      background-image: url(../image/items6.jpg);
       @include fonAlign;
     }
     .items7 {
-      background-image: url(image/items7.jpg);
+      background-image: url(../image/items7.jpg);
       @include fonAlign;
     }
     .items8 {
-      background-image: url(image/items8.jpg);
+      background-image: url(../image/items8.jpg);
       @include fonAlign;
     }
 
@@ -348,13 +348,13 @@
   .blockImg{
     width: 60%;
     height: 100%;
-    background-image: url(image/fonGirlCold.jpg);
+    background-image: url(../image/fonGirlCold.jpg);
     @include fonAlign;
 
     .blockImgLayer{
       height: 100%;
       width: 100%;
-      background-image: url(image/fonGirlColdLayer.png);
+      background-image: url(../image/fonGirlColdLayer.png);
       @include fonAlign;
 
       div{

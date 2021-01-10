@@ -12,7 +12,7 @@
 
   <link rel="shortcut icon" href="image/logo.png" type="image/png">
   <link rel="stylesheet" href="style/style.css">
-  <title>Brand</title>
+  <title>Single page</title>
 </head>
 <body>
 
@@ -586,58 +586,97 @@
 
   </nav>
 
+
   <div class="hidden">
     <h1>Welcom to the brand shop</h1>
   </div>
 
-  <section class="slider">
-    <div class="content">
-      <span class="partition"></span>
-      <div>
-        <b>THE BRAND</b>
-        <p>OF LUXERIOUS <b>FASHION</b></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="minCatalog">
-    <div class="forMen">
-      <div class="blockText">
-        <p>hot deal</p>
-        <b>for men</b>
-      </div>
-    </div>
-    <div class="women">
-      <div class="blockText">
-        <p>30% offer</p>
-        <b>women</b>
-      </div>
-    </div>
-    <div class="forKids">
-      <div class="blockText">
-        <p>new arrivals</p>
-        <b>for kids</b>
-      </div>
-    </div>
-    <div class="accesories">
-      <div class="blockText">
-        <p>LUXIROUS & trendy</p>
-        <b>ACCESORIES</b>
-      </div>
-    </div>
-  </section>
-
-  <section class="featuredItems">
-    <p class="topText">Fetured Items</p>
-    <p class="phoneticText">Shop for items based on what we featured in this week</p>
-
+  <section class="arrivals">
     <div class="container">
+      <h1 class="topText">New Arrivals</h1>
+      <p class="wayText"><a href="">Home/</a> <a href="">Men/</a> New Arrivals</p>
+    </div>
+  </section>
+
+  <section class="sliderSinglePage">
+    <button type="button" name="arrow">
+      <i class="fas fa-angle-left"></i>
+    </button>
+    <img src="image/sliderImg.jpg" alt="">
+    <button type="button" name="arrow">
+      <i class="fas fa-angle-right"></i>
+    </button>
+  </section>
+
+  <section class="description">
+    <p class="floorCollection">WOMEN COLLECTION</p>
+    <div class="line"><span class="lineTop"></span></div>
+    <p class="nameCollection">Moschino Cheap And Chic</p>
+    <p class="textCollection">
+      Compellingly actualize fully researched processes
+      before proactive outsourcing. Progressively syndicate
+      collaborative architectures before cutting-edge services.
+      Completely visualize parallel core competencies rather than
+      exceptional portals.
+    </p>
+    <div class="specifications">
+      <p class="material">material:<b>cotton</b></p>
+      <p class="designer">designer:<b>binburhan</b></p>
+    </div>
+    <p class="price">$561</p>
+    <span class="linebottom"></span>
+    <form class="formSinglePageInform" action="index.html" method="post">
+
+      <div class="singlePageInform">
+
+        <div class="formSinglePageColor" onclick="funFormSP('selectedColorActive', selectedColorActiveStatus)">
+          <p>CHOOSE COLOR</p>
+          <div class="selected">
+            <span class="formSinglePageColorPigmentActive"></span>
+            <b>Red</b>
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </div>
+
+        <div class="formSinglePageSize">
+          <p>CHOOSE SIZE</p>
+          <div class="selected">
+            <b>XXL</b>
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </div>
+
+        <div class="formSinglePageQuantity">
+          <p>QUANTITY</p>
+          <div class="selected">
+            <b>2</b>
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <button type="button" name="button" class="addCart">
+        <img src="image/basketWhite.png" alt="basket" class="basketHover">
+        <img src="image/basketPink.png" alt="basket" class="basket">
+        <p>Add to Cart</p>
+      </button>
+
+    </form>
+
+  </section>
+
+  <section class="youLike">
+    <p class="textTop">you may like also</p>
+    <div class="featuredItems">
+
+      <div class="container">
 
         <div class="card items1">
-          <div class="hoverCartFetured">
+          <div class="cardHover">
             <div class="gridContainer">
               <div class="cartFun addCart">
-                <img src="image/basketWhite.png" alt="basket">
+                <img src="image/basketWhite.png" alt="">
                 <p>Add to Cart</p>
               </div>
               <div class="cartFun revert">
@@ -655,10 +694,10 @@
         </div>
 
         <div class="card items2">
-          <div class="hoverCartFetured">
+          <div class="cardHover">
             <div class="gridContainer">
               <div class="cartFun addCart">
-                <img src="image/basketWhite.png" alt="basket">
+                <img src="image/basketWhite.png" alt="">
                 <p>Add to Cart</p>
               </div>
               <div class="cartFun revert">
@@ -676,10 +715,10 @@
         </div>
 
         <div class="card items3">
-          <div class="hoverCartFetured">
+          <div class="cardHover">
             <div class="gridContainer">
               <div class="cartFun addCart">
-                <img src="image/basketWhite.png" alt="basket">
+                <img src="image/basketWhite.png" alt="">
                 <p>Add to Cart</p>
               </div>
               <div class="cartFun revert">
@@ -697,10 +736,10 @@
         </div>
 
         <div class="card items4">
-          <div class="hoverCartFetured">
+          <div class="cardHover">
             <div class="gridContainer">
               <div class="cartFun addCart">
-                <img src="image/basketWhite.png" alt="basket">
+                <img src="image/basketWhite.png" alt="">
                 <p>Add to Cart</p>
               </div>
               <div class="cartFun revert">
@@ -717,183 +756,51 @@
           </div>
         </div>
 
-        <div class="card items5">
-          <div class="hoverCartFetured">
-            <div class="gridContainer">
-              <div class="cartFun addCart">
-                <img src="image/basketWhite.png" alt="basket">
-                <p>Add to Cart</p>
-              </div>
-              <div class="cartFun revert">
-                <img src="image/revertWhite.png" alt="revert">
-              </div>
-              <div class="cartFun like">
-                <i class="far fa-heart"></i>
-              </div>
-            </div>
-          </div>
-          <div class="textContent">
-            <p>Mango  People  T-shirt</p>
-            <p class="pricesText">$52.00</p>
-          </div>
-        </div>
-
-        <div class="card items6">
-          <div class="hoverCartFetured">
-            <div class="gridContainer">
-              <div class="cartFun addCart">
-                <img src="image/basketWhite.png" alt="basket">
-                <p>Add to Cart</p>
-              </div>
-              <div class="cartFun revert">
-                <img src="image/revertWhite.png" alt="revert">
-              </div>
-              <div class="cartFun like">
-                <i class="far fa-heart"></i>
-              </div>
-            </div>
-          </div>
-          <div class="textContent">
-            <p>Mango  People  T-shirt</p>
-            <p class="pricesText">$52.00</p>
-          </div>
-        </div>
-
-        <div class="card items7">
-          <div class="hoverCartFetured">
-            <div class="gridContainer">
-              <div class="cartFun addCart">
-                <img src="image/basketWhite.png" alt="basket">
-                <p>Add to Cart</p>
-              </div>
-              <div class="cartFun revert">
-                <img src="image/revertWhite.png" alt="revert">
-              </div>
-              <div class="cartFun like">
-                <i class="far fa-heart"></i>
-              </div>
-            </div>
-          </div>
-          <div class="textContent">
-            <p>Mango  People  T-shirt</p>
-            <p class="pricesText">$52.00</p>
-          </div>
-        </div>
-
-        <div class="card items8">
-          <div class="hoverCartFetured">
-            <div class="gridContainer">
-              <div class="cartFun addCart">
-                <img src="image/basketWhite.png" alt="basket">
-                <p>Add to Cart</p>
-              </div>
-              <div class="cartFun revert">
-                <img src="image/revertWhite.png" alt="revert">
-              </div>
-              <div class="cartFun like">
-                <i class="far fa-heart"></i>
-              </div>
-            </div>
-          </div>
-          <div class="textContent">
-            <p>Mango  People  T-shirt</p>
-            <p class="pricesText">$52.00</p>
-          </div>
-        </div>
+      </div>
 
     </div>
-
-    <a class="buttonMenu" href="#">Browse All Product &#8594;</a>
 
   </section>
 
-  <section class="banner">
-    <div class="blockImg">
-      <div class="blockImgLayer">
-        <div>
-          <p class="topText">30% <b>OFFER</b></p>
-          <p class="pricesText">FOR WOMEN</p>
-        </div>
-      </div>
-    </div>
-    <div class="BlockFeature">
-      <div class="grid-container">
-        <div class="blockIcon">
-          <img class="icon1" src="image/iconTruck.png" alt="truck">
-        </div>
-        <div class="blockName">
-          Free Delivery
-        </div>
-        <div class="blockText">
-          Worldwide delivery on all.
-          Authorit tively morph next-generation innov tion
-          with extensive models.
-        </div>
-      </div>
-      <div class="grid-container">
-        <div class="blockIcon">
-          <img class="icon2" src="image/iconSales.png" alt="truck">
-        </div>
-        <div class="blockName">
-          Free Delivery
-        </div>
-        <div class="blockText">
-          Worldwide delivery on all.
-          Authorit tively morph next-generation innov tion
-          with extensive models.
-        </div>
-      </div>
-      <div class="grid-container">
-        <div class="blockIcon">
-          <img class="icon3" src="image/iconQuality.png" alt="truck">
-        </div>
-        <div class="blockName">
-          Free Delivery
-        </div>
-        <div class="blockText">
-          Worldwide delivery on all.
-          Authorit tively morph next-generation innov tion
-          with extensive models.
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <section class="subscribe">
-    <div class="content">
-      <div class="reviewBlock">
-        <div class="container">
-          <span class="imgBlock">
-            <img src="image/womenReview.jpg" alt="review">
-          </span>
-          <div>
-            <div class="textBlock">
-              <p>
-                “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
-                a pulvinar purus condimentum a. Aliquam condimentum
-                mattis neque sed pretium”
-              </p>
-            </div>
-            <div class="nameBlock">
-              <p class="topText">Bin Burhan</p>
-              <p class="pricesText">Dhaka, Bd</p>
-            </div>
-            <span class="sliderBlock">
-              <span></span>
-              <span></span>
-              <span></span>
+    <div class="layerFon">
+      <div class="content">
+        <div class="reviewBlock">
+          <div class="container">
+            <span class="imgBlock">
+              <img src="image/womenReview.jpg" alt="review">
             </span>
+            <div class="containerText">
+              <div class="textBlock">
+                <p>
+                  “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                  a pulvinar purus condimentum a. Aliquam condimentum
+                  mattis neque sed pretium”
+                </p>
+              </div>
+              <div class="nameBlock">
+                <p class="topText">Bin Burhan</p>
+                <p class="pricesText">Dhaka, Bd</p>
+              </div>
+              <span class="sliderBlock">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="subscribeBlock">
-        <div class="content">
-          <p class="topText">Subscribe</p>
-          <p class="pricesText">FOR OUR NEWLETTER AND PROMOTION</p>
-          <span>
-            <input type="text" name="email" placeholder="Enter Your Email">
-            <button type="button" name="Subscribe">Subscribe</button>
-          </span>
+        <div class="subscribeBlock">
+          <div class="content">
+            <p class="topText">Subscribe</p>
+            <p class="pricesText">FOR OUR NEWLETTER AND PROMOTION</p>
+            <span>
+              <input type="text" name="email" placeholder="Enter Your Email">
+              <button type="button" name="Subscribe">Subscribe</button>
+            </span>
+          </div>
         </div>
       </div>
     </div>

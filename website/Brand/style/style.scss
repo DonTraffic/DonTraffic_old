@@ -4,8 +4,58 @@
   background-color: rgba(43, 43, 43, 0.5);
   z-index: 100;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+  left: -80px;
+  transition: .4s ease;
+  &:hover{
+    left: 0;
+    i{transform: rotate(180deg);}
+  }
+  .DTPage{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    b{text-align: center;}
+    a{
+      color: black;
+      text-decoration: none;
+      padding: 5px;
+      transition: .4s ease;
+      text-align: center;
+      &:hover{
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+  .DTArrow{
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    i{
+      transition: .4s ease;
+      font-size: 20px;
+    }
+  }
 }
+
+@media (max-width: 1370px) {
+
+  .headerBasket{
+
+    .buttonAccountContainer{
+
+      .dropAccountBasket{
+        left: -112px;
+      }
+
+    }
+
+  }
+
+}
+
 
 @mixin flexAlign{
   display: flex;
@@ -47,6 +97,10 @@
       background-color:#292929;
     }
   }
+}
+
+html{
+  overflow-x:hidden;
 }
 
 header{
@@ -149,6 +203,23 @@ header{
           padding: 15px;
           padding-top: 0;
           box-shadow:0px 0px 21px 1px rgba(0,0,0,0.08);
+          z-index: 1;
+
+          &::before {
+            content: '';
+
+            display: block;
+            width: 0;
+            height: 0;
+            box-shadow:0px 0px 21px 1px rgba(0,0,0,0.08);
+            border-top: 9px solid transparent;
+            border-bottom: 9px solid transparent;
+            border-right: 7px solid #ffffff;
+            transform: rotate(90deg);
+            position: absolute;
+            top: -13px;
+            left: 69px;
+          }
 
           .topText{
             color: #232323;
@@ -276,6 +347,7 @@ header{
         }
 
         .dropAccountBasket{
+          top: 46px;
           z-index: 2;
           position: absolute;
           transform: rotateX(90deg);
@@ -287,6 +359,22 @@ header{
           box-shadow:0px 0px 21px 1px rgba(0,0,0,0.08);
           padding: 20px;
           padding-bottom: 10px;
+
+          &::before {
+            content: '';
+
+            display: block;
+            width: 0;
+            height: 0;
+            box-shadow:0px 0px 21px 1px rgba(0,0,0,0.08);
+            border-top: 9px solid transparent;
+            border-bottom: 9px solid transparent;
+            border-right: 7px solid #ffffff;
+            transform: rotate(90deg);
+            position: absolute;
+            top: -13px;
+            left: 69px;
+          }
 
           .basketCart{
             display: flex;
@@ -434,27 +522,43 @@ nav{
     height: 100%;
     max-width: 680px;
     @include flexAlign;
+    text-shadow: none;
 
     .active{
       border-bottom: 3px solid #ef5b70;;
     }
 
-    li{
+    .buttonNavContainer{
+      position: relative;
+      transition: .4s ease;
       display: inline;
-      text-decoration: none;
       font-size: 14px;
       font-weight: 700;
-      list-style-type: none;
       text-transform: uppercase;
       height: 100%;
       padding: 0 20px;
       width: 100%;
-      @include flexAlign;
-      justify-content: center;
-      transition: .4s ease;
       white-space: nowrap;
 
-      a{
+      &:hover{
+        background-color: #e8e8e8;
+        cursor: pointer;
+
+        .buttonNavElem{
+          color: #ef5b70;
+        }
+
+        .buttonNavHover{
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+
+      .buttonNavElem{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        @include flexAlign;
         transition: .4s ease;
         text-decoration: none;
         color: #222222;
@@ -463,14 +567,102 @@ nav{
 
       }
 
-      &:hover{
-        background-color: #e8e8e8;
-        cursor: pointer;
+      .buttonNavHover{
+        position: absolute;
+        border-radius: 5px;
+        background-color: #ffffff;
+        transform: rotateX(90deg);
+        transform-origin: top;
+        transition: 0.4s ease;
+        opacity: 0;
+        box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.08);
+        display: flex;
+        left: 0;
 
-        a{
-          color: #ef5b70;
+        &::before {
+          content: '';
+
+          display: block;
+          width: 0;
+          height: 0;
+          box-shadow:0px 0px 21px 1px rgba(0,0,0,0.08);
+          border-top: 9px solid transparent;
+          border-bottom: 9px solid transparent;
+          border-right: 7px solid #ffffff;
+          transform: rotate(90deg);
+          position: absolute;
+          top: -13px;
+          left: 39px;
         }
 
+        div{
+          margin: 15px;
+          margin-top: 0;
+          min-width: 235px;
+
+          h3{
+            color: #232323;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 15px;
+          }
+
+          .hr{
+            width: 100%;
+            height: 1px;
+            display: block;
+            background-color: #e8e8e8;
+            margin: 8px 0;
+          }
+
+          a{
+            margin: 10px 0;
+            display: block;
+            text-decoration: none;
+            text-transform: none;
+            color: #646464;
+            font-size: 14px;
+            font-weight: 400;
+            transition: .4s ease;
+
+            &:hover{
+              color: black;
+              cursor: pointer;
+            }
+
+          }
+
+          .navSuperSaleImg{
+            background-image: url(../image/navMenuSale.jpg);
+            @include fonAlign;
+            width: 255px;
+            height: 118px;
+            margin: 0;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 10px;
+
+            p{
+              color: #ffffff;
+              font-size: 22px;
+              font-weight: 900;
+            }
+
+          }
+
+        }
+
+      }
+
+      .buttonNavHoverSpec1{
+        left: -240px;
+      }
+
+      .buttonNavHoverSpec2{
+        left: -480px;
       }
 
     }
@@ -480,12 +672,15 @@ nav{
 }
 
 
-@import 'singlePage/_singlePage.scss';
+@import '_singlePage.scss';
 
-@import 'product/_product.scss';
+@import '_product.scss';
 
-@import 'index/_index.scss';
+@import '_index.scss';
 
+@import '_checkout.scss';
+
+@import '_shoppingCart.scss';
 
 
 .arrivals{
@@ -670,7 +865,7 @@ nav{
 
 
 .subscribe{
-  background-image: url(image/fonBeach.jpg);
+  background-image: url(../image/fonBeach.jpg);
   margin: 0 auto 0 auto;
   width: 100%;
   min-height: 438px;
