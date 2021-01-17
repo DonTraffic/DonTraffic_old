@@ -25,7 +25,7 @@
   <div class="adminPanel">
     <div class="content">
       <p>adminPanel</p>
-      <a href="../photoEditor/photo-editor.html">photoEditor</a>
+      <a href="index.php">Главная</a>
     </div>
     <div class="arrowAdmin">
       <i class="fas fa-angle-double-right"></i>
@@ -55,17 +55,49 @@
           </div>
           <a href="#informationAnchor"><i class="fas fa-angle-double-down"></i></a>
         </div>
-        <div class="enterRegistrMob">
-          <button type="button" name="enter">Войти</button>
-          <a href="#informationAnchor"><i class="fas fa-angle-double-down"></i></a>
-
-        </div>
       </div>
     </section>
 
     <section class="information section" data-anchor="informationAnchor">
       <div class="container">
         <h2>Топы людей</h2>
+
+        <div class="sliderGrid">
+
+          <div class="arrow arrowLeft"><i class="fas fa-angle-left"></i></div>
+          <div class="arrow arrowRight"><i class="fas fa-angle-right"></i></div>
+          <div class="imageSlider">
+
+            <div class="registrBestAccountPeopleSlider">
+              <div class="registrBestAccountPeopleSliderHover">
+                <div class="contentTitleSlider">
+                  <button type="button" name="buttonSliderClose" class="buttonSliderClose">
+                    Закрыть
+                    <i class="far fa-times-circle"></i>
+                  </button>
+                  <h3>Ника Потапова</h3>
+                </div>
+                <div class="registrBestAccountPeopleSliderHoverGrid">
+                  <div class="likeBestAccountRegistrSlider">
+                    <i class="far fa-heart" class="likeBARSlider"></i>
+                  </div>
+                  <div class="mailBestAccountRegistrSlider">
+                    <i class="far fa-envelope"></i>
+                  </div>
+                  <div class="linkBestAccountRegistrSlider">
+                    Перейти
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <button class="revertGender" onclick="funRegSligerGender()">
+            <p class="revertGenderText">Девушки</p>
+            <i class="fas fa-retweet"></i>
+          </button>
+
+        </div>
 
           <div class="topGirlRegistr">
 
@@ -270,41 +302,6 @@
 
       </div>
 
-    </section>
-
-    <section class="test section" data-anchor="testAnchor">
-      <div class="container">
-        <div class="sliderGrid">
-
-          <div class="arrow arrowLeft"><i class="fas fa-angle-left"></i></div>
-          <div class="arrow arrowRight"><i class="fas fa-angle-right"></i></div>
-          <div class="imageSlider">
-
-            <div class="registrBestAccountPeopleSlider" onclick="funRegSligerHover()">
-              <div class="registrBestAccountPeopleSliderHover">
-                <h3>Ника Потапова</h3>
-                <div class="registrBestAccountPeopleSliderHoverGrid">
-                  <div class="likeBestAccountRegistrSlider">
-                    <i class="far fa-heart" class="likeBARSlider"></i>
-                  </div>
-                  <div class="mailBestAccountRegistrSlider">
-                    <i class="far fa-envelope"></i>
-                  </div>
-                  <div class="linkBestAccountRegistrSlider">
-                    Перейти
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <button class="revertGender" onclick="funRegSligerGender()">
-            <p class="revertGenderText">Девушки</p>
-            <i class="fas fa-retweet"></i>
-          </button>
-
-        </div>
-      </div>
     </section>
 
   </div>

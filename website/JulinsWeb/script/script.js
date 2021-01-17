@@ -66,10 +66,12 @@ function funRegSligerGender() {
     if (statusSliger == 0) {
       $('.revertGenderText').html('Парни');
       $('.registrBestAccountPeopleSlider').css('backgroundImage', 'url(img/photoAccount/man1.jpg)');
+      $('.registrBestAccountPeopleSliderHover').css('top', '100%');
       statusSliger = 1;
     } else{
       $('.revertGenderText').html('Девушки');
       $('.registrBestAccountPeopleSlider').css('backgroundImage','url(img/photoAccount/girl1.jpg)');
+      $('.registrBestAccountPeopleSliderHover').css('top', '100%');
       statusSliger = 0;
     }
 
@@ -77,63 +79,29 @@ function funRegSligerGender() {
 
 }
 //функционал слайдера в регистрации, при нажатии на фото
-function funRegSligerHover() {
-    $('.registrBestAccountPeopleSliderHover').css('top', '0');
-}
-
-
-//функция свайпа
-let startPoint;
-let moved = false;
-let slider = document.getElementsByClassName('registrBestAccountPeopleSlider')[0];
-
-// function funSliderRegisterTouch(e) {
-//   e.preventDefault();
-//   startPoint = e.changedTouches[0].pageX;
-// }
-
-// function funSliderRegisterMove(e) {
-//   if (moved) {
-//     return;
-//   }
-//   e.preventDefault();
-//   if (e.changedTouches[0].pageX > startPoint + slider.offsetWidth / 4) {
-//     console.log("направо");
-//     moved = true;
-//   }
-//   if (e.changedTouches[0].pageX < startPoint - slider.offsetWidth / 4) {
-//     console.log("налево");
-//     moved = true;
-//   }
-// }
 
 $('.registrBestAccountPeopleSlider').bind('touchstart', function(e) {
-    e.preventDefault();
-    startPoint = e.changedTouches[0].pageY;
+    e.stopPropagation();
     $('.registrBestAccountPeopleSliderHover').css('top', '0');
   }
 );
 
-$(".registrBestAccountPeopleSlider").bind('touchmove', function(e) {
-    e.preventDefault();
-    if (e.changedTouches[0].pageY > startPoint + slider.offsetHeight / 20) {//down
-      $('.registrBestAccountPeopleSliderHover').css('top', '100%');
-    }
-    // if (e.changedTouches[0].pageY < startPoint - slider.offsetHeight / 20) {//top
-    //   $('.registrBestAccountPeopleSliderHover').css('top', '0');
-    // }
-  }
-);
+$('.registrBestAccountPeopleSlider').click(function(e) {
+  e.stopPropagation();
+  $('.registrBestAccountPeopleSliderHover').css('top', '0');
+});
 
-// $(".registrBestAccountPeopleSlider").bind('touchmove', function() {
-//   const slider = document.getElementById("slider");
-//
-//   slider.addEventListener("touchmove", move);
-//   slider.addEventListener("touchstart", touch);
-//   slider.addEventListener("touchend", () => {
-//     setTimeout(() => {
-//       moved = !moved;
-//     }, 200);
-//   });
-//
-// });
+$('.buttonSliderClose').click(function(e) {
+  e.stopPropagation();
+  $('.registrBestAccountPeopleSliderHover').css('top', '100%');
+});
+
+//функционал слайдера при нажатии на стрелки
+var arrowNumStatus = 2;
+$('.arrowLeft').on('click', function() {
+  if (arrowNumStatus <= 1) {
+    alert('dddd');
+  }else{
+
+  }
+});

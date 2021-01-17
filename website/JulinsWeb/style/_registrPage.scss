@@ -246,6 +246,182 @@ $mainColor: rgb(182, 67, 143);
       margin-bottom: 20px;
     }
 
+    .sliderGrid{
+      height: 377px;
+      width: 320px;
+      display: none;
+      grid-template-columns: 1fr 6fr 1fr;
+      grid-template-rows: 1.7fr 0.3fr;
+      grid-template-areas:
+       "arrowLeft imageSlider arrowRight"
+       "arrowLeft revertGender arrowRight";
+
+      @keyframes sliderRotate{
+        0%{transform: rotateY(0deg);}
+        50%{transform: rotateY(90deg);}
+        100%{transform: rotateY(0deg);}
+      }
+
+      .arrowLeft{
+        grid-area: arrowLeft;
+        i{
+          padding: 5px 5px 5px 3px;
+        }
+      }
+      .arrowRight{
+        grid-area: arrowRight;
+        i{
+          padding: 5px 3px 5px 5px;
+        }
+      }
+      .imageSlider{
+        grid-area: imageSlider;
+      }
+      .revertGender{
+        grid-area: revertGender;
+        background-color: white;
+        border-radius: 0px 0px 15px 15px;
+        @include flexAlign;
+        justify-content: center;
+        font-size: 30px;
+        border: none;
+        transition: .4s ease;
+
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+
+        &:hover{
+          cursor: pointer;
+          // animation: sliderRotate 4s ease infinite;
+        }
+
+        i{
+          margin-left: 10px;
+          font-size: 30px;
+        }
+
+      }
+
+      .arrow{
+        @include flexAlign;
+
+        i{
+          font-size: 30px;
+          background-color: white;
+          border-radius: 15px;
+        }
+
+      }
+
+      .registrBestAccountPeopleSlider{
+        height: 320px;
+        width: 240px;
+        @include fonAlign;
+        overflow: hidden;
+        border-radius: 15px 15px 0px 0px;
+        background-image: url(../img/photoAccount/girl1.jpg);
+
+        .registrBestAccountPeopleSliderHover{
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: column;
+          position: relative;
+          top: 100%;
+
+          .contentTitleSlider{
+            @include flexAlign;
+            flex-direction: column;
+
+            .buttonSliderClose{
+              width: 100%;
+              border: none;
+              background-color: rgba(0,0,0,0);
+              color: white;
+              border-radius: 5px;
+              display: flex;
+              justify-content: center;
+              padding: 5px;
+              font-style: 15px;
+              transition: .4s ease;
+
+              &:hover{
+                cursor: pointer;
+                background-color: black;
+              }
+
+              i{
+                margin-left: 5px;
+              }
+
+            }
+
+            h3{
+              font-size: 30px;
+              align-items: center;
+              color: white;
+              font-weight: 100;
+            }
+
+          }
+
+          .registrBestAccountPeopleSliderHoverGrid{
+            width: 200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 0.5fr;
+            gap: 10px;
+            grid-template-areas:
+              "likeBestAccountRegistr mailBestAccountRegistr"
+              "linkBestAccountRegistr linkBestAccountRegistr";
+
+            div{
+              border: 2px solid white;
+              border-radius: 5px;
+              @include flexAlign;
+              padding: 5px;
+
+              i{
+                font-size: 40px;
+                color: white;
+              }
+
+            }
+
+            .likeBestAccountRegistrSlider {
+              grid-area: likeBestAccountRegistr;
+
+            }
+
+            .mailBestAccountRegistrSlider {
+              grid-area: mailBestAccountRegistr;
+
+            }
+
+            .linkBestAccountRegistrSlider {
+              border: 2px solid white;
+              border-radius: 5px;
+              background-color: rgba(0,0,0,0);
+              font-size: 25px;
+              grid-area: linkBestAccountRegistr;
+              color: white;
+              padding: 5px 0;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
     .topGirlRegistr{
       width: 100%;
       display: flex;
@@ -484,6 +660,9 @@ $mainColor: rgb(182, 67, 143);
       }
       .imageSlider{
         grid-area: imageSlider;
+        // display: flex;
+        // overflow: hidden;
+        // height: 320px;
       }
       .revertGender{
         grid-area: revertGender;
@@ -528,7 +707,8 @@ $mainColor: rgb(182, 67, 143);
         @include fonAlign;
         overflow: hidden;
         border-radius: 15px 15px 0px 0px;
-        background-image: url(../img/photoAccount/girl1.jpg);
+        transition: .4s ease;
+        background-image: url(../img/photoAccount/girl3.jpg);
 
         .registrBestAccountPeopleSliderHover{
           width: 100%;
@@ -537,16 +717,45 @@ $mainColor: rgb(182, 67, 143);
           padding: 10px;
           display: flex;
           align-items: center;
-          flex-direction: column;
           justify-content: space-between;
+          flex-direction: column;
           position: relative;
           top: 100%;
 
-          h3{
-            font-size: 30px;
-            align-items: center;
-            color: white;
-            font-weight: 100;
+          .contentTitleSlider{
+            @include flexAlign;
+            flex-direction: column;
+
+            .buttonSliderClose{
+              width: 100%;
+              border: none;
+              background-color: rgba(0,0,0,0);
+              color: white;
+              border-radius: 5px;
+              display: flex;
+              justify-content: center;
+              padding: 5px;
+              font-style: 15px;
+              transition: .4s ease;
+
+              &:hover{
+                cursor: pointer;
+                background-color: black;
+              }
+
+              i{
+                margin-left: 5px;
+              }
+
+            }
+
+            h3{
+              font-size: 30px;
+              align-items: center;
+              color: white;
+              font-weight: 100;
+            }
+
           }
 
           .registrBestAccountPeopleSliderHoverGrid{
@@ -662,12 +871,70 @@ $mainColor: rgb(182, 67, 143);
 
 }
 
+@media (max-width: 590px){
+
+  .information{
+
+    .container{
+
+      .sliderGrid{
+        display: grid;
+      }
+
+      .topGirlRegistr{
+        display: none;
+      }
+
+      .topManRegistr{
+        display: none;
+      }
+
+    }
+
+  }
+
+}
+
 @media (max-width: 426px){
+
+  .registration{
+
+    .container{
+
+      .registrForm{
+        margin-top: 10px;
+
+        button{
+          margin-top: 20px;
+        }
+
+      }
+
+      .enterRegistrPC{
+
+        h3 , button{
+          margin-top: 7px;
+        }
+
+        .socialToils{
+          display: none;
+        }
+
+        a{
+          margin-top: 10px;
+        }
+
+      }
+
+    }
+
+  }
 
   .information{
 
     .container{
       border-radius: 0px;
+      justify-content: center;
     }
 
   }
