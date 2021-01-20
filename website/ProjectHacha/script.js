@@ -6,6 +6,7 @@ function funImportantInformOpen() {
   elem.style.height = 100 + '%';
   elem.style.width = 100 + '%';
   elem.style.margin = 0 + 'px';
+  elem.style.overflowY = 'scroll';
 }
 function funImportantInformClose() {
   let elem = document.getElementById('importantInform');
@@ -14,6 +15,7 @@ function funImportantInformClose() {
   elem.style.height = 23 + 'px';
   elem.style.width = 174 + 'px';
   elem.style.margin = 8 + 'px';
+  elem.style.overflow = 'hidden';
 }
 
 //функция регистрации
