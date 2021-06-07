@@ -9,7 +9,7 @@ $color4: #5d3032;
     box-sizing: border-box;
         
     ::-webkit-scrollbar-track {
-        background-color:#666666
+        background-color:#666666;
     }
     
     ::-webkit-scrollbar-thumb {
@@ -24,6 +24,7 @@ $color4: #5d3032;
     
     ::-webkit-scrollbar{
         width: 6px;
+        height: 6px;
     }
 
     input::-webkit-input-placeholder {
@@ -31,14 +32,14 @@ $color4: #5d3032;
     }
 
     ::selection {
-        background: #5b3032; 
+        background: $color4; 
         color: #a9a9a9;
     }
 
 }
 
 #setting{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     margin: 10px;
@@ -58,11 +59,15 @@ $color4: #5d3032;
 
 body{
     background-color: $color1;
-    background: url(../image/background1.jpg) 0px -100px;
-    background-position: right;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    #main{
+        width: 100vw;
+    }
 
     .winClose{
         top: 100%;
@@ -86,16 +91,107 @@ body{
 
 }
 
-#main{
+header{
+    background-image: url(../image/animeSpaceFon.jpg);
+    background-position: top;
+    background-size: cover;
+
+    #wrap {
+        border: 10px solid rgba(255, 255, 255, .5);
+        height: 600px;
+        width: 600px;
+        margin: 50px;
+        border-radius: 50%;
+    }
+    
+    #inner {
+        background: rgba(255,255,255,0.7);
+        height: 570px;
+        width: 570px;
+        border-radius: 50%; 
+        margin: auto;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Mate SC', serif;
+
+        h2{
+            text-transform: uppercase;
+            color: #2d447f;
+            font-size: 52.5px;
+        }
+
+    }
+
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../image/background1.jpg) 0px -100px;
+    background-position: right;
+}
+
+.mainSection{
     max-width: 1024px;
     height: 100vh;
     background-color: $color1;
     margin: 0 auto;
     border-left: black 1px solid;
     border-right: black 1px solid;
-    padding: 50px 0px;
+    padding-bottom: 50px;
     overflow-y: scroll;
     overflow-x: none;
+    margin: 0;
+    position: relative;
+
+    #catalog{
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        transition: .4s ease;
+
+        ul{
+            border-bottom: 1px solid black;
+            white-space: nowrap;
+            overflow-x: scroll;
+            background-color: $color3;
+            transition: .4s ease;
+
+            li{
+                font-size: 35px;
+                list-style: none;
+                padding: 0px 20px;
+                border-right: 1px solid black;
+                display: inline-flex;
+                transition: .4s ease;
+
+                &:hover{
+                    background-color: $color2;
+                    cursor: pointer;
+                    padding: 0px 40px;
+                }
+
+            }
+
+        }
+
+        #buttonCatalog{
+            font-size: 35px;
+            position: absolute;
+            top: 35px;
+            left: 20px;
+            transition: .4s ease;
+            z-index: 1;
+
+            &::before{
+                z-index: 1;
+            }
+        }
+
+    }
 
     h1{
         font-size: 50px;
@@ -104,6 +200,7 @@ body{
         border-bottom: black 1px solid;
         margin-bottom: 30px;
         text-transform: uppercase;
+        padding-top: 50px;
     }
 
     .section{

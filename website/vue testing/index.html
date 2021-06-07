@@ -6,110 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue.js</title>
 
+    <!-- Основная таблица стилей -->
     <link rel="stylesheet" href="style/style.css">
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div id="main">
-        <h1>{{ title }}</h1>
 
-        <!-- <div class="section">
-            <h2>Скачать исходники</h2>
-            html - <a href = "download/index.html" download = "nevergiveup">Содержимое элемента</a>
-        </div> -->
-        <!-- <div class="section">
-            <h2>Оглавление</h2>
-            <span></span>
-        </div> -->
+        <header id="headerSection">
+            <div id="wrap"><div id="inner">
+                <h2>glitch.me</h2>
+            </div></div>
+        </header>
 
-        <div class="section">
-            <h2>Пока не придумал</h2>
-            <p>Применение <codee>'UperCase content'.toUpperCase()</codee> -- {{ 'UperCase content'.toUpperCase() }}</p>
-        </div>
+        <div class="background" id="vueJsSection">
 
-        <div class="section">
-            <h2>Связывание</h2>
-            <p>Связывание происходит за счёт <codee>v-model="textBinding"</codee></p>
-            <input type="text" v-model="textBinding" placeholder="Введите текст">
-            <p>Вывод -- {{ textBinding }}</p>
-        </div>
-
-        <div class="section">
-            <h2>Условия</h2>
-            <p> 
-                Можно выполнять разные действия с помощью <codee>v-if и v-else</codee>.<br>
-                В данном примере будеть выводиться текст если в поле будет больше 3 символов<br>
-                Такое можно выполнить с помошью <codee>v-if="textCondition.length > 3"</codee>
-            </p>
-            <input type="text" v-model="textCondition" placeholder="Введите текст">
-            <p v-if="textCondition.length > 3">lenght больше 3, вывод -- {{ textCondition }}</p>
-            <p v-else>lenght меньше 3, введите текст...</p>
-        </div>
-
-        <div class="section">
-            <!-- сделать добавление и удалеение имён -->
-            <h2>Oтрисовки списка элементов на основе массива данных</h2>
-            <p>
-                Для отрисовки, буду использовать код
-                <codee>
-                    &lt;li v-for="name in names"&gt; &#123;{ name }<!-- -->&#125; &lt;/li&gt;
-                </codee><br>
-                Где names исходный массив, а name это ссылка на текущий элемент массива
-            </p>
-            <ul>
-                <li v-for="name in names">{{ name }}</li>
-            </ul><br>
-            <p>Так же для сложных массивов можно использовать <span class="code">:key='name.addition'</span></p>
-        </div>
-
-        <div class="section">
-            <!-- исправить ошибку со стилизацией -->
-            <h2>События</h2>
-            <p>Для событий используеться вот такой синтаксис: <codee>v-on:событие</codee></p>
-            <button v-on:click="supportWin">Событие клика<br>v-on:click="событие"</button>
-        </div>
-
-        <div class="section">
-            <h2>Компоненты</h2>
-            <p>В Vue.js есть разделение на компоненты, они идут отдельным файлом (component.js)</p>
-            <p>Создать компонент можно с помощью синтаксиса:<br>
-                <codee>
-                    Vue.component('text-one-comp', { <br>
-                        <tab></tab>template: `&#60;span&#62;я &#60;i&#62;робот дурачёк&#60;/i&#62;&#60;/span&#62;`, <br>
-                    })
-                </codee>
-            </p>
-            <p>А вставить соответственно тегом: <codee> &#60;text-one-comp&#62;&#60;/text-one-comp&#62;</codee></p>
-            <p>Вывод -- <text-one-comp></text-one-comp></p>
-            <hr noshade="">
-            <p>Что бы вставить содержимое внутри тега в компонент, нужно указать тег <codee>&#60;slot&#62;&#60;/slot&#62;</codee> в компоненте:</p>
-            <p>
-                html -- <codee>&#60;text-two-comp&#62;Привет, мир. Я программист (почти)&#60;/text-two-comp&#62;</codee><br>
-                Компонент -- 
-                <codee>
-                    Vue.component('text-two-comp', { <br>
-                        <tab></tab>template: `&#60;span&#62;&#60;i&#62;&#60;slot&#62;&#60;/slot&#62;&#60;/i&#62; &#60;/span&#62;`, <br>
-                    })
-                </codee><br>
-                Вывод -- <codee><text-two-comp>Привет, мир. Я программист (почти)</text-two-comp></codee>
-            </p>
-            <hr noshade="">
-            <p>Что бы взять данные из Vue и приминить из в компоненте, используеться <codee>props: ['name']</codee></p>
-            <p>Для исользования в компоненте, используеться структура -- <codee>&#123;&#123; name &#125;<!---->&#125;</codee></p>
-        </div>
-
-        <div class="section">
-            <h2>v-bind:</h2>
-            <p>Впринцепе, <codee>v-bind:</codee> это не заменимая вещь. Она используеться много для чего. Хватит воды, время для примеров</p><br>
-            <p>Путь из data или json указываеться через <codee>v-bind:src="&#123;&#123; src &#125;<!---->&#125;"</codee></p>
-            <hr noshade="">
-            <p>Применение классов через <codee>v-bind:class="{ класс:условие }"</codee></p>
+            <div class="mainSection">
+    
+                <h1>Vue.js</h1>
+    
+                <div class="section">
+                    <h2>Пока не придумал</h2>
+                    <p>Применение <codee>'UperCase content'.toUpperCase()</codee> -- {{ 'UperCase content'.toUpperCase() }}</p>
+                </div>
+    
+                <div class="section">
+                    <h2>Связывание</h2>
+                    <p>Связывание происходит за счёт <codee>v-model="textBinding"</codee></p>
+                    <input type="text" v-model="textBinding" placeholder="Введите текст">
+                    <p>Вывод -- {{ textBinding }}</p>
+                </div>
+    
+                <div class="section">
+                    <h2>Условия</h2>
+                    <p> 
+                        Можно выполнять разные действия с помощью <codee>v-if и v-else</codee>.<br>
+                        В данном примере будеть выводиться текст если в поле будет больше 3 символов<br>
+                        Такое можно выполнить с помошью <codee>v-if="textCondition.length > 3"</codee>
+                    </p>
+                    <input type="text" v-model="textCondition" placeholder="Введите текст">
+                    <p v-if="textCondition.length > 3">lenght больше 3, вывод -- {{ textCondition }}</p>
+                    <p v-else>lenght меньше 3, введите текст...</p>
+                </div>
+    
+                <div class="section">
+                    <!-- сделать добавление и удалеение имён -->
+                    <h2>Oтрисовки списка элементов на основе массива данных</h2>
+                    <p>
+                        Для отрисовки, буду использовать код
+                        <codee>
+                            &lt;li v-for="name in names"&gt; &#123;{ name }<!-- -->&#125; &lt;/li&gt;
+                        </codee><br>
+                        Где names исходный массив, а name это ссылка на текущий элемент массива
+                    </p>
+                    <ul>
+                        <li v-for="name in names">{{ name }}</li>
+                    </ul><br>
+                    <p>Так же для сложных массивов можно использовать <span class="code">:key='name.addition'</span></p>
+                </div>
+    
+                <div class="section">
+                    <!-- исправить ошибку со стилизацией -->
+                    <h2>События</h2>
+                    <p>Для событий используеться вот такой синтаксис: <codee>v-on:событие</codee></p>
+                    <button v-on:click="supportWin">Событие клика<br>v-on:click="событие"</button>
+                </div>
+    
+                <div class="section">
+                    <h2>Компоненты</h2>
+                    <p>В Vue.js есть разделение на компоненты, они идут отдельным файлом (component.js)</p>
+                    <p>Создать компонент можно с помощью синтаксиса:<br>
+                        <codee>
+                            Vue.component('text-one-comp', { <br>
+                                <tab></tab>template: `&#60;span&#62;я &#60;i&#62;робот дурачёк&#60;/i&#62;&#60;/span&#62;`, <br>
+                            })
+                        </codee>
+                    </p>
+                    <p>А вставить соответственно тегом: <codee> &#60;text-one-comp&#62;&#60;/text-one-comp&#62;</codee></p>
+                    <p>Вывод -- <text-one-comp></text-one-comp></p>
+                    <hr noshade="">
+                    <p>Что бы вставить содержимое внутри тега в компонент, нужно указать тег <codee>&#60;slot&#62;&#60;/slot&#62;</codee> в компоненте:</p>
+                    <p>
+                        html -- <codee>&#60;text-two-comp&#62;Привет, мир. Я программист (почти)&#60;/text-two-comp&#62;</codee><br>
+                        Компонент -- 
+                        <codee>
+                            Vue.component('text-two-comp', { <br>
+                                <tab></tab>template: `&#60;span&#62;&#60;i&#62;&#60;slot&#62;&#60;/slot&#62;&#60;/i&#62; &#60;/span&#62;`, <br>
+                            })
+                        </codee><br>
+                        Вывод -- <codee><text-two-comp>Привет, мир. Я программист (почти)</text-two-comp></codee>
+                    </p>
+                    <hr noshade="">
+                    <p>Что бы взять данные из Vue и приминить из в компоненте, используеться <codee>props: ['name']</codee></p>
+                    <p>Для исользования в компоненте, используеться структура -- <codee>&#123;&#123; name &#125;<!---->&#125;</codee></p>
+                </div>
+    
+                <div class="section">
+                    <h2>v-bind:</h2>
+                    <p>Впринцепе, <codee>v-bind:</codee> это не заменимая вещь. Она используеться много для чего. Хватит воды, время для примеров</p><br>
+                    <p>Путь из data или json указываеться через <codee>v-bind:src="&#123;&#123; src &#125;<!---->&#125;"</codee></p>
+                    <hr noshade="">
+                    <p>Применение классов через <codee>v-bind:class="{ класс:условие }"</codee></p>
+                </div>
+            </div>
+    
         </div>
 
     </div>
 
     <!-- сделать настройки -->
-    <div id="setting"><i class="fas fa-cog" onclick='settingWin()'></i></div>
+    <div id="setting"><i class="fas fa-cog" v-on:click="settingWin"></i></div>
 
     <div class="supportWin"></div>
 
@@ -123,6 +133,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/script.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    
+
 </body>
 </html>
