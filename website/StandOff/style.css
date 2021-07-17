@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Uchen', serif;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 0, 34);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main #imageHeader{
+    background-image: url(img/1nferno.jpg);
+    width: 100%;
+    height: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main #textHeader{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main #textHeader #headerContent{
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #b80116;
+    border-radius: 40px;
+    -webkit-box-shadow: 0px 0px 18px 7px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 18px 7px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 18px 7px rgba(34, 60, 80, 0.2);
+}
+
+main #textHeader #headerName{
+    font-size: 60px;
+    color: white;
+    text-transform: uppercase;
+}
+
+main #textHeader #headerLink{
+    font-size: 30px;
+    color: white;
+}
+
+main #textHeader #headerLink a{
+    color: white;
+}

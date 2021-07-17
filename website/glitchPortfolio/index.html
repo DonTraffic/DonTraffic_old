@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonTraffic</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+    <!-- fullPage.js style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css" integrity="sha512-hGBKkjAVJUXoImyDezOKpzuY4LS1eTvJ4HTC/pbxn47x5zNzGA1vi3vFQhhOehWLTNHdn+2Yqh/IRNPw/8JF/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- favicon -->
+    <link rel="icon" href="https://faviconka.ru/ico/1/faviconka.ru_1_116274.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://faviconka.ru/ico/1/faviconka.ru_1_116274.ico" type="image/x-icon">
+
+
+</head>
+<body>
+    <div id="main">
+        <header id="headerSection" class="section">
+            <div id="scene">
+                <canvas id="canvas" data-depth="0.5"></canvas>
+            </div>
+            <div id="wrap"><div id="inner">
+                <div id="nameWebsite" onclick="headerFun(1)"><h1>DonTraffic.ru</h1></div>
+                <div id="heading" onclick="headerFun(2)">
+                    <h2>Привет</h2>
+                     Это личный сайт-визитка программиста Уханова Дмитрий. Тут будет немного про меня, про мои знания и про мой характер. Я в поисках работы и каких либо задач за которые мне заплатят. (Выбери текст по лучше)
+                </div>
+                <div id="persona" onclick="headerFun(3)">
+                    <img src="img/avatar.jpg" alt="avatar" onclick="headerFun(3)">
+                </div>
+            </div></div>
+        </header>
+
+        <section class="section" id="sectionsSkills">
+            <h2>Чем я могу похвастаться?</h2>
+            <div id="blockSkills">
+
+                <div class="cardSkills" id="JavaScript" @click="funBlockSkill('JS', false)">
+
+                    <div class="headerSkill"><i class="fab fa-js-square"></i> JavaScript</div>
+                    <p class="textSkill">
+                        JavaScript. Ох уж этот набор букв. Даёт способность наполнять сайты волшебством, но так же отбирает самоконтроль, потихоньку преврящая в JavaScriptтера...
+                    </p>
+                    <span>Открыть...</span>
+
+                </div>
+                <div class="cardSkills" id="working">
+                    <div class="headerSkill"><i class="fas fa-terminal"></i>in development</div>
+                </div>
+                <div class="cardSkills" id="ThreeJs" @click="funBlockSkill('ThreeJS', false)">
+                    <div class="headerSkill"><i class="fas fa-cubes"></i>3D-технологии</div>
+                    <p class="textSkill">
+                        3D-технологии. Захватывающий новый мир в который можно внести свои красоты. Внимание: 3D миры сильно затягивают...
+                    </p>
+                    <span>Открыть...</span>
+                </div>
+                <div class="cardSkills" id="HTML">
+                    <div class="headerSkill"><i class="fab fa-html5"></i>HTML</div>
+                </div>
+                <div class="cardSkills" id="CSS">
+                    <div class="headerSkill"><i class="fab fa-css3-alt"></i>CSS</div>
+                </div>
+                <div class="cardSkills" id="VueJs">
+                    <div class="headerSkill"><i class="fab fa-vuejs"></i>Vue.js</div>
+                </div>
+                <div class="cardSkills" id="working2">
+                    <div class="headerSkill"><i class="fas fa-terminal"></i>in development</div>
+                    <p class="textSkill">
+                        Тут нужно немного текста. Чуть больше. Ещё немного. И последний штрих...
+                    </p>
+                    <span>Открыть...</span>
+                </div>
+                <div class="cardSkills" id="working3">
+                    <div class="headerSkill"><i class="fas fa-terminal"></i>in development</div>
+                    <p class="textSkill">
+                        Тут так же нужен текст. Можно даже ещё подбавить...
+                    </p>
+                    <span>Открыть...</span>
+                </div>
+
+            </div>
+
+            <div class='exampleBlock' id='exampleJS'>
+                <div class="contentExampleBlock">
+                    heloo
+                </div>
+                <div class="exampleClose" @click="funBlockSkill('JS', true)">
+                    <p>Закрыть <i class="fas fa-door-closed exampleClose exampleCloseJS"></i></p>
+                </div>
+            </div>
+
+            <div class='exampleBlock' id='exampleThreeJS'>
+                <div class="contentExampleBlock">
+                    heloo
+                </div>
+                <div class="exampleClose" @click="funBlockSkill('ThreeJS', true)">
+                    <p>Закрыть <i class="fas fa-door-closed exampleClose exampleCloseThreeJS"></i></p>
+                </div>            
+            </div>
+
+
+        </section>
+
+        <section class="section" id="particles-js">
+
+            <div id="blockPersona" >
+                <div id="personInfo">
+                    <div id="personImg">
+                        <img src="img/avatar.jpg" alt="persona">
+                    </div>
+                    <div id="personContent">
+                        <h2>Уханов Дмитрий<br><span>junior developer</span></h2>
+                        <ul id="personSocial">
+                            <li><a href="https://vk.com/dontraffic"><img src="img/vk.svg" alt="vk"></a></li>
+                            <li><a onclick="alert('+7(921) 063 86 47')" href="tel:+89210638647"><img src="img/smartphone.svg" alt="phone"></a></li>
+                            <li><a href="mailto:dogerfantom6@gmail.com"><img src="img/gmail.svg" alt="gmail"></a></li>
+                            <li id="socialTelegram"><a href="http://t.me/DonTraffic"><img src="img/telegram.svg" alt="telegram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="statsPersona">
+                    <h2>Описание программиста</h2>
+                    <ol>
+                        <ul> Характеристика
+                            <li><b>Выностливость</b> - 4 дня на энергетиках</li>
+                            <li><b>Сила</b> - с лёгкостью поднимает компьютер</li>
+                            <li><b>Интелект</b> - отличает библиотеку от фреймворка</li>
+                            <li><b>Харизма</b> - бетмен</li>
+                            <li><b>Магия</b> - JavaScript, PHP</li>
+                        </ul>
+                        <ul id="statsPersonaPerks"> Перки
+                            <li data-title="В 2 раза больше энергии и интереса">Молодость</li>
+                            <li data-title="Интерес к программированию повышен в 4 раза">Любовь к программированию</li>
+                            <li data-title="Кто не знает, перфекционизмом является стремление убрать всё «лишнее» или сделать «неровный» предмет «ровным»">Перфекционизм</li>
+                            <li data-title="Могу работать больше чем остальные">Трудолюбие</li>
+                        </ul>
+                    </ol>
+                </div>
+            </div>
+
+            <div ></div>
+
+        </section>
+
+        <div id="infoContainer" onclick="funInfo()">
+
+            <div id="infoContent">
+                <ul>
+                    <li>Иконки взяты с сайта - <a href="https://fontawesome.com/">FontAwesome</a></li>
+                    <li>Поблочный скрол - <a href="https://alvarotrigo.com/fullPage/">fullPage</a></li>
+                    <li>Паралакс - <a href="https://matthew.wagerfield.com/parallax/">paralax</a></li>
+                </ul>
+            </div>
+
+            <div id="infoButton">
+                <i class="fas fa-question"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- fullPage.js script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js" integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new fullpage('#main', {
+            //options here
+            // autoScrolling:true,
+            // scrollHorizontally: true
+        });
+    </script>
+    <!-- jQuery cdn -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- parallax.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene, {
+            invertX:false,
+            invertY:false,
+        });
+    </script>
+
+    <!-- three.js -->
+    <script src="script/libs/three.min.js"></script>
+    <script src="script/libs/OBJLoader.js"></script>
+    <script src="script/libs/TrackballControls.js"></script>
+
+    <!-- particles.js -->
+    <script src="script/libs/particles.min.js"></script>
+
+    <!-- vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- script.js -->
+    <script src="script/script.js"></script>
+
+</body>
+</html>
