@@ -1,60 +1,121 @@
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Uchen', serif;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+*::selection {
+    background: #9c3838;
+}
+
+body{
+    background-color: rgb(255, 0, 34);
+    height: 100vh;
+    width: 100vw;
 }
 
 main{
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(255, 0, 34);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "imageHeader"
+        "textHeader"; 
 }
 
 main #imageHeader{
     background-image: url(img/1nferno.jpg);
     width: 100%;
-    height: 65%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.1;
+    transition: .9s;
+    grid-area: imageHeader;
 }
 
 main #textHeader{
     width: 100%;
-    height: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-area: textHeader;
 }
 
 main #textHeader #headerContent{
-    padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #b80116;
-    border-radius: 40px;
     -webkit-box-shadow: 0px 0px 18px 7px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 0px 18px 7px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 0px 18px 7px rgba(34, 60, 80, 0.2);
+    overflow: hidden;
+    transition: .6;
+    height: 0;
 }
 
 main #textHeader #headerName{
     font-size: 60px;
+    display: flex;
+    align-items: center;
     color: white;
     text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
 main #textHeader #headerLink{
-    font-size: 30px;
+    font-size: 150%;
     color: white;
+    text-align: center;
 }
 
 main #textHeader #headerLink a{
     color: white;
+}
+
+@media (min-width: 501px) {
+    #headerContent{
+        border-radius: 40px;
+        background-color: #b80116;
+    }
+    /* #headerName{
+        font-size: 60px;
+    }
+    #headerLink{
+        font-size: 30px;
+    } */
+}
+
+@media (max-width: 501px) {
+    #headerContent{
+        border-radius: 0px;
+        background-color: rgb(226, 8, 42);
+    }
+    /* #headerName{
+        font-size: 50px;
+    }
+    #headerLink{
+        font-size: 25px;
+    } */
+}
+@media (max-height: 600) {
+    /* #headerContent{
+        border-radius: 0px;
+        background-color: rgb(226, 8, 42);
+    } */
+    /* #headerName{
+        font-size: 40px;
+    }
+    #headerLink{
+        font-size: 15px;
+    } */
 }
