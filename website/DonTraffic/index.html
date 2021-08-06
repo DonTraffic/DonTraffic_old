@@ -30,8 +30,8 @@
             <div id="scene">
                 <canvas id="canvas" data-depth="0.5"></canvas>
             </div>
-            <div id="wrap"><div id="inner">
-                <div id="nameWebsite" onclick="headerFun(1)"><h1>DonTraffic.ru</h1></div>
+            <div id="wrap" data-proportion-h="1"><div id="inner">
+                <div id="nameWebsite" onclick="headerFun(1)"><h1 id="testingH1">DonTraffic.ru</h1></div>
                 <div id="heading" onclick="headerFun(2)">
                     <h2>Привет</h2>
                      Это личный сайт-визитка программиста Уханова Дмитрий. Тут будет немного про меня, про мои знания и про мой характер. Я в поисках работы и каких либо задач за которые мне заплатят. (Выбери текст по лучше)
@@ -42,7 +42,7 @@
             </div></div>
         </header>
 
-        <section class="section" id="sectionsSkills">
+        <section class="section active" id="sectionsSkills">
             <h2>Чем я могу похвастаться?</h2>
             <div id="blockSkills">
 
@@ -204,6 +204,25 @@
 
     <!-- vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- stickjaw.js -->
+    <script src="script/libs/stickjaw.js"></script>
+    <script>
+        var SJ_setiings = {
+                    options: {
+                        hlw: true, // Height as width
+                        wlh: true, // Width as height
+                        hlt: true, // Width of the target element (target id is the same as for height)
+                        wlt: true, // Height of the target element (target id is the same as for width)
+                        alo: true, // All elements as one (height)
+                    },
+                    settings: {
+                        windowResize: true, 
+                        writeHystory: true 
+                    }
+                }
+        var sj = new SJ(SJ_setiings);
+    </script>
 
     <!-- script.js -->
     <script src="script/script.js"></script>

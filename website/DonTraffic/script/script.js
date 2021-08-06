@@ -24,8 +24,8 @@ new Vue ({
 
 // 3d three.js
 window.onload = function () {
-    var width = window.innerWidth;
-    var height = window.innerHeight;
+    var width = window.innerWidth + 400;
+    var height = window.innerHeight + 400;
 
     var canvas = document.getElementById('canvas');
     canvas.setAttribute('width', width);
@@ -37,7 +37,7 @@ window.onload = function () {
     var scene = new THREE.Scene();
 
     var camera = new THREE.PerspectiveCamera(45, width / height, 0.1, -2000);
-    camera.position.set(0, 0, 25);
+    camera.position.set(0, 0, 24);
 
     const light = new THREE.DirectionalLight(0xffffff, 0.4);
     light.position.set(100, 100, 0);
