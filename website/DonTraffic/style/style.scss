@@ -8,6 +8,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    // transition: .4s ease;
 
     -webkit-user-select: none;   /* Chrome/Safari/Opera */
     -moz-user-select: none;      /* Firefox */
@@ -55,7 +56,7 @@ body{
 .section{
     .fp-tableCell{
         height: 100vh;
-        width: 100wh;
+        width: 100vw;
         @include flex;
         flex-direction: column;
     }
@@ -67,6 +68,11 @@ header{
     background-size: cover;
     position: relative;
     color: #232323;
+
+    #scene{
+        transition: 1s ease;
+        opacity: 0;
+    }
 
     #canvas{
         position: absolute;
@@ -184,26 +190,78 @@ header{
 
     h2{
         font-size: 40px;
+        margin: 10px auto;
         padding-bottom: 40px;
+        text-align: center;
+        transition: .4s ease;
+
+        @media screen and (max-width:483px) {
+            padding-bottom: 5px;
+        }
+        @media screen and (max-width: 580px) {
+            font-size: 6vw;
+        }
     }
 
     #blockSkills{
         height: 600px;
         max-width: 1340px;
-        width: 100%;
+        width: auto;
+        transition: .4s ease;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
         gap: 10px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 10px;
         padding: 0 10px;
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr 1fr; 
-        grid-template-areas: 
-            "working VueJs working2 working3"
-            "JavaScript JavaScript working2 working3"
-            "JavaScript JavaScript ThreeJs ThreeJs"
-            "HTML CSS ThreeJs ThreeJs"; 
+        margin: 0 auto;
+
+        .blockSkillsContainer{
+            max-width: 100vw;
+            position: relative;
+            transition: .4s ease;
+
+            .blockSkillsItem{
+                display: grid;
+                grid-template-columns: 1fr 1fr; 
+                grid-template-rows: 1fr 1fr 1fr 1fr; 
+                gap: 10px;
+                transition: .4s ease;
+                position: relative;
+                height: 100%;
+            }
+
+        }
+
+        #blockSkillsItem1{
+            grid-template-areas: 
+                "project VueJs"
+                "JavaScript JavaScript"
+                "JavaScript JavaScript"
+                "HTML CSS"; 
+
+            .blockSkillsContainerButton{
+                right: 0;
+                border-radius: 10px 0 0 10px;
+            }
+        }
+
+        #blockSkillsItem2{
+            grid-template-areas: 
+                "working2 working3"
+                "working2 working3"
+                "ThreeJs ThreeJs"
+                "ThreeJs ThreeJs"; 
+
+            .blockSkillsContainerButton{
+                left: 0;
+                border-radius: 0 10px 10px 0;
+            }
+        }
 
         #JavaScript { grid-area: JavaScript; }
-        #working { grid-area: working; }
+        #project { grid-area: project; }
         #ThreeJs { grid-area: ThreeJs; }
         #HTML { grid-area: HTML; }
         #CSS { grid-area: CSS; }
@@ -225,6 +283,7 @@ header{
             justify-content: space-around;
             flex-direction: column;
             font-size: 23px;
+            position: relative;
 
             &:hover{
                 background-color: rgba(71, 71, 71, 0.5);
@@ -249,14 +308,25 @@ header{
 
         }
 
+        .blockSkillsContainerButton{
+            width: 30px;
+            height: 60px;
+            background-color: #1b1b1b;
+            position: absolute;
+            font-size: 25px;
+            @include flex;
+            display: none;
+
+        }
+
         @media screen and (max-width: 1070px) {
             .cardSkills{
-                font-size: 2vw;
+                font-size: 2.1vw;
                 .headerSkill{
                     font-size: 4vw;
                 }
                 span{
-                    font-size: 3vw;
+                    font-size: 2.7vw;
                 }
             }
             #working, #working2, #working3{
@@ -264,6 +334,47 @@ header{
             }
         }
 
+        @media screen and (max-width: 768px) {
+            .blockSkillsContainer{
+                width: 200vw;
+
+                .blockSkillsItem{
+                    padding: 0 10px;
+                }
+            } 
+            .blockSkillsContainerButton{
+               display: flex;
+            }
+            .cardSkills{
+                font-size: 3.1vw;
+                .headerSkill{
+                    font-size: 7vw;
+                }
+                span{
+                    font-size: 4.7vw;
+                }
+            }
+        }
+
+        @media screen and (max-width: 580px) {
+            .blockSkillsContainer{
+                gap: 5px;
+            }
+            .cardSkills{
+                font-size: 4.1vw;
+                .headerSkill{
+                    font-size: 7vw;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        #blockSkills{
+            padding: 0;
+            margin-bottom: 10px;
+        } 
     }
 
     .exampleBlock{

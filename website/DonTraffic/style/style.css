@@ -46,7 +46,7 @@ body {
 
 .section .fp-tableCell {
   height: 100vh;
-  width: 100wh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,6 +59,10 @@ header {
   background-size: cover;
   position: relative;
   color: #232323;
+}
+header #scene {
+  transition: 1s ease;
+  opacity: 0;
 }
 header #canvas {
   position: absolute;
@@ -162,24 +166,68 @@ header #wrap #inner #persona img {
 }
 #sectionsSkills h2 {
   font-size: 40px;
+  margin: 10px auto;
   padding-bottom: 40px;
+  text-align: center;
+  transition: 0.4s ease;
+}
+@media screen and (max-width: 483px) {
+  #sectionsSkills h2 {
+    padding-bottom: 5px;
+  }
+}
+@media screen and (max-width: 580px) {
+  #sectionsSkills h2 {
+    font-size: 6vw;
+  }
 }
 #sectionsSkills #blockSkills {
   height: 600px;
   max-width: 1340px;
-  width: 100%;
-  gap: 10px;
-  padding: 0 10px;
+  width: auto;
+  transition: 0.4s ease;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+#sectionsSkills #blockSkills .blockSkillsContainer {
+  max-width: 100vw;
+  position: relative;
+  transition: 0.4s ease;
+}
+#sectionsSkills #blockSkills .blockSkillsContainer .blockSkillsItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "working VueJs working2 working3" "JavaScript JavaScript working2 working3" "JavaScript JavaScript ThreeJs ThreeJs" "HTML CSS ThreeJs ThreeJs";
+  gap: 10px;
+  transition: 0.4s ease;
+  position: relative;
+  height: 100%;
+}
+#sectionsSkills #blockSkills #blockSkillsItem1 {
+  grid-template-areas: "project VueJs" "JavaScript JavaScript" "JavaScript JavaScript" "HTML CSS";
+}
+#sectionsSkills #blockSkills #blockSkillsItem1 .blockSkillsContainerButton {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+#sectionsSkills #blockSkills #blockSkillsItem2 {
+  grid-template-areas: "working2 working3" "working2 working3" "ThreeJs ThreeJs" "ThreeJs ThreeJs";
+}
+#sectionsSkills #blockSkills #blockSkillsItem2 .blockSkillsContainerButton {
+  left: 0;
+  border-radius: 0 10px 10px 0;
 }
 #sectionsSkills #blockSkills #JavaScript {
   grid-area: JavaScript;
 }
-#sectionsSkills #blockSkills #working {
-  grid-area: working;
+#sectionsSkills #blockSkills #project {
+  grid-area: project;
 }
 #sectionsSkills #blockSkills #ThreeJs {
   grid-area: ThreeJs;
@@ -212,6 +260,7 @@ header #wrap #inner #persona img {
   justify-content: space-around;
   flex-direction: column;
   font-size: 23px;
+  position: relative;
 }
 #sectionsSkills #blockSkills .cardSkills:hover {
   background-color: rgba(71, 71, 71, 0.5);
@@ -229,18 +278,66 @@ header #wrap #inner #persona img {
 #sectionsSkills #blockSkills .cardSkills span {
   font-size: 25px;
 }
+#sectionsSkills #blockSkills .blockSkillsContainerButton {
+  width: 30px;
+  height: 60px;
+  background-color: #1b1b1b;
+  position: absolute;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
 @media screen and (max-width: 1070px) {
   #sectionsSkills #blockSkills .cardSkills {
-    font-size: 2vw;
+    font-size: 2.1vw;
   }
   #sectionsSkills #blockSkills .cardSkills .headerSkill {
     font-size: 4vw;
   }
   #sectionsSkills #blockSkills .cardSkills span {
-    font-size: 3vw;
+    font-size: 2.7vw;
   }
   #sectionsSkills #blockSkills #working .headerSkill, #sectionsSkills #blockSkills #working2 .headerSkill, #sectionsSkills #blockSkills #working3 .headerSkill {
     font-size: 2vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #sectionsSkills #blockSkills .blockSkillsContainer {
+    width: 200vw;
+  }
+  #sectionsSkills #blockSkills .blockSkillsContainer .blockSkillsItem {
+    padding: 0 10px;
+  }
+  #sectionsSkills #blockSkills .blockSkillsContainerButton {
+    display: flex;
+  }
+  #sectionsSkills #blockSkills .cardSkills {
+    font-size: 3.1vw;
+  }
+  #sectionsSkills #blockSkills .cardSkills .headerSkill {
+    font-size: 7vw;
+  }
+  #sectionsSkills #blockSkills .cardSkills span {
+    font-size: 4.7vw;
+  }
+}
+@media screen and (max-width: 580px) {
+  #sectionsSkills #blockSkills .blockSkillsContainer {
+    gap: 5px;
+  }
+  #sectionsSkills #blockSkills .cardSkills {
+    font-size: 4.1vw;
+  }
+  #sectionsSkills #blockSkills .cardSkills .headerSkill {
+    font-size: 7vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #sectionsSkills #blockSkills {
+    padding: 0;
+    margin-bottom: 10px;
   }
 }
 #sectionsSkills .exampleBlock {

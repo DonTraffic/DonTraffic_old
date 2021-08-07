@@ -42,55 +42,74 @@
             </div></div>
         </header>
 
-        <section class="section active" id="sectionsSkills">
+        <section class="section" id="sectionsSkills">
             <h2>Чем я могу похвастаться?</h2>
             <div id="blockSkills">
+                <div class="blockSkillsContainer">
+                    <div class="blockSkillsItem" id="blockSkillsItem1">
+                        <div class="cardSkills" id="project">
+                            <div class="headerSkill"><i class="fas fa-project-diagram"></i>Project</div>
+                        </div>
+                        <div class="cardSkills" id="VueJs">
+                            <div class="headerSkill"><i class="fab fa-vuejs"></i>Vue.js</div>
+                        </div>
+                        <div class="cardSkills" id="JavaScript" @click="funBlockSkill('JS', false)">
+    
+                            <div class="headerSkill"><i class="fab fa-js-square"></i> JavaScript</div>
+                            <p class="textSkill">
+                                JavaScript. Ох уж этот набор букв. Даёт способность наполнять сайты волшебством, но так же отбирает самоконтроль, потихоньку преврящая в JavaScriptтера...
+                            </p>
+                            <span>Открыть...</span>
+        
+                        </div>
+                        <div class="cardSkills" id="HTML">
+                            <div class="headerSkill"><i class="fab fa-html5"></i>HTML</div>
+                        </div>
+    
+                        <div class="cardSkills" id="CSS">
+                            <div class="headerSkill"><i class="fab fa-css3-alt"></i>CSS</div>
+                        </div>
+    
+                        <div class="blockSkillsContainerButton" onclick="funSkillButton()">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="blockSkillsContainer">
+                    <div class="blockSkillsItem" id="blockSkillsItem2">
+                    
+                        <div class="cardSkills" id="ThreeJs" @click="funBlockSkill('ThreeJS', false)">
+                            <div class="headerSkill"><i class="fas fa-cubes"></i>3D-технологии</div>
+                            <p class="textSkill">
+                                3D-технологии. Захватывающий новый мир в который можно внести свои красоты. Внимание: 3D миры сильно затягивают...
+                            </p>
+                            <span>Открыть...</span>
+                        </div>
+                        <div class="cardSkills" id="working2">
+                            <div class="headerSkill"><i class="fas fa-terminal"></i>in development</div>
+                            <p class="textSkill">
+                                Тут нужно немного текста. Чуть больше. Ещё немного. И последний штрих...
+                            </p>
+                            <span>Открыть...</span>
+                        </div>
+                        <div class="cardSkills" id="working3">
+                            <div class="headerSkill"><i class="fas fa-terminal"></i>in development</div>
+                            <p class="textSkill">
+                                Тут так же нужен текст. Можно даже ещё подбавить...
+                            </p>
+                            <span>Открыть...</span>
+                        </div>
 
-                <div class="cardSkills" id="JavaScript" @click="funBlockSkill('JS', false)">
+                        <div class="blockSkillsContainerButton" onclick="funSkillButton()">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
 
-                    <div class="headerSkill"><i class="fab fa-js-square"></i> JavaScript</div>
-                    <p class="textSkill">
-                        JavaScript. Ох уж этот набор букв. Даёт способность наполнять сайты волшебством, но так же отбирает самоконтроль, потихоньку преврящая в JavaScriptтера...
-                    </p>
-                    <span>Открыть...</span>
-
-                </div>
-                <div class="cardSkills" id="working">
-                    <div class="headerSkill"><i class="fas fa-terminal"></i>in development</div>
-                </div>
-                <div class="cardSkills" id="ThreeJs" @click="funBlockSkill('ThreeJS', false)">
-                    <div class="headerSkill"><i class="fas fa-cubes"></i>3D-технологии</div>
-                    <p class="textSkill">
-                        3D-технологии. Захватывающий новый мир в который можно внести свои красоты. Внимание: 3D миры сильно затягивают...
-                    </p>
-                    <span>Открыть...</span>
-                </div>
-                <div class="cardSkills" id="HTML">
-                    <div class="headerSkill"><i class="fab fa-html5"></i>HTML</div>
-                </div>
-                <div class="cardSkills" id="CSS">
-                    <div class="headerSkill"><i class="fab fa-css3-alt"></i>CSS</div>
-                </div>
-                <div class="cardSkills" id="VueJs">
-                    <div class="headerSkill"><i class="fab fa-vuejs"></i>Vue.js</div>
-                </div>
-                <div class="cardSkills" id="working2">
-                    <div class="headerSkill"><i class="fas fa-terminal"></i>in development</div>
-                    <p class="textSkill">
-                        Тут нужно немного текста. Чуть больше. Ещё немного. И последний штрих...
-                    </p>
-                    <span>Открыть...</span>
-                </div>
-                <div class="cardSkills" id="working3">
-                    <div class="headerSkill"><i class="fas fa-terminal"></i>in development</div>
-                    <p class="textSkill">
-                        Тут так же нужен текст. Можно даже ещё подбавить...
-                    </p>
-                    <span>Открыть...</span>
+                    </div>
                 </div>
 
             </div>
-
+    
             <div class='exampleBlock' id='exampleJS'>
                 <div class="contentExampleBlock">
                     heloo

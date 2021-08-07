@@ -22,193 +22,11 @@ new Vue ({
     },
 });
 
-// 3d three.js
-window.onload = function () {
-    var width = window.innerWidth + 400;
-    var height = window.innerHeight + 400;
-
-    var canvas = document.getElementById('canvas');
-    canvas.setAttribute('width', width);
-    canvas.setAttribute('height', height);
-
-    var renderer = new THREE.WebGLRenderer({canvas: canvas, alpha: true, antialias: true});
-    renderer.setClearColor(0x000000, 0);
-
-    var scene = new THREE.Scene();
-
-    var camera = new THREE.PerspectiveCamera(45, width / height, 0.1, -2000);
-    camera.position.set(0, 0, 24);
-
-    const light = new THREE.DirectionalLight(0xffffff, 0.4);
-    light.position.set(100, 100, 0);
-    light.target.position.set(-50, 0, -100);
-    scene.add(light);
-    scene.add(light.target);
-
-    var lightAmbient = new THREE.AmbientLight(0xffffff, 0.05);
-    scene.add(lightAmbient);
-
-    var meshes = [];
-
-    var objLoader = new THREE.OBJLoader();
-
-    objLoader.load( 'img/planetModel.obj', function ( object ) {
-
-        object.traverse( function ( child ) {
-            if ( child instanceof THREE.Mesh ){
-                meshes.push(child);
-            }
-        });
-
-        var body = meshes[0];
-
-        body.material = new THREE.MeshPhongMaterial({
-            map: new THREE.TextureLoader().load('img/planetTexture.jpg'),
-        });
-
-        scene.add(body);
-
-        var render = function () {
-            requestAnimationFrame( render );
-            renderer.render(scene, camera);
-        };
-
-        function loop() {
-            body.rotation.y += Math.PI/900;
-
-            renderer.render(scene, camera);
-            requestAnimationFrame(function() {loop();});
-        }
-  
-        loop();
-    
-        render();
-
-    });
-
+//
+function test() {
+  $('#scene').css('opacity', '1');
 }
-
-particlesJS('particles-js',
-  
-  {
-    "particles": {
-      "number": {
-        "value": 100,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 5,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 6,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
-    }
-  }
-
-);
-
+window.setTimeout(test, 1500)
 
 // header
 function headerFun (id) {
@@ -274,4 +92,27 @@ function funInfo () {
   }
 
 }
+
+// style and script blockSkill button
+$('.blockSkillsContainerButton').css('top', $(".blockSkillsItem").height() / 2 - 30 + 'px');
+
+document.getElementsByClassName('fp-tableCell')[1].style.alignItems = 'flex-start';
+
+let statusSkillButton = 'right';
+function funSkillButton() {
+  let width = $('.blockSkillsItem').width() + 30;
+  if (statusSkillButton == 'right') {
+    $('.blockSkillsContainer').css('left', -width+'px');
+    statusSkillButton = 'left';
+  } else {
+    $('.blockSkillsContainer').css('left','0px');
+    statusSkillButton = 'right';
+  }
+}
+
+
+funSkillButton();
+funSkillButton();
+
+
 
