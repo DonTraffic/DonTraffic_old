@@ -93,26 +93,55 @@ function funInfo () {
 
 }
 
-// style and script blockSkill button
+// style skills
+// button
 $('.blockSkillsContainerButton').css('top', $(".blockSkillsItem").height() / 2 - 30 + 'px');
-
+// block
 document.getElementsByClassName('fp-tableCell')[1].style.alignItems = 'flex-start';
 
-let statusSkillButton = 'right';
-function funSkillButton() {
-  let width = $('.blockSkillsItem').width() + 30;
-  if (statusSkillButton == 'right') {
-    $('.blockSkillsContainer').css('left', -width+'px');
-    statusSkillButton = 'left';
+// style persona section
+// width < 440px block
+$('#personInfo').css('width', $("#blockPersona").width() + 'px');
+$('#statsPersona').css('width', $("#blockPersona").width() + 'px');
+// button
+$('.blockPersonaContainerButton').css('top', $("#statsPersona").height() / 2 - 30 + 'px');
+$('.blockPersonaContainerButton').css('left', $("#statsPersona").width() - 30 + 'px');
+// fp-tabletCell
+// if (!($(window).width() < 440)) {
+//   document.getElementsByClassName('fp-tableCell')[2].style.padding = '20px';
+// }
+// document.getElementsByClassName('fp-tableCell')[2].style.padding = '20px';
+
+let personaButtonStatus = 0;
+function funPersonaButton(margin = 40) {
+  if (personaButtonStatus == 0) {
+    $('.statsPersonaMove').css('left', -($('.statsPersonaMove').width() + margin) +'px');
+    $('.personButton').toggleClass('fa-chevron-right fa-chevron-left');
+    personaButtonStatus = 1;
   } else {
-    $('.blockSkillsContainer').css('left','0px');
-    statusSkillButton = 'right';
+    $('.statsPersonaMove').css('left','0px');
+    $('.personButton').toggleClass('fa-chevron-left fa-chevron-right');
+    personaButtonStatus = 0;
+  }
+
+}
+
+//
+function funButton(widthBlock, moveBlock, margin, status, button = 0) {
+  let width = $(widthBlock).width() + margin;
+  if (status == '1') {
+    $(moveBlock).css('left', -width+'px');
+  } else {
+    $(moveBlock).css('left','0px');
+  }
+  if (button != 0) {
+    // $(button).
   }
 }
 
-
-funSkillButton();
-funSkillButton();
-
+funButton('.blockSkillsItem', '.blockSkillsContainer', 30, 1);
+funButton('.blockSkillsItem', '.blockSkillsContainer', 30, 2);
+funButton('.statsPersonaUl', '.statsPersonaMove', 40, 1);
+funButton('.statsPersonaUl', '.statsPersonaMove', 40, 2);
 
 
