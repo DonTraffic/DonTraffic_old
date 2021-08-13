@@ -8,8 +8,8 @@ new Vue ({
         funBlockSkill(value, num) {
           let elem = $('#example' + value);
           if (num == false) {
-            elem.css('width', '100vw');
-            elem.css('height', '100vh');
+            elem.css('width', '100%');
+            elem.css('height', '100%');
             elem.css('border-radius', '0px');
             elem.css('z-index', '10');
           } else {
