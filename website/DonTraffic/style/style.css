@@ -352,11 +352,12 @@ header #wrap #inner #persona img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding: 20px 0;
 }
 #sectionsSkills .exampleBlock .contentExampleBlock {
   background-color: #5f5f5f;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 #sectionsSkills .exampleBlock .exampleClose {
   display: flex;
@@ -585,6 +586,9 @@ header #wrap #inner #persona img {
   #particles-js #blockPersona {
     width: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   #particles-js #blockPersona #personInfo {
     width: 100%;

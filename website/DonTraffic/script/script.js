@@ -101,14 +101,19 @@ document.getElementsByClassName('fp-tableCell')[1].style.alignItems = 'flex-star
 
 // style persona section
 // width < 440px block
-$('#personInfo').css('width', $("#blockPersona").width() + 'px');
-$('#statsPersona').css('width', $("#blockPersona").width() + 'px');
+if ($(window).width() < 440) {
+  $('#personInfo').css('width', $("#blockPersona").width() + 'px');
+  $('#statsPersona').css('width', $("#blockPersona").width() + 'px');
+  document.getElementsByClassName('fp-tableCell')[2].style.alignItems = 'inherit';
+  document.getElementsByClassName('fp-tableCell')[2].style.flexDirection = 'inherit';
+}
+
 // button
 $('.blockPersonaContainerButton').css('top', $("#statsPersona").height() / 2 - 30 + 'px');
 $('.blockPersonaContainerButton').css('left', $("#statsPersona").width() - 30 + 'px');
 // fp-tabletCell
 // if (!($(window).width() < 440)) {
-//   document.getElementsByClassName('fp-tableCell')[2].style.padding = '20px';
+  // document.getElementsByClassName('fp-tableCell')[2].style.padding = '20px';
 // }
 // document.getElementsByClassName('fp-tableCell')[2].style.padding = '20px';
 
