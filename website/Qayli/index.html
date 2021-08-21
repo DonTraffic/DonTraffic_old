@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кайли</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+    <header>
+        <div class="headerContainer">
+
+            <div class="headerLogo">
+                <img src="/img/icon/Group6.svg" alt="qyaliIcon">
+                <span>Кайли</span>
+            </div>
+            <div class="headerMenu">
+                <a>Новостройки</a>
+                <a>Акции</a>
+                <a>Застройщики</a>
+                <a>Ипотека</a>
+                <a>Журнал</a>
+            </div>
+            <div class="headerLike">
+                <img src="/img/icon/heart.svg" alt="headerHeadt">
+                <span>2</span>
+            </div>
+            <button class="headerAccountButton">
+                <img src="/img/icon/account.svg" alt="headerAccount">
+                <span>Войти</span>
+            </button>
+
+        </div>
+        
+    </header>
+
+    <main>
+        <div class="mortgage">
+            <h1>Ипотека на новостройки в Вологде</h1>
+            <h2>Подберите лучшее ипотечное предложения на покупку квартиры в новостройках Вологды</h2>
+            <div class="mortgageParametrs">
+                <div class="mortgageParametrsPrice">
+                    <span>Стоимость квартиры, ₽</span>
+                    <input type="number" value="3000000">
+                </div>
+                <div class="mortgageParametrsContribution">
+                    <div class="mortgageParametrsContributionInput">
+                        <span>Первый взнос, ₽ </span>
+                        <input type="number" value="300000">
+                    </div>
+                    <div class="mortgageParametrsContributionSelect mortgageParametrsSelect">
+                        <select name="ContributionSelect" id="ContributionSelectId">
+                            <option value="10%">10%</option>
+                            <option value="20%">20%</option>
+                            <option value="30%">30%</option>
+                            <option value="40%">40%</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="mortgageParametrsAge mortgageParametrsSelect">
+                    <span>Срок, лет</span>
+                    <select name="AgeSelect" id="AgeSelectId">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                    </select>
+                </div>
+                <button class="mortgageSearchButoon">
+                    <span class="mortgageSearchButoonText">Подобрать</span>
+                    <span class="mortgageSearchButoonNumber">54</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="informationMortgage">
+            <div class="informationMortgageBlock" style="padding: 0; background: rgba(255, 255, 255, 0); margin-bottom: 4px;">
+                <span>Название программы / Банк</span>
+                <span>Сумма кредита</span>
+                <span>Мин, ставка</span>
+                <span>
+                    Платеж
+                    <i class="far fa-question-circle"></i>
+                </span>
+            </div>
+
+            <div class="informationMortgageContainer">
+
+                <div class="informationMortgageBlock">
+                    <div class="informationMortgageBlockFirst">
+                        <img src="/img/icon/bankHome.svg" alt="bankHome">
+                        <div class="informationMortgageBlockFirstName">
+                            <h3>Семейная ипотека</h3>
+                            <span>Банк ДомРФ</span>
+                        </div>
+                    </div>
+                    <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                        <h3>1 000 000 — 12 000 000₽</h3>
+                        <span>На срок до 30 лет</span>
+                    </div>
+                    <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                        <h3>3,99%</h3>
+                        <span>⁣⁣&#8291;</span>
+                    </div>
+                    <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                        <h3>9 082₽</h3>
+                        <span>&#8291;</span>
+                    </div>
+                    <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                        Подробнее
+                    </button>
+    
+                </div>
+
+            </div>
+
+            <div class="informationMortgageBlock">
+                <div class="informationMortgageBlockFirst">
+                    <img src="/img/icon/person.svg" alt="person">
+                    <div class="informationMortgageBlockFirstName">
+                        <h3>Ипотека в Новостройке</h3>
+                        <span>Банк ДомРФ</span>
+                    </div>
+                </div>
+                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                    <h3>5 000 000 — 12 000 000₽</h3>
+                    <span>На срок до 30 лет</span>
+                </div>
+                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                    <h3>3,99%</h3>
+                    <span>⁣⁣&#8291;</span>
+                </div>
+                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                    <h3>9 082₽</h3>
+                    <span>&#8291;</span>
+                </div>
+                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                    Подробнее
+                </button>
+
+            </div>
+
+            <div class="informationMortgageBlock">
+                <div class="informationMortgageBlockFirst">
+                    <img src="/img/icon/Group.svg" alt="bankHome3">
+                    <div class="informationMortgageBlockFirstName">
+                        <h3>Ипотека от 4,84% годовых</h3>
+                        <span>Банк ДомРФ</span>
+                    </div>
+                </div>
+                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                    <h3>100 000 — 30 000 000₽</h3>
+                    <span>На срок до 30 лет</span>
+                </div>
+                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                    <h3>4,84%</h3>
+                    <span>⁣⁣&#8291;</span>
+                </div>
+                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                    <h3>9 082₽</h3>
+                    <span>&#8291;</span>
+                </div>
+                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                    Подробнее
+                </button>
+
+            </div>
+
+            <div class="informationMortgageBlock">
+                <div class="informationMortgageBlockFirst">
+                    <img src="/img/icon/bankHome.svg" alt="bankHome4">
+                    <div class="informationMortgageBlockFirstName">
+                        <h3>Льготная ипотека на новостройки</h3>
+                        <span>Банк ДомРФ</span>
+                    </div>
+                </div>
+                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                    <h3>1 000 000 — 12 000 000₽</h3>
+                    <span>Срок кредита неизвестен</span>
+                </div>
+                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                    <h3>3,99%</h3>
+                    <span>⁣⁣&#8291;</span>
+                </div>
+                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                    <h3>9 082₽</h3>
+                    <span>&#8291;</span>
+                </div>
+                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                    Подробнее
+                </button>
+
+            </div>
+
+            <div class="informationMortgageBlock">
+                <div class="informationMortgageBlockFirst">
+                    <img src="/img/icon/MTSBank.svg" alt="MTSBank">
+                    <div class="informationMortgageBlockFirstName">
+                        <h3>Дальневосточная ипотека</h3>
+                        <span>Банк ДомРФ</span>
+                    </div>
+                </div>
+                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                    <h3>1 000 000 — 12 000 000₽</h3>
+                    <span>На срок до 30 лет</span>
+                </div>
+                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                    <h3>0,70%</h3>
+                    <span>⁣⁣&#8291;</span>
+                </div>
+                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                    <h3>9 082₽</h3>
+                    <span>&#8291;</span>
+                </div>
+                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                    Подробнее
+                </button>
+
+            </div>
+
+            <div class="informationMortgageBlock">
+                <div class="informationMortgageBlockFirst">
+                    <img src="/img/icon/gazprombank.svg" alt="gazprombank">
+                    <div class="informationMortgageBlockFirstName">
+                        <h3>Семейная ипотека</h3>
+                        <span>Банк ДомРФ</span>
+                    </div>
+                </div>
+                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                    <h3>1 000 000 — 12 000 000₽</h3>
+                    <span>На срок до 30 лет</span>
+                </div>
+                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                    <h3>3,99%</h3>
+                    <span>⁣⁣&#8291;</span>
+                </div>
+                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                    <h3>9 082₽</h3>
+                    <span>&#8291;</span>
+                </div>
+                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                    Подробнее
+                </button>
+
+            </div>
+
+            <div class="informationMortgageBlock">
+                <div class="informationMortgageBlockFirst">
+                    <img src="/img/icon/Group2.svg" alt="bankHome5">
+                    <div class="informationMortgageBlockFirstName">
+                        <h3>	Ипотека для семей с детьми</h3>
+                        <span>Банк ДомРФ</span>
+                    </div>
+                </div>
+                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                    <h3>1 000 000 — 12 000 000₽</h3>
+                    <span>На срок до 30 лет</span>
+                </div>
+                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                    <h3>5,95%</h3>
+                    <span>⁣⁣&#8291;</span>
+                </div>
+                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                    <h3>9 082₽</h3>
+                    <span>&#8291;</span>
+                </div>
+                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                    Подробнее
+                </button>
+
+            </div>
+
+            <div class="informationMortgageBlock">
+                <div class="informationMortgageBlockFirst">
+                    <img src="/img/icon/roshome.svg" alt="rosHome">
+                    <div class="informationMortgageBlockFirstName">
+                        <h3>Новостройка</h3>
+                        <span>Банк ДомРФ</span>
+                    </div>
+                </div>
+                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                    <h3>1 000 000 — 12 000 000₽</h3>
+                    <span>На срок до 30 лет</span>
+                </div>
+                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                    <h3>5,95%</h3>
+                    <span>⁣⁣&#8291;</span>
+                </div>
+                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                    <h3>9 082₽</h3>
+                    <span>&#8291;</span>
+                </div>
+                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                    Подробнее
+                </button>
+
+            </div>
+
+            <div class="informationMortgageBlock">
+                <div class="informationMortgageBlockFirst">
+                    <img src="/img/icon/Group3.svg" alt="bankHome6">
+                    <div class="informationMortgageBlockFirstName">
+                        <h3>Семейная ипотека</h3>
+                        <span>Банк ДомРФ</span>
+                    </div>
+                </div>
+                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                    <h3>1 000 000 — 12 000 000₽</h3>
+                    <span>На срок до 30 лет</span>
+                </div>
+                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                    <h3>4,92%</h3>
+                    <span>⁣⁣&#8291;</span>
+                </div>
+                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                    <h3>9 082₽</h3>
+                    <span>&#8291;</span>
+                </div>
+                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                    Подробнее
+                </button>
+
+            </div>
+
+            <div class="informationMortgageBlock">
+                <div class="informationMortgageBlockFirst">
+                    <img src="/img/icon/Group4.svg" alt="bankHome7">
+                    <div class="informationMortgageBlockFirstName">
+                        <h3>Ипотека в ползунках</h3>
+                        <span>Банк ДомРФ</span>
+                    </div>
+                </div>
+                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                    <h3>1 000 000 — 12 000 000₽</h3>
+                    <span>На срок до 30 лет</span>
+                </div>
+                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                    <h3>6,10%</h3>
+                    <span>⁣⁣&#8291;</span>
+                </div>
+                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                    <h3>9 082₽</h3>
+                    <span>&#8291;</span>
+                </div>
+                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                    Подробнее
+                </button>
+
+            </div>
+
+            <button class="informationMortgageButton">
+                Показать больше
+            </button>
+
+        </div>
+
+        <div class="mortgageBank">
+            <h2>Ипотека по банкам</h2>
+
+            <div class="mortgageBankContainer">
+                <div class="mortgageBankItem">
+                    <img src="/img/icon/revivalBank.svg" alt="revivalBank">
+                    <div class="mortgageBankItemContainer">
+                        <h3>Банк Возраждение</h3>
+                        <span>Ставка от 6,5%</span>
+                        <button>Программы</button>
+                    </div>
+                </div>
+
+                <div class="mortgageBankItem">
+                    <img src="/img/icon/gazprombankCircle.svg" alt="gazprombank">
+                    <div class="mortgageBankItemContainer">
+                        <h3>Газпром Банк</h3>
+                        <span>Ставка от 6,5%</span>
+                        <button>Программы</button>
+                    </div>
+                </div>
+
+                <div class="mortgageBankItem">
+                    <img src="/img/icon/rosselkhoznadzor.svg" alt="rosselkhoznadzor">
+                    <div class="mortgageBankItemContainer">
+                        <h3>Россельхоз Банк</h3>
+                        <span>Ставка от 6,5%</span>
+                        <button>Программы</button>
+                    </div>
+                </div>
+
+                <div class="mortgageBankItem">
+                    <img src="/img/icon/sberbank.jpg" alt="sberbank">
+                    <div class="mortgageBankItemContainer">
+                        <h3>Сбербанк</h3>
+                        <span>Ставка от 6,5%</span>
+                        <button>Программы</button>
+                    </div>
+                </div>
+
+                <div class="mortgageBankItem">
+                    <img src="/img/icon/AKbars.svg" alt="AKbars">
+                    <div class="mortgageBankItemContainer">
+                        <h3>Ак Барс Банк</h3>
+                        <span>Ставка от 6,5%</span>
+                        <button>Программы</button>
+                    </div>
+                </div>
+
+                <div class="mortgageBankItem">
+                    <img src="/img/icon/alphaBank.svg" alt="alphaBank">
+                    <div class="mortgageBankItemContainer">
+                        <h3>Альфа Банк</h3>
+                        <span>Ставка от 6,5%</span>
+                        <button>Программы</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="greenCity">
+
+            <div class="greenCityContainer">
+                <span>Строится до 3 кв. 2022 г.</span>
+                <h2>ЖК Зеленый город</h2>
+                <span>Вологда, Центр, Рыбинская 41</span>
+                <div class="greenCityContainerGPS">
+                    <span class="greenCityContainerCircle"></span>Красносельская 
+                    <img src="/img/icon/bx-walk.svg" alt="walk"> <span>16 мин.</span>
+                    <img src="/img/icon/bx-bus.svg" alt="bus"> <span>4 мин.</span>
+                </div>
+                <div class="greenCityContainerInformatiom">
+                    <div class="greenCityContainerInformatiomItem">
+                        <span>1-комн.</span>
+                        <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
+                        <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
+                    </div>
+                    <div class="greenCityContainerInformatiomItem">
+                        <span>2-комн.</span>
+                        <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
+                        <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
+                    </div>
+                    <div class="greenCityContainerInformatiomItem">
+                        <span>3-комн.</span>
+                        <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
+                        <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
+                    </div>
+                    <div class="greenCityContainerInformatiomItem">
+                        <span>4+комн.</span>
+                        <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
+                        <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
+                    </div>
+                    <div class="greenCityContainerInformatiomItem" style="border: none;">
+                        <span>Студии</span>
+                        <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
+                        <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
+                    </div>
+                </div>
+                <div class="greenCityContainerContact">
+                    <button class="greenCityContainerContactTel">
+                        <img src="/img/icon/tel.svg">Показать телефон
+                    </button>
+                    <button class="greenCityContainerContactDetail">Подробнее</button>
+                </div>
+            </div>
+
+            <img class="greenCityLogo" src="/img/icon/greenCityLogo.svg">
+            <div class="greenCityAd">
+                <div class="greenCityAdLink">
+                    Реклама <img src="/img/icon/bx-link.svg" alt="link">
+                </div> <br>
+                <span>Проектная декларация на сайте наш.дом.рф <br> Застройщик ООО «Инвестцентр»</span>
+            </div>
+
+        </div>
+
+        <div class="newBuildings">
+            <div class="newBuildingsSearch">
+                <a href="#" class="active">Аккредитованные новостройки</a>
+                <a href="#" class="">Рекомендованные ЖК</a>
+                <a href="#" class="">Популярные новостройки</a>
+                <a href="#" class="">Самые обсуждаемые</a>
+            </div>
+            <div class="newBuildingsContainer">
+
+                <div class="newBuildingsContainerItem">
+                    <img src="/img/ribinsk.png" alt="ribinsk">
+                    <div class="newBuildingsContainerItemInfo">
+                        <h3>ЖК Рыбинская, 41</h3>
+                        <p>Вологда, Центр, Окружное шоссе 23</p>
+                        <div>
+                            <div></div>Красносельская
+                            <img src="/img/icon/bx-walk1.svg" alt="walk">
+                            <span>16 мин.</span>
+                        </div>
+                        <span>от 75 000 ₽ за м²</span>
+                    </div>
+                    <div class="newBuildingsContainerItemLike">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                        </svg>                            
+                    </div>
+                </div>
+
+                <div class="newBuildingsContainerItem">
+                    <img src="/img/resedentPark.png" alt="resedentPark">
+                    <div class="newBuildingsContainerItemInfo">
+                        <h3>ЖК Резеденция парк</h3>
+                        <p>Вологда, Центр, Окружное шоссе 23</p>
+                        <div>
+                            <div></div>Красносельская
+                            <img src="/img/icon/bx-walk1.svg" alt="walk">
+                            <span>16 мин.</span>
+                        </div>
+                        <span>от 48 000 ₽ за м²</span>
+                    </div>
+                    <div class="newBuildingsContainerItemLike">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                        </svg>                            
+                    </div>
+                </div>
+
+                <div class="newBuildingsContainerItem">
+                    <img src="/img/severna.png" alt="severna">
+                    <div class="newBuildingsContainerItemInfo">
+                        <h3>ЖК на Северной</h3>
+                        <p>Вологда, Центр, Окружное шоссе 23</p>
+                        <div>
+                            <div></div>Красносельская
+                            <img src="/img/icon/bx-walk1.svg" alt="walk">
+                            <span>16 мин.</span>
+                        </div>
+                        <span>от 43 000 ₽ за м²</span>
+                    </div>
+                    <div class="newBuildingsContainerItemLike">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                        </svg>                            
+                    </div>
+                </div>
+
+                <div class="newBuildingsContainerItem">
+                    <img src="/img/marschal.png" alt="marschal">
+                    <div class="newBuildingsContainerItemInfo">
+                        <h3>ЖК Маршал</h3>
+                        <p>Вологда, Центр, Окружное шоссе 23</p>
+                        <div>
+                            <div></div>Красносельская
+                            <img src="/img/icon/bx-walk1.svg" alt="walk">
+                            <span>16 мин.</span>
+                        </div>
+                        <span>от 51 000 ₽ за м²</span>
+                    </div>
+                    <div class="newBuildingsContainerItemLike">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                        </svg>                            
+                    </div>
+                </div>
+
+                <div class="newBuildingsContainerItem">
+                    <img src="/img/ribinsk.png" alt="ribinsk">
+                    <div class="newBuildingsContainerItemInfo">
+                        <h3>ЖК Рыбинская, 41</h3>
+                        <p>Вологда, Центр, Окружное шоссе 23</p>
+                        <div>
+                            <div></div>Красносельская
+                            <img src="/img/icon/bx-walk1.svg" alt="walk">
+                            <span>16 мин.</span>
+                        </div>
+                        <span>от 75 000 ₽ за м²</span>
+                    </div>
+                    <div class="newBuildingsContainerItemLike">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                        </svg>                            
+                    </div>
+                </div>
+
+                <div class="newBuildingsContainerItem">
+                    <img src="/img/severna.png" alt="severna">
+                    <div class="newBuildingsContainerItemInfo">
+                        <h3>ЖК на Северной</h3>
+                        <p>Вологда, Центр, Окружное шоссе 23</p>
+                        <div>
+                            <div></div>Красносельская
+                            <img src="/img/icon/bx-walk1.svg" alt="walk">
+                            <span>16 мин.</span>
+                        </div>
+                        <span>от 43 000 ₽ за м²</span>
+                    </div>
+                    <div class="newBuildingsContainerItemLike">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                        </svg>                            
+                    </div>
+                </div>
+
+                <div class="newBuildingsContainerItem">
+                    <img src="/img/marschal.png" alt="marschal">
+                    <div class="newBuildingsContainerItemInfo">
+                        <h3>ЖК Маршал</h3>
+                        <p>Вологда, Центр, Окружное шоссе 23</p>
+                        <div>
+                            <div></div>Красносельская
+                            <img src="/img/icon/bx-walk1.svg" alt="walk">
+                            <span>16 мин.</span>
+                        </div>
+                        <span>от 51 000 ₽ за м²</span>
+                    </div>
+                    <div class="newBuildingsContainerItemLike">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                        </svg>                            
+                    </div>
+                </div>
+
+                <div class="newBuildingsContainerItem">
+                    <img src="/img/resedentPark.png" alt="resedentPark">
+                    <div class="newBuildingsContainerItemInfo">
+                        <h3>ЖК Резеденция парк</h3>
+                        <p>Вологда, Центр, Окружное шоссе 23</p>
+                        <div>
+                            <div></div>Красносельская
+                            <img src="/img/icon/bx-walk1.svg" alt="walk">
+                            <span>16 мин.</span>
+                        </div>
+                        <span>от 48 000 ₽ за м²</span>
+                    </div>
+                    <div class="newBuildingsContainerItemLike">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                        </svg>                            
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="linkBlock">
+            <span class="linkBlockItem">Кайли</span>
+            <img src="/img/icon/arrowRight.svg" alt="arrow">
+            <span class="linkBlockItem">Вологда</span>
+            <img src="/img/icon/arrowRight.svg" alt="arrow">
+            <span class="linkBlockItemEnd">Ипотека на новостройки</span>
+        </div>
+
+    </main>
+
+    <div class="apartmentsInfo">
+        <div class="apartmentsInfoContainer">
+            <h2>Квартиры в 56 новостройках Сочи</h2>
+            <p>Лирический субъект, согласно традиционным представлениям, неумеренно осознаёт симулякр. Его герой, пишет Бахтин, впечатление последовательно. Мифопоэтическое пространство, соприкоснувшись в чем-то со своим главным антагонистом в постструктурной поэтике, вязко. Генезис свободного стиха, чтобы уловить хореический ритм или аллитерацию на "л", притягивает словесный холодный цинизм, потому что в стихах и в прозе автор рассказывает нам об одном и том же. Ударение выбирает былинный зачин, и это является некими межсловесными отношениями другого типа, природу которых еще предстоит конкретизировать далее.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+
+            <div class="footerTop">
+                <h2>Поиск новостроек в Вологде</h2>
+                <div class="footerTopMenu">
+                    <a href="#" class="active">По типу</a>
+                    <a href="#">Метро</a>
+                    <a href="#">Районы</a>
+                    <a href="#">Улицы</a>
+                </div>
+            </div>
+
+            <div class="footerList">
+
+                <div class="footerListItem">
+                    <h3>Новостройки</h3>
+                    <a href="#">Проверенные новостройки</a>
+                    <a href="#">Строящиеся ЖК</a>
+                    <a href="#">Сданные ЖК</a>
+                    <a href="#">Новостройки на карте</a>
+                </div>
+
+                <div class="footerListItem">
+                    <h3>Популярные фильтры</h3>
+                    <a href="#">Квартиры с отделкой</a>
+                    <a href="#">Квартиры без отделки</a>
+                    <a href="#">Новостройки в центре</a>
+                    <a href="#">Недорогие новостройки</a>
+                    <a href="#">Новостройки с ипотекой</a>
+                </div>
+
+                <div class="footerListItem">
+                    <h3>Квартиры в ЖК</h3>
+                    <a href="#">Студии</a>
+                    <a href="#">Однокомнатные</a>
+                    <a href="#">Двухкомнатные</a>
+                    <a href="#">Трехкомнатные</a>
+                    <a href="#">Четырехкомнатные и более</a>
+                </div>
+
+                <div class="footerListItem">
+                    <h3>По классу</h3>
+                    <a href="#">Эконом</a>
+                    <a href="#">Комфорт</a>
+                    <a href="#">Бизнес</a>
+                    <a href="#">Элит</a>
+                </div>
+            </div>
+
+            <div class="footerInfo">
+                <p>Qayli — база проверенных новостроек. Использование сайта означает согласие с Пользовательским соглашением и Политикой конфиденциальности Qayli. Оплачивая услуги, вы принимаете Лицензионное соглашение.</p>
+                <p>Информация, размещенная на сайте, не является публичной офертой и предоставляется в ознакомительных целях.  Для получения подробной информации о жилых комплексах и квартирах, общайтесь в отдел продаж застройщика. Карта сайта.</p>
+            </div>
+
+            <div class="footerContact">
+                <div class="footerContactLogo">
+                    <img src="/img/icon/Group6.svg" alt="logo">
+                    <img src="/img/icon/Qayli.svg" alt="qualy">
+                </div>
+                <div class="footerContactInfo">
+                    <a href="#">Застройщикам</a>
+                    <a href="#">Агенствам недвижимости</a>
+                    <a href="#">Реклама на сайте</a>
+                </div>
+                <button class="footerContactChat">
+                    <img src="/img/icon/bx-chat.svg" alt="chat"> Связаться с нами
+                </button>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="/script/script.js"></script>
+
+</body>
+</html>

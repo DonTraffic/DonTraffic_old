@@ -1,0 +1,807 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.4s ease;
+}
+*::-webkit-outer-spin-button, *::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  background-color: #F7F8FC;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(205, 211, 221, 0.32);
+  width: 100%;
+}
+header .headerContainer {
+  width: 100vw;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  color: #38424E;
+  max-width: 1136px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+header .headerContainer .headerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+header .headerContainer .headerLogo:hover {
+  cursor: pointer;
+}
+header .headerContainer .headerLogo img {
+  height: 31.7220821381px;
+  width: 32.5982933044px;
+  margin-right: 6px;
+}
+header .headerContainer .headerLogo span {
+  font-family: Futura;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+}
+header .headerContainer .headerMenu {
+  display: flex;
+  flex-grow: 1;
+}
+header .headerContainer .headerMenu a {
+  list-style: none;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  margin-right: 20px;
+}
+header .headerContainer .headerMenu a:hover {
+  cursor: pointer;
+}
+header .headerContainer .headerLike {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+header .headerContainer .headerLike:hover {
+  cursor: pointer;
+}
+header .headerContainer .headerLike img {
+  width: 20px;
+  height: 19px;
+  margin-right: 6px;
+}
+header .headerContainer .headerLike span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
+header .headerContainer .headerAccountButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: none;
+}
+header .headerContainer .headerAccountButton:hover {
+  cursor: pointer;
+}
+header .headerContainer .headerAccountButton img {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+header .headerContainer .headerAccountButton span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+main .mortgage {
+  font-family: Roboto;
+  text-align: center;
+  margin-top: 25px;
+}
+main .mortgage h1 {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 120%;
+  color: #0F0208;
+  margin-bottom: 12px;
+}
+main .mortgage h2 {
+  font-size: 18px;
+  line-height: 160%;
+  color: #38424E;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+main .mortgage .mortgageParametrs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38424E;
+  font-family: Roboto;
+}
+main .mortgage .mortgageParametrs div {
+  background-color: white;
+  border: 1px solid #CDD3DD;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  height: 60px;
+}
+main .mortgage .mortgageParametrs div span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #38424E;
+}
+main .mortgage .mortgageParametrs div input {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 5px;
+  border: none;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+main .mortgage .mortgageParametrs .mortgageParametrsPrice {
+  padding: 0px 12px;
+  margin-right: 15px;
+}
+main .mortgage .mortgageParametrs .mortgageParametrsContribution {
+  padding: 0px 12px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding-right: 0;
+}
+main .mortgage .mortgageParametrs .mortgageParametrsContribution .mortgageParametrsContributionInput {
+  border: none;
+  color: black;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+}
+main .mortgage .mortgageParametrs .mortgageParametrsContribution .mortgageParametrsContributionSelect {
+  width: 100px;
+  height: 100%;
+  border: none;
+}
+main .mortgage .mortgageParametrs .mortgageParametrsContribution .mortgageParametrsContributionSelect select {
+  border-left: 1px solid #CDD3DD;
+  padding-left: 10px;
+}
+main .mortgage .mortgageParametrs .mortgageParametrsAge {
+  padding-top: 12px;
+  width: 170px;
+  margin-right: 15px;
+}
+main .mortgage .mortgageParametrs .mortgageParametrsAge span {
+  margin-left: 12px;
+}
+main .mortgage .mortgageParametrs .mortgageParametrsAge select {
+  padding-left: 12px;
+}
+main .mortgage .mortgageParametrs .mortgageParametrsSelect {
+  position: relative;
+}
+main .mortgage .mortgageParametrs .mortgageParametrsSelect:after {
+  content: url("/img/icon/arrovSelect.svg");
+  width: 10px;
+  height: 25px;
+  top: 17px;
+  right: 6px;
+  background: #F7F8FC;
+  border-radius: 50%;
+  padding: 0 8px;
+  position: absolute;
+}
+main .mortgage .mortgageParametrs .mortgageParametrsSelect select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+main .mortgage .mortgageParametrs .mortgageParametrsSelect select:hover {
+  cursor: pointer;
+}
+main .mortgage .mortgageParametrs .mortgageSearchButoon {
+  width: 170px;
+  height: 60px;
+  background-color: #5AB677;
+  border: none;
+  border-radius: 5px;
+}
+main .mortgage .mortgageParametrs .mortgageSearchButoon:hover {
+  cursor: pointer;
+}
+main .mortgage .mortgageParametrs .mortgageSearchButoon .mortgageSearchButoonText {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+main .mortgage .mortgageParametrs .mortgageSearchButoon .mortgageSearchButoonNumber {
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.32);
+  border-radius: 4px;
+}
+main .informationMortgage {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .informationMortgage .informationMortgageContainer {
+  width: 100%;
+}
+main .informationMortgage .informationMortgageBlock {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 0.4fr 0.4fr;
+  padding: 15px;
+  background-color: white;
+  margin-bottom: 12px;
+}
+main .informationMortgage .informationMortgageBlock h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: #38424E;
+  margin-bottom: 8px;
+}
+main .informationMortgage .informationMortgageBlock .informationMortgageBlockFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .informationMortgage .informationMortgageBlock .informationMortgageBlockFirst {
+  display: flex;
+  align-items: center;
+}
+main .informationMortgage .informationMortgageBlock .informationMortgageBlockFirst img {
+  border-radius: 4px;
+  margin-right: 12px;
+}
+main .informationMortgage .informationMortgageBlock span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 100%;
+  color: #78859B;
+}
+main .informationMortgage .informationMortgageBlock .informationMortgageBlockButton {
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  border: 1px solid #38424E;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  color: #38424E;
+  background-color: white;
+}
+main .informationMortgage .informationMortgageBlock .informationMortgageBlockButton:hover {
+  cursor: pointer;
+}
+main .informationMortgage .informationMortgageButton {
+  padding: 12px 24px;
+  border: 1px solid #38424E;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #38424E;
+  background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 50px;
+}
+main .informationMortgage .informationMortgageButton:hover {
+  cursor: pointer;
+}
+main .mortgageBank {
+  margin-bottom: 50px;
+}
+main .mortgageBank h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 120%;
+  color: #0F0208;
+}
+main .mortgageBank .mortgageBankContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .mortgageBank .mortgageBankContainer .mortgageBankItem {
+  width: 180px;
+  height: 100%;
+  position: relative;
+  margin-top: 44px;
+  padding-top: 44px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+main .mortgageBank .mortgageBankContainer .mortgageBankItem img {
+  border-radius: 50%;
+  position: absolute;
+  top: -32px;
+  left: 58px;
+  height: 64px;
+}
+main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer {
+  height: 130px;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  color: #38424E;
+  padding: 0 16px 16px 16px;
+  position: relative;
+}
+main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  margin-bottom: 8px;
+}
+main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer span {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 120%;
+}
+main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer button {
+  position: absolute;
+  bottom: 16px;
+  right: 39px;
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  border: 1px solid #38424E;
+  border-radius: 4px;
+  padding: 6px 14px;
+  background-color: rgba(255, 255, 255, 0);
+}
+main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer button:hover {
+  cursor: pointer;
+}
+main .greenCity {
+  width: 100%;
+  height: 540px;
+  background-image: url(/img/greenCity.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .greenCity .greenCityContainer {
+  color: #F7F8FC;
+  font-family: Roboto;
+  width: 360px;
+  font-style: normal;
+}
+main .greenCity .greenCityContainer span {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 120%;
+}
+main .greenCity .greenCityContainer h2 {
+  color: white;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 120%;
+}
+main .greenCity .greenCityContainer .greenCityContainerGPS {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+main .greenCity .greenCityContainer .greenCityContainerGPS .greenCityContainerCircle {
+  width: 8px;
+  height: 8px;
+  background-color: #DA4233;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+main .greenCity .greenCityContainer .greenCityContainerGPS img {
+  margin: 0 0px 0 5px;
+}
+main .greenCity .greenCityContainer .greenCityContainerGPS span {
+  color: rgba(247, 248, 252, 0.54);
+}
+main .greenCity .greenCityContainer .greenCityContainerInformatiom {
+  width: 100%;
+  margin-top: 16px;
+}
+main .greenCity .greenCityContainer .greenCityContainerInformatiom .greenCityContainerInformatiomItem {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1fr;
+  border-bottom: 1px solid rgba(247, 248, 252, 0.32);
+  padding: 4px 0;
+  margin-top: 8px;
+}
+main .greenCity .greenCityContainer .greenCityContainerInformatiom .greenCityContainerInformatiomItem .greenCityContainerInformatiomItemSize {
+  text-align: center;
+}
+main .greenCity .greenCityContainer .greenCityContainerInformatiom .greenCityContainerInformatiomItem .greenCityContainerInformatiomItemPrice {
+  text-align: right;
+}
+main .greenCity .greenCityContainer .greenCityContainerContact {
+  width: 100%;
+  display: flex;
+  font-weight: 500;
+  margin-top: 25px;
+}
+main .greenCity .greenCityContainer .greenCityContainerContact .greenCityContainerContactTel {
+  width: 60%;
+  background: #EFD678;
+  border-radius: 4px;
+  padding: 12px 0;
+  margin-right: 12px;
+  border: none;
+  font-size: 14px;
+  line-height: 18px;
+  color: #38424E;
+}
+main .greenCity .greenCityContainer .greenCityContainerContact .greenCityContainerContactDetail {
+  width: 40%;
+  font-size: 16px;
+  line-height: 120%;
+  color: #F7F8FC;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #F7F8FC;
+  border-radius: 4px;
+}
+main .greenCity .greenCityLogo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+main .greenCity .greenCityAd {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+main .greenCity .greenCityAd .greenCityAdLink {
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 100%;
+  color: #FFFFFF;
+  padding: 4px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+main .greenCity .greenCityAd span {
+  font-size: 9px;
+  line-height: 120%;
+  color: #F7F8FC;
+  opacity: 0.72;
+}
+main .newBuildings {
+  width: 100%;
+  margin-top: 47px;
+}
+main .newBuildings .newBuildingsSearch {
+  width: 100%;
+  border-bottom: 1px solid #CED3DD;
+  padding-bottom: 18px;
+  margin-bottom: 16px;
+}
+main .newBuildings .newBuildingsSearch a {
+  margin-right: 24px;
+  padding-bottom: 16px;
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #38424E;
+  opacity: 0.72;
+}
+main .newBuildings .newBuildingsSearch a:hover {
+  opacity: 1;
+}
+main .newBuildings .newBuildingsSearch .active {
+  border-bottom: 4px solid #38424E;
+  opacity: 1;
+}
+main .newBuildings .newBuildingsContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem {
+  width: 270px;
+  position: relative;
+  margin-bottom: 12px;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem:hover {
+  background: #FFFFFF;
+  box-shadow: 0px 16px 24px -16px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  cursor: pointer;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem:hover .newBuildingsContainerItemLike {
+  opacity: 1;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem img {
+  width: 100%;
+  border-radius: 4px;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo {
+  width: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  padding: 0 12px 12px 12px;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo h3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  color: #38424E;
+  margin: 8px 0;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 120%;
+  color: #78859B;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #38424E;
+  display: flex;
+  align-items: center;
+  margin: 4px 0px 8px 0;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div div {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #DA4233;
+  display: inline-block;
+  margin-right: 4px;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div img {
+  width: 16px;
+  margin: 0px 2px 0px 4px;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div span {
+  font-size: 14px;
+  line-height: 16px;
+  color: #78859B;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo span {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  color: #38424E;
+}
+main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemLike {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: #F7F8FC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  top: 4px;
+  right: 4px;
+}
+main .linkBlock {
+  margin-top: 70px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 120%;
+}
+main .linkBlock img {
+  margin: 0px 6px;
+}
+main .linkBlock .linkBlockItem {
+  color: #38424E;
+}
+main .linkBlock .linkBlockItemEnd {
+  color: #78859B;
+}
+
+.apartmentsInfo {
+  width: 100%;
+  border-top: 1px solid rgba(120, 133, 155, 0.32);
+  margin-top: 24px;
+  padding: 40px 0;
+}
+.apartmentsInfo .apartmentsInfoContainer {
+  max-width: 1140px;
+  margin: 0 auto;
+  font-family: Roboto;
+  font-style: normal;
+}
+.apartmentsInfo .apartmentsInfoContainer h2 {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+  color: #0F0208;
+}
+.apartmentsInfo .apartmentsInfoContainer p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #38424E;
+}
+
+footer {
+  background-color: #353535;
+  padding: 55px 0;
+  width: 100%;
+  font-family: Roboto;
+  font-style: normal;
+}
+footer .footerContainer {
+  width: 1140px;
+  margin: 0 auto;
+}
+footer .footerContainer .footerTop {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.24);
+  padding-bottom: 10px;
+  margin-bottom: 32px;
+}
+footer .footerContainer .footerTop h2 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+footer .footerContainer .footerTop .footerTopMenu a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #F7F8FC;
+  opacity: 0.72;
+  padding-bottom: 16px;
+  margin-left: 16px;
+}
+footer .footerContainer .footerTop .footerTopMenu .active {
+  color: #5AB677;
+  border-bottom: 4px solid #5AB677;
+}
+footer .footerContainer .footerList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer .footerContainer .footerList .footerListItem {
+  margin-bottom: 60px;
+}
+footer .footerContainer .footerList .footerListItem h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  color: white;
+  margin-bottom: 12px;
+}
+footer .footerContainer .footerList .footerListItem a {
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 120%;
+  color: #F7F8FC;
+  margin-bottom: 8px;
+}
+footer .footerContainer .footerInfo {
+  padding: 40px 0 24px 0;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.24);
+  border-top: 1px solid rgba(153, 153, 153, 0.24);
+  margin-bottom: 40px;
+}
+footer .footerContainer .footerInfo p {
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 120%;
+  color: #999999;
+}
+footer .footerContainer .footerContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  color: #F7F8FC;
+  font-size: 16px;
+  line-height: 120%;
+}
+footer .footerContainer .footerContact .footerContactLogo, footer .footerContainer .footerContact .footerContactInfo, footer .footerContainer .footerContact .footerContactChat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footerContainer .footerContact .footerContactLogo img {
+  margin-right: 5px;
+}
+footer .footerContainer .footerContact .footerContactInfo {
+  justify-content: space-between;
+}
+footer .footerContainer .footerContact .footerContactInfo a {
+  text-decoration: none;
+  margin: 0px 20px;
+  color: #F7F8FC;
+}
+footer .footerContainer .footerContact .footerContactChat {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #F7F8FC;
+  font-size: 16px;
+}
+footer .footerContainer .footerContact .footerContactChat:hover {
+  cursor: pointer;
+}
+footer .footerContainer .footerContact .footerContactChat img {
+  margin-right: 5px;
+}/*# sourceMappingURL=style.css.map */
