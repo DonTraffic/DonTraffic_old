@@ -9,6 +9,9 @@
   -webkit-appearance: none;
   margin: 0;
 }
+*::-webkit-scrollbar {
+  width: 0px;
+}
 
 body {
   background-color: #F7F8FC;
@@ -18,6 +21,8 @@ body {
 }
 
 header {
+  max-width: 1140px;
+  margin: 0 auto;
   background-color: #fff;
   border-bottom: 1px solid rgba(205, 211, 221, 0.32);
   width: 100%;
@@ -43,9 +48,7 @@ header .headerContainer .headerLogo {
 header .headerContainer .headerLogo:hover {
   cursor: pointer;
 }
-header .headerContainer .headerLogo img {
-  height: 31.7220821381px;
-  width: 32.5982933044px;
+header .headerContainer .headerLogo svg {
   margin-right: 6px;
 }
 header .headerContainer .headerLogo span {
@@ -81,9 +84,7 @@ header .headerContainer .headerLike {
 header .headerContainer .headerLike:hover {
   cursor: pointer;
 }
-header .headerContainer .headerLike img {
-  width: 20px;
-  height: 19px;
+header .headerContainer .headerLike svg {
   margin-right: 6px;
 }
 header .headerContainer .headerLike span {
@@ -103,7 +104,7 @@ header .headerContainer .headerAccountButton {
 header .headerContainer .headerAccountButton:hover {
   cursor: pointer;
 }
-header .headerContainer .headerAccountButton img {
+header .headerContainer .headerAccountButton svg {
   width: 20px;
   height: 20px;
   margin-right: 6px;
@@ -115,38 +116,89 @@ header .headerContainer .headerAccountButton span {
   font-size: 16px;
   line-height: 100%;
 }
+header .headerContainer .headerMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: none;
+  display: none;
+}
+header .headerContainer .headerMenuButton:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 720px) {
+  header .headerContainer .headerLogo {
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+  header .headerContainer .headerAccountButton {
+    display: none;
+  }
+  header .headerContainer .headerMenuButton {
+    display: block;
+  }
+  header .headerContainer .headerMenu {
+    display: none;
+  }
+}
 
-main {
+.mortgage, .informationMortgage, .mortgageBank, .greenCity, .newBuildings, .linkBlockContainer {
   max-width: 1140px;
   margin: 0 auto;
+  width: 100%;
 }
-main .mortgage {
+
+@media screen and (max-width: 1140px) {
+  .mortgage, .informationMortgage, .mortgageBank, .greenCity, .newBuildings, .linkBlockContainer {
+    padding: 0px 16px;
+  }
+}
+.informationMortgageButton {
+  padding: 12px 24px;
+  border: 1px solid #38424E;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #38424E;
+  background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 50px;
+}
+.informationMortgageButton:hover {
+  cursor: pointer;
+}
+
+.mortgage {
   font-family: Roboto;
   text-align: center;
   margin-top: 25px;
 }
-main .mortgage h1 {
+.mortgage h1 {
   font-weight: bold;
   font-size: 28px;
   line-height: 120%;
   color: #0F0208;
   margin-bottom: 12px;
 }
-main .mortgage h2 {
+.mortgage h2 {
   font-size: 18px;
   line-height: 160%;
   color: #38424E;
   font-weight: 400;
   margin-bottom: 24px;
 }
-main .mortgage .mortgageParametrs {
+.mortgage .mortgageParametrs {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #38424E;
   font-family: Roboto;
+  flex-wrap: wrap;
 }
-main .mortgage .mortgageParametrs div {
+.mortgage .mortgageParametrs div {
   background-color: white;
   border: 1px solid #CDD3DD;
   border-radius: 4px;
@@ -158,13 +210,13 @@ main .mortgage .mortgageParametrs div {
   width: 300px;
   height: 60px;
 }
-main .mortgage .mortgageParametrs div span {
+.mortgage .mortgageParametrs div span {
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
   color: #38424E;
 }
-main .mortgage .mortgageParametrs div input {
+.mortgage .mortgageParametrs div input {
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
@@ -173,11 +225,11 @@ main .mortgage .mortgageParametrs div input {
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
 }
-main .mortgage .mortgageParametrs .mortgageParametrsPrice {
+.mortgage .mortgageParametrs .mortgageParametrsPrice {
   padding: 0px 12px;
   margin-right: 15px;
 }
-main .mortgage .mortgageParametrs .mortgageParametrsContribution {
+.mortgage .mortgageParametrs .mortgageParametrsContribution {
   padding: 0px 12px;
   margin-right: 15px;
   display: flex;
@@ -186,37 +238,41 @@ main .mortgage .mortgageParametrs .mortgageParametrsContribution {
   flex-direction: row;
   padding-right: 0;
 }
-main .mortgage .mortgageParametrs .mortgageParametrsContribution .mortgageParametrsContributionInput {
+.mortgage .mortgageParametrs .mortgageParametrsContribution .mortgageParametrsContributionInput {
   border: none;
   color: black;
   width: 100%;
   background-color: rgba(255, 255, 255, 0);
 }
-main .mortgage .mortgageParametrs .mortgageParametrsContribution .mortgageParametrsContributionSelect {
+.mortgage .mortgageParametrs .mortgageParametrsContribution .mortgageParametrsContributionSelect {
   width: 100px;
   height: 100%;
   border: none;
 }
-main .mortgage .mortgageParametrs .mortgageParametrsContribution .mortgageParametrsContributionSelect select {
+.mortgage .mortgageParametrs .mortgageParametrsContribution .mortgageParametrsContributionSelect select {
   border-left: 1px solid #CDD3DD;
   padding-left: 10px;
 }
-main .mortgage .mortgageParametrs .mortgageParametrsAge {
+.mortgage .mortgageParametrs .mortgageParametrsSelectContainer {
+  flex-direction: row;
+  border: none;
+}
+.mortgage .mortgageParametrs .mortgageParametrsAge {
   padding-top: 12px;
   width: 170px;
   margin-right: 15px;
 }
-main .mortgage .mortgageParametrs .mortgageParametrsAge span {
+.mortgage .mortgageParametrs .mortgageParametrsAge span {
   margin-left: 12px;
 }
-main .mortgage .mortgageParametrs .mortgageParametrsAge select {
+.mortgage .mortgageParametrs .mortgageParametrsAge select {
   padding-left: 12px;
 }
-main .mortgage .mortgageParametrs .mortgageParametrsSelect {
+.mortgage .mortgageParametrs .mortgageParametrsSelect {
   position: relative;
 }
-main .mortgage .mortgageParametrs .mortgageParametrsSelect:after {
-  content: url("/img/icon/arrovSelect.svg");
+.mortgage .mortgageParametrs .mortgageParametrsSelect:after {
+  content: url("/img/svg/arrowSelect.svg");
   width: 10px;
   height: 25px;
   top: 17px;
@@ -226,7 +282,7 @@ main .mortgage .mortgageParametrs .mortgageParametrsSelect:after {
   padding: 0 8px;
   position: absolute;
 }
-main .mortgage .mortgageParametrs .mortgageParametrsSelect select {
+.mortgage .mortgageParametrs .mortgageParametrsSelect select {
   width: 100%;
   height: 100%;
   border: none;
@@ -235,20 +291,20 @@ main .mortgage .mortgageParametrs .mortgageParametrsSelect select {
   -moz-appearance: none;
   appearance: none;
 }
-main .mortgage .mortgageParametrs .mortgageParametrsSelect select:hover {
+.mortgage .mortgageParametrs .mortgageParametrsSelect select:hover {
   cursor: pointer;
 }
-main .mortgage .mortgageParametrs .mortgageSearchButoon {
+.mortgage .mortgageParametrs .mortgageSearchButoon {
   width: 170px;
   height: 60px;
   background-color: #5AB677;
   border: none;
   border-radius: 5px;
 }
-main .mortgage .mortgageParametrs .mortgageSearchButoon:hover {
+.mortgage .mortgageParametrs .mortgageSearchButoon:hover {
   cursor: pointer;
 }
-main .mortgage .mortgageParametrs .mortgageSearchButoon .mortgageSearchButoonText {
+.mortgage .mortgageParametrs .mortgageSearchButoon .mortgageSearchButoonText {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -256,12 +312,33 @@ main .mortgage .mortgageParametrs .mortgageSearchButoon .mortgageSearchButoonTex
   line-height: 20px;
   color: #FFFFFF;
 }
-main .mortgage .mortgageParametrs .mortgageSearchButoon .mortgageSearchButoonNumber {
+.mortgage .mortgageParametrs .mortgageSearchButoon .mortgageSearchButoonNumber {
   padding: 4px;
   background: rgba(255, 255, 255, 0.32);
   border-radius: 4px;
 }
-main .informationMortgage {
+@media screen and (max-width: 930px) {
+  .mortgage .mortgageParametrs .mortgageParametrsContribution {
+    margin-right: 0px;
+  }
+  .mortgage .mortgageParametrs .mortgageParametrsSelectContainer {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 647px) {
+  .mortgage .mortgageParametrs .mortgageParametrsPrice {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  .mortgage .mortgageParametrs .mortgageParametrsContribution {
+    margin-right: 0px;
+  }
+  .mortgage .mortgageParametrs .mortgageParametrsSelectContainer {
+    margin-top: 12px;
+  }
+}
+
+.informationMortgage {
   margin-top: 30px;
   width: 100%;
   display: flex;
@@ -269,10 +346,7 @@ main .informationMortgage {
   justify-content: center;
   flex-direction: column;
 }
-main .informationMortgage .informationMortgageContainer {
-  width: 100%;
-}
-main .informationMortgage .informationMortgageBlock {
+.informationMortgage .informationMortgageBlock {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 0.5fr 0.4fr 0.4fr;
@@ -280,7 +354,7 @@ main .informationMortgage .informationMortgageBlock {
   background-color: white;
   margin-bottom: 12px;
 }
-main .informationMortgage .informationMortgageBlock h3 {
+.informationMortgage .informationMortgageBlock h3 {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -289,30 +363,77 @@ main .informationMortgage .informationMortgageBlock h3 {
   color: #38424E;
   margin-bottom: 8px;
 }
-main .informationMortgage .informationMortgageBlock .informationMortgageBlockFlex {
+.informationMortgage .informationMortgageBlock .informationMortgageBlockFlex {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
 }
-main .informationMortgage .informationMortgageBlock .informationMortgageBlockFirst {
+.informationMortgage .informationMortgageBlock .informationMortgageBlockFlex h4 {
+  display: none;
+}
+.informationMortgage .informationMortgageBlock .informationMortgageBlockFirst {
   display: flex;
   align-items: center;
 }
-main .informationMortgage .informationMortgageBlock .informationMortgageBlockFirst img {
+.informationMortgage .informationMortgageBlock .informationMortgageBlockFirst svg {
   border-radius: 4px;
+  min-height: 48px;
+  min-width: 48px;
   margin-right: 12px;
 }
-main .informationMortgage .informationMortgageBlock span {
+.informationMortgage .informationMortgageBlock span {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 100%;
   color: #78859B;
+  display: flex;
 }
-main .informationMortgage .informationMortgageBlock .informationMortgageBlockButton {
+.informationMortgage .informationMortgageBlock span .informationMortgageBlockInfoContainer {
+  display: grid;
+  position: relative;
+}
+.informationMortgage .informationMortgageBlock span .informationMortgageBlockInfoContainer .informationMortgageBlockInfo {
+  position: absolute;
+  height: 100px;
+  width: 150px;
+  display: flex;
+  left: 20px;
+  top: -10px;
+  opacity: 0;
+}
+.informationMortgage .informationMortgageBlock span .informationMortgageBlockInfoContainer .informationMortgageBlockInfo .informationMortgageBlockInfoArrow {
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  margin-top: 7px;
+  box-shadow: 0px 0px 12px rgba(120, 133, 155, 0.24);
+  border-radius: 4px;
+}
+.informationMortgage .informationMortgageBlock span .informationMortgageBlockInfoContainer .informationMortgageBlockInfo .informationMortgageBlockInfoContent {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 8px;
+  box-shadow: 0px 0px 12px rgba(120, 133, 155, 0.24);
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #38424E;
+  padding: 8px;
+}
+.informationMortgage .informationMortgageBlock span .informationMortgageBlockInfoContainer:hover .informationMortgageBlockInfo {
+  opacity: 1;
+}
+.informationMortgage .informationMortgageBlock .informationMortgageBlockButton {
   align-items: center;
   width: 100px;
   height: 30px;
@@ -326,29 +447,174 @@ main .informationMortgage .informationMortgageBlock .informationMortgageBlockBut
   color: #38424E;
   background-color: white;
 }
-main .informationMortgage .informationMortgageBlock .informationMortgageBlockButton:hover {
+.informationMortgage .informationMortgageBlock .informationMortgageBlockButton:hover {
   cursor: pointer;
 }
-main .informationMortgage .informationMortgageButton {
-  padding: 12px 24px;
-  border: 1px solid #38424E;
-  border-radius: 4px;
+.informationMortgage .informationMortgageAd {
+  width: 100%;
+  height: 320px;
+  background-image: url(/img/adFon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   font-family: Roboto;
   font-style: normal;
+  color: #FFFFFF;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdLink {
+  font-family: Roboto;
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdLink div {
+  padding: 4px 2px;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: left;
+  color: #FFFFFF;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdLink p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 120%;
+  color: #F7F8FC;
+  opacity: 0.72;
+  margin-top: 5px;
+  display: none;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdInfo {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdInfo h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 4px;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdInfo p {
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdInfo span {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin-top: 16px;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdArrowContainer {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdArrowContainer .informationMortgageAdArrow {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdArrowContainer .informationMortgageAdArrow:hover {
+  cursor: pointer;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdButton {
+  font-family: Roboto;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.informationMortgage .informationMortgageAd .informationMortgageAdButton button {
+  padding: 10px 38px;
+  background: #FFFFFF;
+  border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
   color: #38424E;
-  background-color: rgba(255, 255, 255, 0);
-  margin-bottom: 50px;
+  border: none;
+  margin-bottom: 4px;
 }
-main .informationMortgage .informationMortgageButton:hover {
+.informationMortgage .informationMortgageAd .informationMortgageAdButton button:hover {
   cursor: pointer;
 }
-main .mortgageBank {
+.informationMortgage .informationMortgageAd .informationMortgageAdButton p {
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 120%;
+  text-align: right;
+  color: #FFFFFF;
+  opacity: 0.72;
+}
+@media screen and (max-width: 670px) {
+  .informationMortgage .informationMortgageAd .informationMortgageAdButton {
+    display: none;
+  }
+  .informationMortgage .informationMortgageAd .informationMortgageAdLink p {
+    display: block;
+  }
+}
+@media screen and (max-width: 760px) {
+  .informationMortgage .informationMortgageBlock {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "informationMortgageBlockFirst informationMortgageBlockFirst informationMortgageBlockFirst" "informationMortgageBlockBet informationMortgageBlockCredit informationMortgageBlockPayment";
+  }
+  .informationMortgage .informationMortgageBlock .informationMortgageBlockFirst {
+    grid-area: informationMortgageBlockFirst;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .informationMortgage .informationMortgageBlock .informationMortgageBlockFirst span {
+    display: block;
+  }
+  .informationMortgage .informationMortgageBlock .informationMortgageBlockCredit {
+    grid-area: informationMortgageBlockCredit;
+  }
+  .informationMortgage .informationMortgageBlock .informationMortgageBlockBet {
+    grid-area: informationMortgageBlockBet;
+  }
+  .informationMortgage .informationMortgageBlock .informationMortgageBlockPayment {
+    grid-area: informationMortgageBlockPayment;
+  }
+  .informationMortgage .informationMortgageBlock .informationMortgageBlockButton {
+    display: none;
+  }
+  .informationMortgage .informationMortgageBlock .informationMortgageBlockFlex h4 {
+    display: block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    color: #78859B;
+  }
+  .informationMortgage .informationMortgageBlock span {
+    display: none;
+  }
+}
+
+.mortgageBank {
   margin-bottom: 50px;
 }
-main .mortgageBank h2 {
+.mortgageBank h2 {
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
@@ -356,13 +622,13 @@ main .mortgageBank h2 {
   line-height: 120%;
   color: #0F0208;
 }
-main .mortgageBank .mortgageBankContainer {
+.mortgageBank .mortgageBankContainer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .mortgageBank .mortgageBankContainer .mortgageBankItem {
+.mortgageBank .mortgageBankContainer .mortgageBankItem {
   width: 180px;
   height: 100%;
   position: relative;
@@ -371,14 +637,15 @@ main .mortgageBank .mortgageBankContainer .mortgageBankItem {
   background-color: #fff;
   border-radius: 8px;
 }
-main .mortgageBank .mortgageBankContainer .mortgageBankItem img {
+.mortgageBank .mortgageBankContainer .mortgageBankItem svg {
   border-radius: 50%;
   position: absolute;
   top: -32px;
   left: 58px;
   height: 64px;
+  width: 64px;
 }
-main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer {
+.mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer {
   height: 130px;
   text-align: center;
   font-family: Roboto;
@@ -387,18 +654,18 @@ main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemCon
   padding: 0 16px 16px 16px;
   position: relative;
 }
-main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer h3 {
+.mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 120%;
   margin-bottom: 8px;
 }
-main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer span {
+.mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer span {
   font-weight: normal;
   font-size: 14px;
   line-height: 120%;
 }
-main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer button {
+.mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer button {
   position: absolute;
   bottom: 16px;
   right: 39px;
@@ -411,13 +678,66 @@ main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemCon
   padding: 6px 14px;
   background-color: rgba(255, 255, 255, 0);
 }
-main .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer button:hover {
+.mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer button:hover {
   cursor: pointer;
 }
-main .greenCity {
+.mortgageBank .informationMortgageButton {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .mortgageBank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mortgageBank h2 {
+    width: 100%;
+  }
+  .mortgageBank .mortgageBankContainer {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 8px 0;
+  }
+  .mortgageBank .mortgageBankContainer .mortgageBankItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px 8px 12px 8px;
+    width: 160px;
+    height: auto;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  .mortgageBank .mortgageBankContainer .mortgageBankItem svg {
+    border-radius: 4px;
+    height: 48px;
+    width: 48px;
+    position: static;
+    margin-bottom: 8px;
+  }
+  .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer {
+    padding: 0;
+    height: auto;
+  }
+  .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer h3 {
+    font-size: 14px;
+  }
+  .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer span {
+    font-size: 12px;
+  }
+  .mortgageBank .mortgageBankContainer .mortgageBankItem .mortgageBankItemContainer button {
+    display: none;
+  }
+  .mortgageBank .informationMortgageButton {
+    display: block;
+  }
+}
+.greenCity {
   width: 100%;
   height: 540px;
-  background-image: url(/img/greenCity.jpg);
+  background-image: url(../img/greenCity.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -425,30 +745,30 @@ main .greenCity {
   align-items: center;
   justify-content: center;
 }
-main .greenCity .greenCityContainer {
+.greenCity .greenCityContainer {
   color: #F7F8FC;
   font-family: Roboto;
   width: 360px;
   font-style: normal;
 }
-main .greenCity .greenCityContainer span {
+.greenCity .greenCityContainer span {
   font-weight: normal;
   font-size: 14px;
   line-height: 120%;
 }
-main .greenCity .greenCityContainer h2 {
+.greenCity .greenCityContainer h2 {
   color: white;
   margin-bottom: 8px;
   font-weight: bold;
   font-size: 32px;
   line-height: 120%;
 }
-main .greenCity .greenCityContainer .greenCityContainerGPS {
+.greenCity .greenCityContainer .greenCityContainerGPS {
   display: flex;
   align-items: center;
   margin-top: 4px;
 }
-main .greenCity .greenCityContainer .greenCityContainerGPS .greenCityContainerCircle {
+.greenCity .greenCityContainer .greenCityContainerGPS .greenCityContainerCircle {
   width: 8px;
   height: 8px;
   background-color: #DA4233;
@@ -456,36 +776,36 @@ main .greenCity .greenCityContainer .greenCityContainerGPS .greenCityContainerCi
   margin-right: 5px;
   border-radius: 50%;
 }
-main .greenCity .greenCityContainer .greenCityContainerGPS img {
-  margin: 0 0px 0 5px;
+.greenCity .greenCityContainer .greenCityContainerGPS svg {
+  margin: 0 5px 0 5px;
 }
-main .greenCity .greenCityContainer .greenCityContainerGPS span {
+.greenCity .greenCityContainer .greenCityContainerGPS span {
   color: rgba(247, 248, 252, 0.54);
 }
-main .greenCity .greenCityContainer .greenCityContainerInformatiom {
+.greenCity .greenCityContainer .greenCityContainerInformatiom {
   width: 100%;
   margin-top: 16px;
 }
-main .greenCity .greenCityContainer .greenCityContainerInformatiom .greenCityContainerInformatiomItem {
+.greenCity .greenCityContainer .greenCityContainerInformatiom .greenCityContainerInformatiomItem {
   display: grid;
   grid-template-columns: 0.7fr 1fr 1fr;
   border-bottom: 1px solid rgba(247, 248, 252, 0.32);
   padding: 4px 0;
   margin-top: 8px;
 }
-main .greenCity .greenCityContainer .greenCityContainerInformatiom .greenCityContainerInformatiomItem .greenCityContainerInformatiomItemSize {
+.greenCity .greenCityContainer .greenCityContainerInformatiom .greenCityContainerInformatiomItem .greenCityContainerInformatiomItemSize {
   text-align: center;
 }
-main .greenCity .greenCityContainer .greenCityContainerInformatiom .greenCityContainerInformatiomItem .greenCityContainerInformatiomItemPrice {
+.greenCity .greenCityContainer .greenCityContainerInformatiom .greenCityContainerInformatiomItem .greenCityContainerInformatiomItemPrice {
   text-align: right;
 }
-main .greenCity .greenCityContainer .greenCityContainerContact {
+.greenCity .greenCityContainer .greenCityContainerContact {
   width: 100%;
   display: flex;
   font-weight: 500;
   margin-top: 25px;
 }
-main .greenCity .greenCityContainer .greenCityContainerContact .greenCityContainerContactTel {
+.greenCity .greenCityContainer .greenCityContainerContact .greenCityContainerContactTel {
   width: 60%;
   background: #EFD678;
   border-radius: 4px;
@@ -496,7 +816,7 @@ main .greenCity .greenCityContainer .greenCityContainerContact .greenCityContain
   line-height: 18px;
   color: #38424E;
 }
-main .greenCity .greenCityContainer .greenCityContainerContact .greenCityContainerContactDetail {
+.greenCity .greenCityContainer .greenCityContainerContact .greenCityContainerContactDetail {
   width: 40%;
   font-size: 16px;
   line-height: 120%;
@@ -505,12 +825,12 @@ main .greenCity .greenCityContainer .greenCityContainerContact .greenCityContain
   border: 1px solid #F7F8FC;
   border-radius: 4px;
 }
-main .greenCity .greenCityLogo {
+.greenCity .greenCityLogo {
   position: absolute;
   top: 24px;
   left: 24px;
 }
-main .greenCity .greenCityAd {
+.greenCity .greenCityAd {
   position: absolute;
   bottom: 24px;
   left: 24px;
@@ -518,7 +838,7 @@ main .greenCity .greenCityAd {
   font-style: normal;
   font-weight: normal;
 }
-main .greenCity .greenCityAd .greenCityAdLink {
+.greenCity .greenCityAd .greenCityAdLink {
   background: rgba(255, 255, 255, 0.24);
   border-radius: 2px;
   font-size: 14px;
@@ -528,23 +848,50 @@ main .greenCity .greenCityAd .greenCityAdLink {
   display: inline-block;
   margin-bottom: 8px;
 }
-main .greenCity .greenCityAd span {
+.greenCity .greenCityAd p {
   font-size: 9px;
   line-height: 120%;
   color: #F7F8FC;
   opacity: 0.72;
 }
-main .newBuildings {
+
+@media screen and (max-width: 600px) {
+  .greenCity {
+    align-items: flex-end;
+    padding-bottom: 24px;
+  }
+  .greenCity .greenCityContainer {
+    width: auto;
+  }
+  .greenCity .greenCityLogo {
+    top: 16px;
+    left: 16px;
+  }
+  .greenCity .greenCityAd {
+    top: 16px;
+    right: 16px;
+    left: auto;
+    bottom: auto;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .greenCity .greenCityAd p {
+    text-align: right;
+  }
+}
+.newBuildings {
   width: 100%;
   margin-top: 47px;
 }
-main .newBuildings .newBuildingsSearch {
+.newBuildings .newBuildingsSearch {
   width: 100%;
   border-bottom: 1px solid #CED3DD;
   padding-bottom: 18px;
   margin-bottom: 16px;
+  white-space: nowrap;
 }
-main .newBuildings .newBuildingsSearch a {
+.newBuildings .newBuildingsSearch a {
   margin-right: 24px;
   padding-bottom: 16px;
   text-decoration: none;
@@ -556,57 +903,57 @@ main .newBuildings .newBuildingsSearch a {
   color: #38424E;
   opacity: 0.72;
 }
-main .newBuildings .newBuildingsSearch a:hover {
+.newBuildings .newBuildingsSearch a:hover {
   opacity: 1;
 }
-main .newBuildings .newBuildingsSearch .active {
+.newBuildings .newBuildingsSearch .active {
   border-bottom: 4px solid #38424E;
   opacity: 1;
 }
-main .newBuildings .newBuildingsContainer {
+.newBuildings .newBuildingsContainer {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem {
   width: 270px;
   position: relative;
   margin-bottom: 12px;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem:hover {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem:hover {
   background: #FFFFFF;
   box-shadow: 0px 16px 24px -16px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   cursor: pointer;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem:hover .newBuildingsContainerItemLike {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem:hover .newBuildingsContainerItemLike {
   opacity: 1;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem img {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem img {
   width: 100%;
   border-radius: 4px;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo {
   width: 100%;
   font-family: Roboto;
   font-style: normal;
   padding: 0 12px 12px 12px;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo h3 {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo h3 {
   font-weight: 600;
   font-size: 16px;
   line-height: 120%;
   color: #38424E;
   margin: 8px 0;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo p {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo p {
   font-weight: normal;
   font-size: 14px;
   line-height: 120%;
   color: #78859B;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
@@ -615,7 +962,7 @@ main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildin
   align-items: center;
   margin: 4px 0px 8px 0;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div div {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div div {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -623,22 +970,22 @@ main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildin
   display: inline-block;
   margin-right: 4px;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div img {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div svg {
   width: 16px;
-  margin: 0px 2px 0px 4px;
+  margin-left: 4px;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div span {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo div span {
   font-size: 14px;
   line-height: 16px;
   color: #78859B;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo span {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemInfo span {
   font-weight: bold;
   font-size: 18px;
   line-height: 120%;
   color: #38424E;
 }
-main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemLike {
+.newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildingsContainerItemLike {
   position: absolute;
   height: 32px;
   width: 32px;
@@ -651,7 +998,21 @@ main .newBuildings .newBuildingsContainer .newBuildingsContainerItem .newBuildin
   top: 4px;
   right: 4px;
 }
-main .linkBlock {
+@media screen and (max-width: 1090px) {
+  .newBuildings .newBuildingsContainer {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 570px) {
+  .newBuildings .newBuildingsContainer {
+    justify-content: space-evenly;
+  }
+  .newBuildings .newBuildingsContainer .newBuildingsContainerItem {
+    width: 100%;
+  }
+}
+
+.linkBlock {
   margin-top: 70px;
   font-family: Roboto;
   font-style: normal;
@@ -659,21 +1020,26 @@ main .linkBlock {
   font-size: 12px;
   line-height: 120%;
 }
-main .linkBlock img {
+.linkBlock img {
   margin: 0px 6px;
 }
-main .linkBlock .linkBlockItem {
+.linkBlock .linkBlockItem {
   color: #38424E;
 }
-main .linkBlock .linkBlockItemEnd {
+.linkBlock .linkBlockItemEnd {
   color: #78859B;
 }
 
+@media screen and (max-width: 570px) {
+  .linkBlock {
+    display: none;
+  }
+}
 .apartmentsInfo {
   width: 100%;
   border-top: 1px solid rgba(120, 133, 155, 0.32);
   margin-top: 24px;
-  padding: 40px 0;
+  padding: 40px 16px;
 }
 .apartmentsInfo .apartmentsInfoContainer {
   max-width: 1140px;
@@ -697,13 +1063,14 @@ main .linkBlock .linkBlockItemEnd {
 
 footer {
   background-color: #353535;
-  padding: 55px 0;
+  padding: 32px 16px;
   width: 100%;
   font-family: Roboto;
   font-style: normal;
 }
 footer .footerContainer {
-  width: 1140px;
+  padding-top: 24px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 footer .footerContainer .footerTop {
@@ -756,6 +1123,10 @@ footer .footerContainer .footerList .footerListItem a {
   color: #F7F8FC;
   margin-bottom: 8px;
 }
+footer .footerContainer .footerList button {
+  display: none;
+  margin-bottom: 32px;
+}
 footer .footerContainer .footerInfo {
   padding: 40px 0 24px 0;
   border-bottom: 1px solid rgba(153, 153, 153, 0.24);
@@ -804,4 +1175,53 @@ footer .footerContainer .footerContact .footerContactChat:hover {
 }
 footer .footerContainer .footerContact .footerContactChat img {
   margin-right: 5px;
+}
+@media screen and (max-width: 660px) {
+  footer .footerContainer {
+    padding-top: 0px;
+  }
+  footer .footerContainer .footerTop {
+    flex-direction: column;
+    padding-bottom: 19px;
+  }
+  footer .footerContainer .footerTop .footerTopMenu {
+    margin-top: 16px;
+  }
+  footer .footerContainer .footerTop .footerTopMenu a {
+    margin: 0 16px 0 0;
+  }
+  footer .footerContainer .footerList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .footerContainer .footerList .footerListItem {
+    margin-bottom: 24px;
+  }
+  footer .footerContainer .footerList button {
+    display: inline-block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #5AB677;
+    border: none;
+    background-color: rgba(15, 2, 8, 0);
+  }
+  footer .footerContainer .footerList button:hover {
+    cursor: pointer;
+  }
+  footer .footerContainer .footerContact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .footerContainer .footerContact .footerContactInfo {
+    margin: 19px 0px 12px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .footerContainer .footerContact .footerContactInfo a {
+    margin: 6px 0;
+  }
 }/*# sourceMappingURL=style.css.map */

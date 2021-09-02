@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>Кайли</title>
 
     <!-- style -->
@@ -20,7 +20,11 @@
         <div class="headerContainer">
 
             <div class="headerLogo">
-                <img src="/img/icon/Group6.svg" alt="qyaliIcon">
+                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 4.13892C0 1.92978 1.79086 0.138916 4 0.138916H24.0314C26.2406 0.138916 28.0314 1.92978 28.0314 4.13892V24.1704C28.0314 26.3795 26.2406 28.1704 24.0314 28.1704H4C1.79086 28.1704 0 26.3795 0 24.1704V4.13892Z" fill="#5AB677"/>
+                    <rect x="14.0159" y="19.4727" width="8.75982" height="17.5196" rx="2" transform="rotate(-45 14.0159 19.4727)" fill="#5AB677"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0236 12.2061C21.0236 12.2061 21.0236 12.2061 21.0236 12.2061L15.3997 6.9078C14.6306 6.18325 13.4306 6.18194 12.66 6.90481L7.00827 12.2061C7.00825 12.2061 7.00822 12.2061 7.00818 12.2061C7.00811 12.2061 7.00806 12.2062 7.00806 12.2063V12.2063V19.1679C7.00806 20.2725 7.90349 21.1679 9.00806 21.1679H19.0238C20.1283 21.1679 21.0238 20.2725 21.0238 19.1679V12.2063V12.2063C21.0238 12.2062 21.0237 12.2061 21.0236 12.2061Z" fill="white"/>
+                </svg>
                 <span>Кайли</span>
             </div>
             <div class="headerMenu">
@@ -31,42 +35,51 @@
                 <a>Журнал</a>
             </div>
             <div class="headerLike">
-                <img src="/img/icon/heart.svg" alt="headerHeadt">
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.205 1.79111C17.068 0.660109 15.574 0.0371094 13.996 0.0371094C12.513 0.0371094 11.104 0.589109 10 1.59511C8.896 0.589109 7.488 0.0371094 6.004 0.0371094C4.426 0.0371094 2.932 0.66011 1.791 1.79511C-0.562004 4.15811 -0.561004 7.85411 1.793 10.2071L10 18.4141L18.207 10.2071C20.561 7.85411 20.562 4.15811 18.205 1.79111Z" fill="#EC6B60"/>
+                </svg>
                 <span>2</span>
             </div>
             <button class="headerAccountButton">
-                <img src="/img/icon/account.svg" alt="headerAccount">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C4.579 0 0 4.579 0 10C0 15.421 4.579 20 10 20C15.421 20 20 15.421 20 10C20 4.579 15.421 0 10 0ZM10 5C11.727 5 13 6.272 13 8C13 9.728 11.727 11 10 11C8.274 11 7 9.728 7 8C7 6.272 8.274 5 10 5ZM4.894 14.772C5.791 13.452 7.287 12.572 9 12.572H11C12.714 12.572 14.209 13.452 15.106 14.772C13.828 16.14 12.015 17 10 17C7.985 17 6.172 16.14 4.894 14.772Z" fill="#38424E"/>
+                </svg>
                 <span>Войти</span>
+            </button>
+
+            <button class="headerMenuButton">
+                <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.333313 0H21.6666V2.66667H0.333313V0ZM0.333313 6.66667H21.6666V9.33333H0.333313V6.66667ZM0.333313 13.3333H21.6666V16H0.333313V13.3333Z" fill="#38424E"/>
+                </svg>                    
             </button>
 
         </div>
         
     </header>
 
-    <main>
-        <div class="mortgage">
-            <h1>Ипотека на новостройки в Вологде</h1>
-            <h2>Подберите лучшее ипотечное предложения на покупку квартиры в новостройках Вологды</h2>
-            <div class="mortgageParametrs">
-                <div class="mortgageParametrsPrice">
-                    <span>Стоимость квартиры, ₽</span>
-                    <input type="number" value="3000000">
+    <div class="mortgage">
+        <h1>Ипотека на новостройки в Вологде</h1>
+        <h2>Подберите лучшее ипотечное предложения на покупку квартиры в новостройках Вологды</h2>
+        <div class="mortgageParametrs">
+            <div class="mortgageParametrsPrice">
+                <span>Стоимость квартиры, ₽</span>
+                <input type="number" value="3000000">
+            </div>
+            <div class="mortgageParametrsContribution">
+                <div class="mortgageParametrsContributionInput">
+                    <span>Первый взнос, ₽ </span>
+                    <input type="number" value="300000">
                 </div>
-                <div class="mortgageParametrsContribution">
-                    <div class="mortgageParametrsContributionInput">
-                        <span>Первый взнос, ₽ </span>
-                        <input type="number" value="300000">
-                    </div>
-                    <div class="mortgageParametrsContributionSelect mortgageParametrsSelect">
-                        <select name="ContributionSelect" id="ContributionSelectId">
-                            <option value="10%">10%</option>
-                            <option value="20%">20%</option>
-                            <option value="30%">30%</option>
-                            <option value="40%">40%</option>
-                        </select>
-                    </div>
-                    
+                <div class="mortgageParametrsContributionSelect mortgageParametrsSelect">
+                    <select name="ContributionSelect" id="ContributionSelectId">
+                        <option value="10%">10%</option>
+                        <option value="20%">20%</option>
+                        <option value="30%">30%</option>
+                        <option value="40%">40%</option>
+                    </select>
                 </div>
+            </div>
+            <div class="mortgageParametrsSelectContainer">
                 <div class="mortgageParametrsAge mortgageParametrsSelect">
                     <span>Срок, лет</span>
                     <select name="AgeSelect" id="AgeSelectId">
@@ -82,581 +95,804 @@
                 </button>
             </div>
         </div>
+    </div>
 
-        <div class="informationMortgage">
-            <div class="informationMortgageBlock" style="padding: 0; background: rgba(255, 255, 255, 0); margin-bottom: 4px;">
-                <span>Название программы / Банк</span>
-                <span>Сумма кредита</span>
-                <span>Мин, ставка</span>
-                <span>
-                    Платеж
+    <div class="informationMortgage">
+        <div class="informationMortgageBlock" style="padding: 0; background: rgba(255, 255, 255, 0); margin-bottom: 4px;">
+            <span>Название программы / Банк</span>
+            <span>Сумма кредита</span>
+            <span>Мин, ставка</span>
+            <span>
+                Платеж
+                <div class="informationMortgageBlockInfoContainer">
                     <i class="far fa-question-circle"></i>
-                </span>
-            </div>
-
-            <div class="informationMortgageContainer">
-
-                <div class="informationMortgageBlock">
-                    <div class="informationMortgageBlockFirst">
-                        <img src="/img/icon/bankHome.svg" alt="bankHome">
-                        <div class="informationMortgageBlockFirstName">
-                            <h3>Семейная ипотека</h3>
-                            <span>Банк ДомРФ</span>
+                    <div class="informationMortgageBlockInfo">
+                        <div class="informationMortgageBlockInfoArrow"></div>
+                        <div class="informationMortgageBlockInfoContent">
+                            Ежемесячный платеж, является примерным параметром и уникален для каждого  заемщика
                         </div>
                     </div>
-                    <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
-                        <h3>1 000 000 — 12 000 000₽</h3>
-                        <span>На срок до 30 лет</span>
-                    </div>
-                    <div class="informationMortgageBlockBet informationMortgageBlockFlex">
-                        <h3>3,99%</h3>
-                        <span>⁣⁣&#8291;</span>
-                    </div>
-                    <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
-                        <h3>9 082₽</h3>
-                        <span>&#8291;</span>
-                    </div>
-                    <button class="informationMortgageBlockButton informationMortgageBlockFlex">
-                        Подробнее
-                    </button>
-    
                 </div>
+            </span>
+        </div>
 
+        <div class="informationMortgageBlock">
+            <div class="informationMortgageBlockFirst">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#354148"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9474 24.4799H23.9999V12.3196H18.9474V24.4799ZM20.2665 23.1311H22.6809V13.6674H20.2665V23.1311ZM12.8841 27.5202H36.1257V26.5055H12.8841V27.5202ZM12.8841 36.6402H14.2377V35.0466H21.9791V29.5458H12.8831V36.6402H12.8841ZM14.2377 33.6402H20.6255V30.9532H14.2367V33.6402H14.2377ZM27.3868 16.365L29.8857 13.6674V24.4799H31.2508V16.3641L33.7497 13.6684V24.4799H35.1158V12.3196H33.1967L31.2498 14.4143V12.3196H29.3327L26.0207 15.8543V24.4799H27.3858L27.3868 16.365ZM22.989 35.0457H28.3065V36.6393H29.7705V35.0457H35.1158V29.5468H22.989V35.0457ZM29.7705 33.6402H33.7122V30.9532H29.7705V33.6402ZM24.3945 33.6402H28.3065V30.9532H24.3935V33.6402H24.3945ZM16.6175 24.4799H17.9366V12.3196H16.0838L12.8841 15.8543V24.4799H16.6175ZM14.2041 16.365L16.6175 13.6674V23.1311H14.2041V16.365Z" fill="#FEFEFE"/>
+                </svg>                            
+                <div class="informationMortgageBlockFirstName">
+                    <h3>Семейная ипотека</h3>
+                    <span>Банк ДомРФ</span>
+                </div>
             </div>
-
-            <div class="informationMortgageBlock">
-                <div class="informationMortgageBlockFirst">
-                    <img src="/img/icon/person.svg" alt="person">
-                    <div class="informationMortgageBlockFirstName">
-                        <h3>Ипотека в Новостройке</h3>
-                        <span>Банк ДомРФ</span>
-                    </div>
-                </div>
-                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
-                    <h3>5 000 000 — 12 000 000₽</h3>
-                    <span>На срок до 30 лет</span>
-                </div>
-                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
-                    <h3>3,99%</h3>
-                    <span>⁣⁣&#8291;</span>
-                </div>
-                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
-                    <h3>9 082₽</h3>
-                    <span>&#8291;</span>
-                </div>
-                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
-                    Подробнее
-                </button>
-
+            <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                <h4>Сумма</h4>
+                <h3 class="informationMortgageBlockCreditNum">1 000 000 — 12 000 000₽</h3>
+                <span>На срок до 30 лет</span>
             </div>
-
-            <div class="informationMortgageBlock">
-                <div class="informationMortgageBlockFirst">
-                    <img src="/img/icon/Group.svg" alt="bankHome3">
-                    <div class="informationMortgageBlockFirstName">
-                        <h3>Ипотека от 4,84% годовых</h3>
-                        <span>Банк ДомРФ</span>
-                    </div>
-                </div>
-                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
-                    <h3>100 000 — 30 000 000₽</h3>
-                    <span>На срок до 30 лет</span>
-                </div>
-                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
-                    <h3>4,84%</h3>
-                    <span>⁣⁣&#8291;</span>
-                </div>
-                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
-                    <h3>9 082₽</h3>
-                    <span>&#8291;</span>
-                </div>
-                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
-                    Подробнее
-                </button>
-
+            <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                <h4>Ставка</h4>
+                <h3>3,99%</h3>
+                <span>⁣⁣&#8291;</span>
             </div>
-
-            <div class="informationMortgageBlock">
-                <div class="informationMortgageBlockFirst">
-                    <img src="/img/icon/bankHome.svg" alt="bankHome4">
-                    <div class="informationMortgageBlockFirstName">
-                        <h3>Льготная ипотека на новостройки</h3>
-                        <span>Банк ДомРФ</span>
-                    </div>
-                </div>
-                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
-                    <h3>1 000 000 — 12 000 000₽</h3>
-                    <span>Срок кредита неизвестен</span>
-                </div>
-                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
-                    <h3>3,99%</h3>
-                    <span>⁣⁣&#8291;</span>
-                </div>
-                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
-                    <h3>9 082₽</h3>
-                    <span>&#8291;</span>
-                </div>
-                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
-                    Подробнее
-                </button>
-
+            <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                <h4>Платеж</h4>
+                <h3>9 082₽</h3>
+                <span>&#8291;</span>
             </div>
-
-            <div class="informationMortgageBlock">
-                <div class="informationMortgageBlockFirst">
-                    <img src="/img/icon/MTSBank.svg" alt="MTSBank">
-                    <div class="informationMortgageBlockFirstName">
-                        <h3>Дальневосточная ипотека</h3>
-                        <span>Банк ДомРФ</span>
-                    </div>
-                </div>
-                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
-                    <h3>1 000 000 — 12 000 000₽</h3>
-                    <span>На срок до 30 лет</span>
-                </div>
-                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
-                    <h3>0,70%</h3>
-                    <span>⁣⁣&#8291;</span>
-                </div>
-                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
-                    <h3>9 082₽</h3>
-                    <span>&#8291;</span>
-                </div>
-                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
-                    Подробнее
-                </button>
-
-            </div>
-
-            <div class="informationMortgageBlock">
-                <div class="informationMortgageBlockFirst">
-                    <img src="/img/icon/gazprombank.svg" alt="gazprombank">
-                    <div class="informationMortgageBlockFirstName">
-                        <h3>Семейная ипотека</h3>
-                        <span>Банк ДомРФ</span>
-                    </div>
-                </div>
-                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
-                    <h3>1 000 000 — 12 000 000₽</h3>
-                    <span>На срок до 30 лет</span>
-                </div>
-                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
-                    <h3>3,99%</h3>
-                    <span>⁣⁣&#8291;</span>
-                </div>
-                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
-                    <h3>9 082₽</h3>
-                    <span>&#8291;</span>
-                </div>
-                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
-                    Подробнее
-                </button>
-
-            </div>
-
-            <div class="informationMortgageBlock">
-                <div class="informationMortgageBlockFirst">
-                    <img src="/img/icon/Group2.svg" alt="bankHome5">
-                    <div class="informationMortgageBlockFirstName">
-                        <h3>	Ипотека для семей с детьми</h3>
-                        <span>Банк ДомРФ</span>
-                    </div>
-                </div>
-                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
-                    <h3>1 000 000 — 12 000 000₽</h3>
-                    <span>На срок до 30 лет</span>
-                </div>
-                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
-                    <h3>5,95%</h3>
-                    <span>⁣⁣&#8291;</span>
-                </div>
-                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
-                    <h3>9 082₽</h3>
-                    <span>&#8291;</span>
-                </div>
-                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
-                    Подробнее
-                </button>
-
-            </div>
-
-            <div class="informationMortgageBlock">
-                <div class="informationMortgageBlockFirst">
-                    <img src="/img/icon/roshome.svg" alt="rosHome">
-                    <div class="informationMortgageBlockFirstName">
-                        <h3>Новостройка</h3>
-                        <span>Банк ДомРФ</span>
-                    </div>
-                </div>
-                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
-                    <h3>1 000 000 — 12 000 000₽</h3>
-                    <span>На срок до 30 лет</span>
-                </div>
-                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
-                    <h3>5,95%</h3>
-                    <span>⁣⁣&#8291;</span>
-                </div>
-                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
-                    <h3>9 082₽</h3>
-                    <span>&#8291;</span>
-                </div>
-                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
-                    Подробнее
-                </button>
-
-            </div>
-
-            <div class="informationMortgageBlock">
-                <div class="informationMortgageBlockFirst">
-                    <img src="/img/icon/Group3.svg" alt="bankHome6">
-                    <div class="informationMortgageBlockFirstName">
-                        <h3>Семейная ипотека</h3>
-                        <span>Банк ДомРФ</span>
-                    </div>
-                </div>
-                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
-                    <h3>1 000 000 — 12 000 000₽</h3>
-                    <span>На срок до 30 лет</span>
-                </div>
-                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
-                    <h3>4,92%</h3>
-                    <span>⁣⁣&#8291;</span>
-                </div>
-                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
-                    <h3>9 082₽</h3>
-                    <span>&#8291;</span>
-                </div>
-                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
-                    Подробнее
-                </button>
-
-            </div>
-
-            <div class="informationMortgageBlock">
-                <div class="informationMortgageBlockFirst">
-                    <img src="/img/icon/Group4.svg" alt="bankHome7">
-                    <div class="informationMortgageBlockFirstName">
-                        <h3>Ипотека в ползунках</h3>
-                        <span>Банк ДомРФ</span>
-                    </div>
-                </div>
-                <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
-                    <h3>1 000 000 — 12 000 000₽</h3>
-                    <span>На срок до 30 лет</span>
-                </div>
-                <div class="informationMortgageBlockBet informationMortgageBlockFlex">
-                    <h3>6,10%</h3>
-                    <span>⁣⁣&#8291;</span>
-                </div>
-                <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
-                    <h3>9 082₽</h3>
-                    <span>&#8291;</span>
-                </div>
-                <button class="informationMortgageBlockButton informationMortgageBlockFlex">
-                    Подробнее
-                </button>
-
-            </div>
-
-            <button class="informationMortgageButton">
-                Показать больше
+            <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                Подробнее
             </button>
 
         </div>
 
-        <div class="mortgageBank">
-            <h2>Ипотека по банкам</h2>
-
-            <div class="mortgageBankContainer">
-                <div class="mortgageBankItem">
-                    <img src="/img/icon/revivalBank.svg" alt="revivalBank">
-                    <div class="mortgageBankItemContainer">
-                        <h3>Банк Возраждение</h3>
-                        <span>Ставка от 6,5%</span>
-                        <button>Программы</button>
-                    </div>
+        <div class="informationMortgageBlock">
+            <div class="informationMortgageBlockFirst">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#F7F8FC"/>
+                    <g clip-path="url(#clip0)">
+                    <path d="M33.3327 20.5005C31.5063 25.3867 25.8268 27.9491 20.6445 26.227C15.4621 24.5021 12.7415 19.15 14.571 14.261C16.3974 9.37481 22.0768 6.81245 27.2592 8.53455C32.4386 10.2594 35.1592 15.6143 33.3327 20.5005Z" fill="url(#paint0_linear)"/>
+                    <path d="M33.8971 32.6584L33.9001 33.6068C33.9059 35.4094 29.4618 36.8874 23.9648 36.9068C18.4706 36.9263 14.0148 35.4787 14.0059 33.6762L14.003 32.7305L33.8971 32.6584Z" fill="url(#paint1_linear)"/>
+                    <path d="M33.8971 32.6586C33.903 34.4639 29.4559 35.9392 23.9618 35.9558C18.4677 35.9725 14.0059 34.5277 14.003 32.7279C13.9971 30.9226 18.4442 29.4446 23.9412 29.4251C29.4324 29.4113 33.8912 30.8561 33.8971 32.6586Z" fill="url(#paint2_linear)"/>
+                    <path d="M14.003 39.9102C14.003 39.6467 18.4559 39.3833 23.953 39.3833C29.4471 39.3833 33.9001 39.644 33.9001 39.9102V40.4731C33.9001 40.7338 29.4471 40.9972 23.953 40.9972C18.4589 40.9972 14.003 40.7366 14.003 40.4731V39.9102Z" fill="url(#paint3_linear)"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="21.528" y1="20.4488" x2="35.5301" y2="0.512549" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#DB1E33"/>
+                    <stop offset="1" stop-color="#F57E21"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear" x1="27.3217" y1="34.7506" x2="35.9013" y2="34.9878" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#A11C34"/>
+                    <stop offset="1" stop-color="#C22034"/>
+                    </linearGradient>
+                    <linearGradient id="paint2_linear" x1="22.7019" y1="33.2822" x2="42.77" y2="22.648" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#DB1E33"/>
+                    <stop offset="0.8102" stop-color="#F08128"/>
+                    <stop offset="1" stop-color="#F79421"/>
+                    </linearGradient>
+                    <linearGradient id="paint3_linear" x1="21.8664" y1="40.2703" x2="9.05429" y2="40.812" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#A11C34"/>
+                    <stop offset="1" stop-color="#C22034"/>
+                    </linearGradient>
+                    <clipPath id="clip0">
+                    <rect width="20" height="33" fill="white" transform="translate(14 8)"/>
+                    </clipPath>
+                    </defs>
+                </svg>                        
+                <div class="informationMortgageBlockFirstName">
+                    <h3>Ипотека в Новостройке</h3>
+                    <span>Банк ДомРФ</span>
                 </div>
-
-                <div class="mortgageBankItem">
-                    <img src="/img/icon/gazprombankCircle.svg" alt="gazprombank">
-                    <div class="mortgageBankItemContainer">
-                        <h3>Газпром Банк</h3>
-                        <span>Ставка от 6,5%</span>
-                        <button>Программы</button>
-                    </div>
-                </div>
-
-                <div class="mortgageBankItem">
-                    <img src="/img/icon/rosselkhoznadzor.svg" alt="rosselkhoznadzor">
-                    <div class="mortgageBankItemContainer">
-                        <h3>Россельхоз Банк</h3>
-                        <span>Ставка от 6,5%</span>
-                        <button>Программы</button>
-                    </div>
-                </div>
-
-                <div class="mortgageBankItem">
-                    <img src="/img/icon/sberbank.jpg" alt="sberbank">
-                    <div class="mortgageBankItemContainer">
-                        <h3>Сбербанк</h3>
-                        <span>Ставка от 6,5%</span>
-                        <button>Программы</button>
-                    </div>
-                </div>
-
-                <div class="mortgageBankItem">
-                    <img src="/img/icon/AKbars.svg" alt="AKbars">
-                    <div class="mortgageBankItemContainer">
-                        <h3>Ак Барс Банк</h3>
-                        <span>Ставка от 6,5%</span>
-                        <button>Программы</button>
-                    </div>
-                </div>
-
-                <div class="mortgageBankItem">
-                    <img src="/img/icon/alphaBank.svg" alt="alphaBank">
-                    <div class="mortgageBankItemContainer">
-                        <h3>Альфа Банк</h3>
-                        <span>Ставка от 6,5%</span>
-                        <button>Программы</button>
-                    </div>
-                </div>
-
             </div>
-
+            <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                <h4>Сумма</h4>
+                <h3 class="informationMortgageBlockCreditNum">5 000 000 — 12 000 000₽</h3>
+                <span>На срок до 30 лет</span>
+            </div>
+            <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                <h4>Ставка</h4>
+                <h3>3,99%</h3>
+                <span>⁣⁣&#8291;</span>
+            </div>
+            <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                <h4>Платеж</h4>
+                <h3>9 082₽</h3>
+                <span>&#8291;</span>
+            </div>
+            <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                Подробнее
+            </button>
 
         </div>
 
-        <div class="greenCity">
+        <div class="informationMortgageAd">
+            <div class="informationMortgageAdLink">
+                <div>
+                    Реклама 
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49998 1.5L8.14648 3.1465L4.64648 6.6465L5.35348 7.3535L8.85348 3.8535L10.5 5.5V1.5H6.49998Z" fill="white"/>
+                        <path d="M9.5 9.5H2.5V2.5H6L5 1.5H2.5C1.9485 1.5 1.5 1.9485 1.5 2.5V9.5C1.5 10.0515 1.9485 10.5 2.5 10.5H9.5C10.0515 10.5 10.5 10.0515 10.5 9.5V7L9.5 6V9.5Z" fill="white"/>
+                    </svg>
+                </div>
 
-            <div class="greenCityContainer">
-                <span>Строится до 3 кв. 2022 г.</span>
-                <h2>ЖК Зеленый город</h2>
-                <span>Вологда, Центр, Рыбинская 41</span>
-                <div class="greenCityContainerGPS">
-                    <span class="greenCityContainerCircle"></span>Красносельская 
-                    <img src="/img/icon/bx-walk.svg" alt="walk"> <span>16 мин.</span>
-                    <img src="/img/icon/bx-bus.svg" alt="bus"> <span>4 мин.</span>
+                <p>
+                    Проектная декларация на сайте наш.дом.рф </br>
+                    Застройщик ООО «СЗ «ДМ АПАРТМЕНТС»
+                </p>
+            </div>
+            <div class="informationMortgageAdInfo">
+                <h3>ЖК Резеденция парк</h3>
+                <p>Успейте купить квартиру с выгодой до 50 000 рублей. </p>br> Детский сад. Котельная. Школа. Не больше 3х стр..</p>
+                <span>Квартиры от 2 136 443 ₽</span>
+            </div>
+            <div class="informationMortgageAdArrowContainer">
+                <div class="informationMortgageAdArrow">
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.293 11.707L0.586001 5.99997L6.293 0.292969L7.707 1.70697L3.414 5.99997L7.707 10.293L6.293 11.707Z" fill="#38424E"/>
+                    </svg>
                 </div>
-                <div class="greenCityContainerInformatiom">
-                    <div class="greenCityContainerInformatiomItem">
-                        <span>1-комн.</span>
-                        <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
-                        <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
-                    </div>
-                    <div class="greenCityContainerInformatiomItem">
-                        <span>2-комн.</span>
-                        <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
-                        <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
-                    </div>
-                    <div class="greenCityContainerInformatiomItem">
-                        <span>3-комн.</span>
-                        <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
-                        <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
-                    </div>
-                    <div class="greenCityContainerInformatiomItem">
-                        <span>4+комн.</span>
-                        <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
-                        <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
-                    </div>
-                    <div class="greenCityContainerInformatiomItem" style="border: none;">
-                        <span>Студии</span>
-                        <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
-                        <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
-                    </div>
+                <div class="informationMortgageAdArrow">
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.707 11.707L7.414 5.99997L1.707 0.292969L0.292999 1.70697L4.586 5.99997L0.292999 10.293L1.707 11.707Z" fill="#38424E"/>
+                    </svg>
                 </div>
-                <div class="greenCityContainerContact">
-                    <button class="greenCityContainerContactTel">
-                        <img src="/img/icon/tel.svg">Показать телефон
-                    </button>
-                    <button class="greenCityContainerContactDetail">Подробнее</button>
+            </div>
+            <div class="informationMortgageAdButton">
+                <button>Подробнее</button>
+                <p>
+                    Проектная декларация на сайте наш.дом.рф </br>
+                    Застройщик ООО «СЗ «ДМ АПАРТМЕНТС»
+                </p>
+            </div>
+        </div>
+
+        <div class="informationMortgageBlock">
+            <div class="informationMortgageBlockFirst">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#FFF200"/>
+                    <path d="M16.3968 35.4337L24.2592 27.4561L32.3846 35.5988L35.7897 32.2273L27.7469 24.1825L29.2925 22.6868V19.4958L30.264 18.674V21.1738L31.5139 22.1934L35.2483 18.459L36.4483 19.3806C37.1558 16.7655 33.0595 10.827 29.6707 14.1169L25.7232 18.0318L26.5296 19.0014L24.5232 20.9598L22.5821 19.0513L23.6016 18.1297L19.2758 13.9518C16.0186 11.2705 12.6806 15.3505 12.5654 19.3306L13.7482 18.3447L17.3827 22.2586L18.6826 21.1738V18.7719L19.489 19.3796V22.5217L21.0672 24.1018L13.0416 32.0122L16.3968 35.4346V35.4337Z" fill="black"/>
+                </svg>                        
+                <div class="informationMortgageBlockFirstName">
+                    <h3>Ипотека от 4,84% годовых</h3>
+                    <span>Банк ДомРФ</span>
+                </div>
+            </div>
+            <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                <h4>Сумма</h4>
+                <h3 class="informationMortgageBlockCreditNum">100 000 — 30 000 000₽</h3>
+                <span>На срок до 30 лет</span>
+            </div>
+            <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                <h4>Ставка</h4>
+                <h3>4,84%</h3>
+                <span>⁣⁣&#8291;</span>
+            </div>
+            <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                <h4>Платеж</h4>
+                <h3>9 082₽</h3>
+                <span>&#8291;</span>
+            </div>
+            <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                Подробнее
+            </button>
+
+        </div>
+
+        <div class="informationMortgageBlock">
+            <div class="informationMortgageBlockFirst">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#354148"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9474 24.4799H23.9999V12.3196H18.9474V24.4799ZM20.2665 23.1311H22.6809V13.6674H20.2665V23.1311ZM12.8841 27.5202H36.1257V26.5055H12.8841V27.5202ZM12.8841 36.6402H14.2377V35.0466H21.9791V29.5458H12.8831V36.6402H12.8841ZM14.2377 33.6402H20.6255V30.9532H14.2367V33.6402H14.2377ZM27.3868 16.365L29.8857 13.6674V24.4799H31.2508V16.3641L33.7497 13.6684V24.4799H35.1158V12.3196H33.1967L31.2498 14.4143V12.3196H29.3327L26.0207 15.8543V24.4799H27.3858L27.3868 16.365ZM22.989 35.0457H28.3065V36.6393H29.7705V35.0457H35.1158V29.5468H22.989V35.0457ZM29.7705 33.6402H33.7122V30.9532H29.7705V33.6402ZM24.3945 33.6402H28.3065V30.9532H24.3935V33.6402H24.3945ZM16.6175 24.4799H17.9366V12.3196H16.0838L12.8841 15.8543V24.4799H16.6175ZM14.2041 16.365L16.6175 13.6674V23.1311H14.2041V16.365Z" fill="#FEFEFE"/>
+                </svg>                        
+                <div class="informationMortgageBlockFirstName">
+                    <h3>Льготная ипотека на новостройки</h3>
+                    <span>Банк ДомРФ</span>
+                </div>
+            </div>
+            <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                <h4>Сумма</h4>
+                <h3 class="informationMortgageBlockCreditNum">1 000 000 — 12 000 000₽</h3>
+                <span>Срок кредита неизвестен</span>
+            </div>
+            <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                <h4>Ставка</h4>
+                <h3>3,99%</h3>
+                <span>⁣⁣&#8291;</span>
+            </div>
+            <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                <h4>Платеж</h4>
+                <h3>9 082₽</h3>
+                <span>&#8291;</span>
+            </div>
+            <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                Подробнее
+            </button>
+
+        </div>
+
+        <div class="informationMortgageBlock">
+            <div class="informationMortgageBlockFirst">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#D93832"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 26.9557C14 32.4546 17.0871 38 24 38C30.9067 38 34 32.4546 34 26.9557C34 23.1994 32.7315 18.8741 30.6142 15.3805C28.5552 12.0067 26.0813 10 24 10C21.9127 10 19.4377 12.0067 17.3966 15.3805C15.2694 18.8741 14 23.1994 14 26.9557Z" fill="white"/>
+                </svg>                        
+                <div class="informationMortgageBlockFirstName">
+                    <h3>Дальневосточная ипотека</h3>
+                    <span>Банк ДомРФ</span>
+                </div>
+            </div>
+            <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                <h4>Сумма</h4>
+                <h3 class="informationMortgageBlockCreditNum">1 000 000 — 12 000 000₽</h3>
+                <span>На срок до 30 лет</span>
+            </div>
+            <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                <h4>Ставка</h4>
+                <h3>0,70%</h3>
+                <span>⁣⁣&#8291;</span>
+            </div>
+            <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                <h4>Платеж</h4>
+                <h3>9 082₽</h3>
+                <span>&#8291;</span>
+            </div>
+            <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                Подробнее
+            </button>
+
+        </div>
+
+        <div class="informationMortgageBlock">
+            <div class="informationMortgageBlockFirst">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#445176"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.877 17.4681C30.6354 17.5027 38.1676 22.3593 38.1638 24.9081C38.159 28.6185 34.007 28.8537 24.5375 28.4237C16.3161 28.0512 14.7791 28.9977 14.7398 31.6205C14.7042 34.0205 20.423 36.5865 27.9926 36.4761C25.9305 37.0425 23.782 37.2105 21.6124 36.7219C17.8722 35.879 13.6828 33.2966 13.6521 31.2019C13.5849 26.7686 20.8175 26.3059 24.622 26.4499C29.2444 26.6227 36.1996 26.8589 36.3148 24.5683C36.4809 21.3177 28.0425 18.2688 23.9327 18.2803L23.8751 17.4681H23.877Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8531 12.6192C18.9263 11.7917 21.0499 11.0467 24.1535 11.04C31.0636 11.0237 34.5023 14.087 34.6415 16.1645C34.8143 18.744 31.7366 19.632 24.3791 19.2077C16.8047 18.7718 12.0047 19.2077 11.9663 21.4061C11.9251 23.832 21.3983 29.6889 28.3027 29.6889C33.0547 29.6889 35.6985 28.7712 37.1279 28.0531C36.8937 28.7443 36.5999 29.4105 36.2524 30.0422C34.3132 30.4166 31.7039 30.839 28.2652 30.6912C22.6108 30.4483 11.0236 25.3728 11.0236 21.4051C11.0236 17.4365 20.23 16.9353 24.2668 16.9353C28.3036 16.9353 33.2457 17.8224 33.0191 15.3945C32.7926 12.9677 28.3785 12.1593 25.7001 11.927C23.0217 11.6966 20.0419 12.119 17.854 12.6201" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7029 16.0061C14.4018 15.1881 14.8703 14.6813 15.8216 13.9574C16.8834 13.4726 19.7692 12.6691 24.3887 12.6921C31.4543 12.7257 36.5951 16.2787 36.6335 18.6729C36.6815 21.7565 32.8837 22.7885 24.4348 22.343C16.5224 21.9254 12.3292 22.4486 12.2888 24.7574C12.2466 27.311 20.9672 32.5526 28.1768 32.376C31.676 32.2896 33.9244 31.8192 35.4757 31.2845C35.036 31.9046 34.5407 32.4845 34.0002 33.0221C32.3586 33.3005 30.429 33.5212 28.2901 33.4291C22.3832 33.1728 11.0485 28.5139 11.0485 24.3398C11.0485 20.1638 20.3605 20.3299 24.573 20.4729C29.1973 20.6294 34.8258 20.5209 34.8373 18.2265C34.8498 15.2889 27.3301 13.6473 24.2418 13.6589C19.3141 13.6781 16.8018 14.5824 13.7048 16.0041" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.928 18.8947C12.2352 18.2573 12.456 17.8032 12.8592 17.1859C15.6557 15.816 19.0531 15.1718 23.6726 15.1958C30.431 15.2285 37.7078 19.199 37.704 21.7488C37.6992 25.4582 33.9561 25.7443 24.4848 25.3152C16.2643 24.9437 13.1443 25.8384 13.1049 28.4611C13.0665 31.0147 20.9654 34.7434 28.1741 34.5667C29.9837 34.5226 31.4592 34.3747 32.6765 34.1693C31.9421 34.729 31.1481 35.2157 30.3091 35.6208C29.6592 35.6496 28.9843 35.6515 28.2873 35.6208C22.3805 35.3654 11.8646 32.2186 11.8646 28.0435C11.8646 23.6083 20.4086 23.304 24.623 23.447C29.2464 23.6035 35.8454 23.7024 35.855 21.409C35.8694 18.4714 27.839 15.9965 23.7302 16.008C18.8016 16.0214 14.7696 17.3693 11.927 18.8957" fill="white"/>
+                </svg>                          
+                <div class="informationMortgageBlockFirstName">
+                    <h3>Семейная ипотека</h3>
+                    <span>Банк ДомРФ</span>
+                </div>
+            </div>
+            <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                <h4>Сумма</h4>
+                <h3 class="informationMortgageBlockCreditNum">1 000 000 — 12 000 000₽</h3>
+                <span>На срок до 30 лет</span>
+            </div>
+            <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                <h4>Ставка</h4>
+                <h3>3,99%</h3>
+                <span>⁣⁣&#8291;</span>
+            </div>
+            <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                <h4>Платеж</h4>
+                <h3>9 082₽</h3>
+                <span>&#8291;</span>
+            </div>
+            <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                Подробнее
+            </button>
+
+        </div>
+
+        <div class="informationMortgageBlock">
+            <div class="informationMortgageBlockFirst">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#2051B2"/>
+                    <path d="M38.1943 16.8565C38.1943 13.0669 35.0779 9.99487 31.2355 9.99487H21.4075C18.2359 9.99487 15.5311 12.1033 14.7115 15.0157H26.5915C31.1623 15.0157 33.1015 17.1133 33.1015 22.0345V33.1561C36.0487 32.3449 38.1943 29.6689 38.1943 26.5525V16.8565Z" fill="white"/>
+                    <path d="M9.59998 31.3164C9.59998 35.106 12.714 38.1768 16.5576 38.1768H26.3856C29.5572 38.1768 32.262 36.0696 33.0828 33.156H21.2028C16.632 33.156 14.6928 31.0584 14.6928 26.1372V15.0156C11.7444 15.8268 9.59998 18.504 9.59998 21.6204V31.3164Z" fill="white"/>
+                    <path d="M28.0368 23.6928H27.1164V21.4872H28.0368C29.16 21.4872 29.4648 22.0212 29.4648 22.5864C29.4648 23.1504 29.0568 23.6928 28.0368 23.6928ZM27.1164 18.2748H27.852C29.0976 18.2748 29.16 19.0284 29.16 19.26C29.16 19.602 28.9764 20.238 27.9132 20.238H27.1164V18.276V18.2748ZM25.5036 22.122V24.0444C25.1148 23.8152 24.6672 23.6328 24.198 23.4324C23.6868 23.2092 23.136 22.9272 23.136 22.2912C23.136 21.9672 23.34 21.4872 24.3204 21.4872H26.1372L25.5036 22.122ZM19.254 27.0384H18.498V24.4476H19.254C20.1936 24.4476 20.622 25.0104 20.622 25.6956C20.622 26.3316 20.2356 27.0384 19.254 27.0384ZM29.508 20.832V20.802C30.0588 20.6304 30.7944 20.178 30.7944 18.9876C30.7944 17.6496 29.6904 17.0352 28.1388 17.0352H25.5036V20.2392H23.952C21.8688 20.2392 21.4404 21.6792 21.4404 22.4652C21.4404 23.5812 22.0944 24.0756 23.3004 24.6696C24.0324 25.0308 24.9108 25.2528 24.9108 26.0796C24.9108 26.514 24.5028 27.0384 23.6256 27.0384H21.9924C22.2372 26.6244 22.338 26.1708 22.338 25.7784C22.338 25.2648 22.1544 23.2092 19.254 23.2092H16.884V31.1352H18.498V27.6816L19.1508 28.326H23.5644C25.6248 28.326 26.6052 27.2796 26.6052 26.0304C26.6052 25.5876 26.5236 25.2324 26.3808 24.9432H28.0356C30.588 24.9432 31.1796 23.6928 31.1796 22.7148C31.1796 21.7188 30.5268 20.9832 29.5068 20.832H29.508Z" fill="white"/>
+                </svg>                        
+                <div class="informationMortgageBlockFirstName">
+                    <h3>	Ипотека для семей с детьми</h3>
+                    <span>Банк ДомРФ</span>
+                </div>
+            </div>
+            <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                <h4>Сумма</h4>
+                <h3 class="informationMortgageBlockCreditNum">1 000 000 — 12 000 000₽</h3>
+                <span>На срок до 30 лет</span>
+            </div>
+            <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                <h4>Ставка</h4>
+                <h3>5,95%</h3>
+                <span>⁣⁣&#8291;</span>
+            </div>
+            <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                <h4>Платеж</h4>
+                <h3>9 082₽</h3>
+                <span>&#8291;</span>
+            </div>
+            <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                Подробнее
+            </button>
+
+        </div>
+
+        <div class="informationMortgageBlock">
+            <div class="informationMortgageBlockFirst">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="24" fill="#E9041E"/>
+                    <rect width="48" height="24" transform="matrix(1 0 0 -1 0 48)" fill="black"/>
+                    <path d="M8 22H39V26H8V22Z" fill="white"/>
+                </svg>                        
+                <div class="informationMortgageBlockFirstName">
+                    <h3>Новостройка</h3>
+                    <span>Банк ДомРФ</span>
+                </div>
+            </div>
+            <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                <h4>Сумма</h4>
+                <h3 class="informationMortgageBlockCreditNum">1 000 000 — 12 000 000₽</h3>
+                <span>На срок до 30 лет</span>
+            </div>
+            <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                <h4>Ставка</h4>
+                <h3>5,95%</h3>
+                <span>⁣⁣&#8291;</span>
+            </div>
+            <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                <h4>Платеж</h4>
+                <h3>9 082₽</h3>
+                <span>&#8291;</span>
+            </div>
+            <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                Подробнее
+            </button>
+
+        </div>
+
+        <div class="informationMortgageBlock">
+            <div class="informationMortgageBlockFirst">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#3C5186"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.6241 17.1936C24.8929 17.1706 25.1598 17.2109 25.4094 17.3088L25.3518 9.78436H26.2522C26.211 12.3514 26.3041 14.9204 26.5306 17.4778C30.8266 18.5146 34.0954 22.0032 34.8538 26.3559C35.6122 30.7095 33.7114 35.0967 30.0212 37.5245C29.9636 37.4669 29.8522 37.297 29.7428 37.1808C26.5431 32.9876 25.7521 26.713 25.5313 21.2698C25.9758 21.3754 26.427 21.4522 26.881 21.5021C27.5434 26.1197 29.5594 30.4359 32.6737 33.9072C35.0017 30.9581 34.8116 26.7456 32.2263 24.0192C30.8478 22.489 29.0535 21.3917 27.0615 20.8628C26.1265 20.6295 25.1655 20.5143 24.2007 20.5191C23.2369 20.521 22.2759 20.6362 21.3399 20.8628C17.1812 21.9572 14.0938 25.2884 14.0938 29.2484C14.1226 30.9245 14.6718 32.5508 15.6634 33.9015C18.7969 30.4436 20.8138 26.1197 21.4503 21.4964C21.9207 21.4426 22.3882 21.3648 22.8519 21.264C22.6244 26.7188 21.8401 32.8954 18.6414 37.1175V37.0599C18.5425 37.2231 18.4302 37.3767 18.3034 37.5188C14.6631 35.0448 12.818 30.6615 13.5946 26.329C14.3722 21.9965 17.6247 18.5261 21.8986 17.472C22.177 11.8426 22.1242 9.7786 22.1242 9.7786H23.0199L22.9623 17.305C23.1927 17.209 23.4423 17.1706 23.689 17.1869V6.10852H24.625V17.1936H24.6241ZM24.6817 21.2112C24.793 26.4452 25.13 32.9876 26.8167 37.4064C26.9857 37.8672 27.265 38.3856 27.4916 38.8445C26.4135 39.1613 25.299 39.3341 24.1767 39.3629C23.0535 39.3437 21.937 39.169 20.8618 38.8445C21.1422 38.2628 21.3687 37.7501 21.5953 37.2394C23.1658 32.8714 23.619 26.3818 23.6718 21.2122H24.6836L24.6817 21.2112Z" fill="white"/>
+                </svg>                        
+                <div class="informationMortgageBlockFirstName">
+                    <h3>Семейная ипотека</h3>
+                    <span>Банк ДомРФ</span>
+                </div>
+            </div>
+            <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                <h4>Сумма</h4>
+                <h3 class="informationMortgageBlockCreditNum">1 000 000 — 12 000 000₽</h3>
+                <span>На срок до 30 лет</span>
+            </div>
+            <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                <h4>Ставка</h4>
+                <h3>4,92%</h3>
+                <span>⁣⁣&#8291;</span>
+            </div>
+            <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                <h4>Платеж</h4>
+                <h3>9 082₽</h3>
+                <span>&#8291;</span>
+            </div>
+            <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                Подробнее
+            </button>
+
+        </div>
+
+        <div class="informationMortgageBlock">
+            <div class="informationMortgageBlockFirst">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#C20018"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.1159 17.6544L19.5802 24.2996L16.2989 20.9636L19.5802 17.6276H13.0176L9.81793 20.9636L19.6349 30.9725L28.0291 22.3536H33.0595L37.7098 17.6554H26.1168L26.1159 17.6544ZM21.0019 30.8064L21.9331 29.8599L28.4131 23.2992H37.7098L33.0615 27.9975H30.3264L27.5645 30.8055H21.0019V30.8064Z" fill="white"/>
+                </svg>
+                <div class="informationMortgageBlockFirstName">
+                    <h3>Ипотека в ползунках</h3>
+                    <span>Банк ДомРФ</span>
+                </div>
+            </div>
+            <div class="informationMortgageBlockCredit informationMortgageBlockFlex">
+                <h4>Сумма</h4>
+                <h3 class="informationMortgageBlockCreditNum">1 000 000 — 12 000 000₽</h3>
+                <span>На срок до 30 лет</span>
+            </div>
+            <div class="informationMortgageBlockBet informationMortgageBlockFlex">
+                <h4>Ставка</h4>
+                <h3>6,10%</h3>
+                <span>⁣⁣&#8291;</span>
+            </div>
+            <div class="informationMortgageBlockPayment informationMortgageBlockFlex">
+                <h4>Платеж</h4>
+                <h3>9 082₽</h3>
+                <span>&#8291;</span>
+            </div>
+            <button class="informationMortgageBlockButton informationMortgageBlockFlex">
+                Подробнее
+            </button>
+
+        </div>
+
+        <button class="informationMortgageButton">
+            Показать больше
+        </button>
+
+    </div>
+
+    <div class="mortgageBank">
+        <h2>Ипотека по банкам</h2>
+
+        <div class="mortgageBankContainer">
+            <div class="mortgageBankItem">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" rx="4" fill="#1E4679"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8779 17C21.98 17 22.0277 16.9079 21.9834 16.7929L21.7569 16.2071C21.7126 16.0941 21.5934 16 21.4912 16H13.1221C13.02 16 12.9723 16.0921 13.0166 16.2071L13.2431 16.7929C13.2874 16.9059 13.4066 17 13.5088 17H21.8779Z" fill="#FEFEFE"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.7839 18.2071C21.7446 18.0941 21.6386 18 21.5478 18H14.1086C14.0177 18 13.9754 18.0941 14.0147 18.2071L14.2161 18.7929C14.2554 18.9059 14.3614 19 14.4522 19H21.8914C21.9823 19 22.0246 18.9079 21.9853 18.7929L21.7839 18.2071Z" fill="#FEFEFE"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.73 20.2071C24.6808 20.0941 24.5483 20 24.4348 20H15.1357C15.0222 20 14.9692 20.092 15.0184 20.2071L15.2719 20.7929C15.3211 20.9059 15.4535 21 15.5671 21H24.8643C24.9778 21 25.0308 20.9079 24.9816 20.7929L24.73 20.2071Z" fill="#FEFEFE"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7299 22.2071C25.6807 22.0941 25.5483 22 25.4347 22H16.1357C16.0222 22 15.9692 22.0921 16.0184 22.2071L16.2701 22.7929C16.3193 22.9059 16.4517 23 16.5653 23H25.8643C25.9778 23 26.0308 22.908 25.9816 22.7929L25.7299 22.2071Z" fill="#FEFEFE"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7299 24.4151C26.6807 24.1887 26.5483 24 26.4347 24H17.1357C17.0222 24 16.9692 24.1845 17.0184 24.4151L17.2701 25.5891C17.3193 25.8155 17.4517 26 17.5653 26H26.8643C26.9778 26 27.0308 25.8155 26.9816 25.5891L26.7299 24.4151Z" fill="#FEFEFE"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M35 26C36.1031 26 37 25.1031 37 24C37 22.8969 36.1048 22 35 22C33.8952 22 33 22.8952 33 24C33 25.1031 33.8935 26 35 26Z" fill="#EE3142"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.8054 14C24.9125 14 25 13.8973 25 13.7715V13.2285C25 13.1027 24.9125 13 24.8054 13H11.1946C11.0875 13 11 13.1027 11 13.2285V13.7715C11 13.8973 11.0875 14 11.1946 14H24.8054Z" fill="#FEFEFE"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1249 27C18.0204 27 17.9716 27.0669 18.0169 27.1491L23.4255 36.9384C23.4708 37.0205 23.5805 37.0205 23.6258 36.9384L28.5675 27.8764C28.6128 27.7942 28.7348 27.7258 28.8393 27.7258H36.8101C36.9146 27.7258 37 27.6512 37 27.5599V27.1658C37 27.0746 36.9146 27 36.8101 27H18.1249Z" fill="#FEFEFE"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M36.8205 13H30.2871C30.1874 13 30.106 13.0891 30.106 13.1981V13.6688C30.106 13.7779 30.1874 13.8669 30.2871 13.8669H31.2561C31.4971 13.8833 32.8882 13.8905 32.358 15.6662L28.0152 25.8201C27.9736 25.9182 28.0202 26 28.1199 26H29.6041C29.7038 26 29.8201 25.9182 29.8633 25.8201L34.5518 15.0991C34.7662 14.6157 35.0239 14.2886 35.3247 14.1195C35.6255 13.9523 36.0177 13.8651 36.5296 13.8651H36.8188C36.9185 13.8651 37 13.776 37 13.667V13.1963C37.0016 13.0891 36.9202 13 36.8205 13Z" fill="#FEFEFE"/>
+                </svg>
+                <div class="mortgageBankItemContainer">
+                    <h3>Банк Возраждение</h3>
+                    <span>Ставка от 6,5%</span>
+                    <button>Программы</button>
                 </div>
             </div>
 
-            <img class="greenCityLogo" src="/img/icon/greenCityLogo.svg">
-            <div class="greenCityAd">
-                <div class="greenCityAdLink">
-                    Реклама <img src="/img/icon/bx-link.svg" alt="link">
-                </div> <br>
-                <span>Проектная декларация на сайте наш.дом.рф <br> Застройщик ООО «Инвестцентр»</span>
+            <div class="mortgageBankItem">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#EE3524"/>
+                    <path d="M24 8C26.1127 8 26.7934 9.56509 27.3568 11.1302C27.5915 11.7803 33.108 27.2867 33.2723 27.7442C33.3192 27.8646 33.2958 28.0813 33.0845 28.1535C32.8732 28.2257 30.0329 29.3815 29.8685 29.4296C29.7042 29.4778 29.5399 29.4056 29.4695 29.237C29.3991 29.0685 28.2254 25.6975 28.0845 25.3363C27.6854 25.3363 20.3146 25.3363 19.9155 25.3363C19.7746 25.7216 18.5775 29.0926 18.5305 29.237C18.4836 29.3815 18.2958 29.5019 18.1315 29.4296C17.9671 29.3574 15.0798 28.2257 14.9155 28.1535C14.7512 28.0813 14.6808 27.8886 14.7277 27.7442C14.939 27.1663 20.3615 11.9248 20.6432 11.1302C21.1831 9.58916 21.8873 8 24 8ZM14.3052 35.7141C14.1408 35.7141 14 35.8585 14 36.0512V39.6629C14 39.8555 14.1408 40 14.3052 40H33.6948C33.8592 40 34 39.8555 34 39.6629V36.0512C34 35.8585 33.8592 35.7141 33.6948 35.7141H14.3052ZM24 13.0564L21.23 21.5561H26.7934L24.0235 13.0564H24Z" fill="white"/>
+                </svg>                        
+                <div class="mortgageBankItemContainer">
+                    <h3>Газпром Банк</h3>
+                    <span>Ставка от 6,5%</span>
+                    <button>Программы</button>
+                </div>
+            </div>
+
+            <div class="mortgageBankItem">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#3C5186"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.6241 17.1936C24.8929 17.1705 25.1598 17.2109 25.4094 17.3088L25.3518 9.7843H26.2522C26.211 12.3513 26.3041 14.9203 26.5306 17.4777C30.8266 18.5145 34.0954 22.0032 34.8538 26.3558C35.6122 30.7094 33.7114 35.0966 30.0212 37.5245C29.9636 37.4669 29.8522 37.2969 29.7428 37.1808C26.5431 32.9875 25.7521 26.7129 25.5313 21.2697C25.9758 21.3753 26.427 21.4521 26.881 21.5021C27.5434 26.1197 29.5594 30.4358 32.6737 33.9072C35.0017 30.9581 34.8116 26.7456 32.2263 24.0192C30.8478 22.4889 29.0535 21.3917 27.0615 20.8627C26.1265 20.6294 25.1655 20.5142 24.2007 20.519C23.2369 20.5209 22.2759 20.6361 21.3399 20.8627C17.1812 21.9571 14.0938 25.2883 14.0938 29.2483C14.1226 30.9245 14.6718 32.5507 15.6634 33.9014C18.7969 30.4435 20.8138 26.1197 21.4503 21.4963C21.9207 21.4425 22.3882 21.3648 22.8519 21.264C22.6244 26.7187 21.8401 32.8953 18.6414 37.1174V37.0598C18.5425 37.223 18.4302 37.3766 18.3034 37.5187C14.6631 35.0448 12.818 30.6614 13.5946 26.3289C14.3722 21.9965 17.6247 18.5261 21.8986 17.472C22.177 11.8425 22.1242 9.77854 22.1242 9.77854H23.0199L22.9623 17.3049C23.1927 17.2089 23.4423 17.1705 23.689 17.1869V6.10846H24.625V17.1936H24.6241ZM24.6817 21.2112C24.793 26.4451 25.13 32.9875 26.8167 37.4064C26.9857 37.8672 27.265 38.3856 27.4916 38.8445C26.4135 39.1613 25.299 39.3341 24.1767 39.3629C23.0535 39.3437 21.937 39.1689 20.8618 38.8445C21.1422 38.2627 21.3687 37.7501 21.5953 37.2393C23.1658 32.8713 23.619 26.3817 23.6718 21.2121H24.6836L24.6817 21.2112Z" fill="white"/>
+                </svg>
+                <div class="mortgageBankItemContainer">
+                    <h3>Россельхоз Банк</h3>
+                    <span>Ставка от 6,5%</span>
+                    <button>Программы</button>
+                </div>
+            </div>
+
+            <div class="mortgageBankItem">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#123063"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M33.1152 27.7805H12.5261L11.04 31.7856H31.6291L33.1152 27.7805ZM35.3405 21.7737H14.7504L13.2653 25.7779H33.8544L35.3405 21.7747V21.7737ZM36.0835 19.7712H15.4944L16.9795 15.767H37.5696L36.0835 19.7702V19.7712Z" fill="#00A3DA"/>
+                </svg>                        
+                <div class="mortgageBankItemContainer">
+                    <h3>Сбербанк</h3>
+                    <span>Ставка от 6,5%</span>
+                    <button>Программы</button>
+                </div>
+            </div>
+
+            <div class="mortgageBankItem">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="#4EA749"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8 20.504L12.8016 20.572H28.4896C28.5296 16.8704 31.5392 13.8784 35.2512 13.8784C35.2976 13.8784 35.3472 13.8824 35.3904 13.8824V13.6H19.7024C17.8716 13.6004 16.116 14.328 14.8216 15.6227C13.5272 16.9174 12.8 18.6732 12.8 20.504ZM19.7016 27.5456C19.6839 29.3269 18.9639 31.0293 17.6981 32.2828C16.4323 33.5363 14.723 34.2397 12.9416 34.24C12.8936 34.24 12.8488 34.24 12.8 34.2384V34.5184H28.488C29.3945 34.5183 30.2922 34.3396 31.1297 33.9926C31.9672 33.6456 32.7281 33.137 33.3691 32.4959C34.01 31.8548 34.5184 31.0938 34.8652 30.2562C35.212 29.4186 35.3905 28.5209 35.3904 27.6144V27.5456H19.7024H19.7016ZM35.3816 27.2632C35.2934 25.5201 34.5477 23.8753 33.2946 22.6605C32.0416 21.4456 30.3745 20.751 28.6296 20.7168C28.6481 22.4609 29.3542 24.1273 30.5943 25.3538C31.8345 26.5803 33.5086 27.2679 35.2528 27.2672C35.296 27.2672 35.3384 27.2632 35.3808 27.2632H35.3816ZM19.564 27.4024C19.5208 23.776 16.5744 20.8504 12.9408 20.8504C12.896 20.8504 12.8536 20.8552 12.8088 20.8552C12.8979 22.5986 13.6444 24.2434 14.8979 25.4583C16.1514 26.6731 17.8187 27.3678 19.564 27.4024Z" fill="#FEFEFE"/>
+                </svg>                        
+                <div class="mortgageBankItemContainer">
+                    <h3>Ак Барс Банк</h3>
+                    <span>Ставка от 6,5%</span>
+                    <button>Программы</button>
+                </div>
+            </div>
+
+            <div class="mortgageBankItem">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="24" rx="4" fill="#E9041E"/>
+                    <rect width="48" height="24" transform="matrix(1 0 0 -1 0 48)" fill="black"/>
+                    <path d="M8 22H39V26H8V22Z" fill="white"/>
+                </svg>
+                <div class="mortgageBankItemContainer">
+                    <h3>Альфа Банк</h3>
+                    <span>Ставка от 6,5%</span>
+                    <button>Программы</button>
+                </div>
             </div>
 
         </div>
 
-        <div class="newBuildings">
-            <div class="newBuildingsSearch">
-                <a href="#" class="active">Аккредитованные новостройки</a>
-                <a href="#" class="">Рекомендованные ЖК</a>
-                <a href="#" class="">Популярные новостройки</a>
-                <a href="#" class="">Самые обсуждаемые</a>
+        <button class="informationMortgageButton">
+            Показать больше
+        </button>
+
+    </div>
+
+    <div class="greenCity">
+
+        <div class="greenCityContainer">
+            <span>Строится до 3 кв. 2022 г.</span>
+            <h2>ЖК Зеленый город</h2>
+            <span>Вологда, Центр, Рыбинская 41</span>
+            <div class="greenCityContainerGPS">
+                <span class="greenCityContainerCircle"></span>Красносельская 
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.66668 3.99998C9.40306 3.99998 10 3.40303 10 2.66665C10 1.93027 9.40306 1.33331 8.66668 1.33331C7.9303 1.33331 7.33334 1.93027 7.33334 2.66665C7.33334 3.40303 7.9303 3.99998 8.66668 3.99998Z" fill="#F7F8FC" fill-opacity="0.54"/>
+                    <path d="M9.31866 8.18001C9.482 8.42534 9.726 8.61134 10.006 8.70467L11.7893 9.29934L12.2113 8.03534L10.428 7.44067L9.31933 5.77734C9.19133 5.58534 9.01466 5.43001 8.80666 5.32467L7.85066 4.84667C7.56733 4.70534 7.242 4.66867 6.932 4.74734L4.80333 5.27867C4.426 5.37267 4.10866 5.62601 3.93266 5.97601L2.73666 8.36867L3.92933 8.96534L5.12533 6.57267L6.60733 6.20201L5.40466 11.766L2.95533 13.4507L3.71066 14.5493L6.16066 12.864C6.44133 12.6707 6.636 12.3807 6.70733 12.0473L7.052 10.4553L8.73 11.714L9.34666 14.7973L10.654 14.5353L10.0373 11.4507C9.97133 11.128 9.79133 10.842 9.52933 10.6467L8.082 9.56134L8.51333 6.97134L9.31866 8.18001Z" fill="#F7F8FC" fill-opacity="0.54"/>
+                </svg>
+                <span>16 мин.</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.0027 5.31665V3.99998C14.0027 2.52931 12.8067 1.33331 11.336 1.33331H4.66933C3.19866 1.33331 2.00266 2.52931 2.00266 3.99998V5.33198C1.97399 5.33331 1.95199 5.33465 1.95199 5.33465C1.60266 5.35998 1.33333 5.64998 1.33333 5.99998V7.33331C1.33333 7.70131 1.63133 7.99998 1.99999 7.99998H2.00266V12C2.00266 12.49 2.27133 12.9146 2.66666 13.1466V14C2.66666 14.3686 2.96466 14.6666 3.33333 14.6666H3.99999C4.36866 14.6666 4.66666 14.3686 4.66666 14V13.3333H11.3333V14C11.3333 14.3686 11.6313 14.6666 12 14.6666H12.6667C13.0353 14.6666 13.3333 14.3686 13.3333 14V13.1493C13.7313 12.918 14.0027 12.4926 14.0027 12V7.99998C14.3713 7.99998 14.6693 7.70131 14.6693 7.33331V6.04131C14.6767 5.93931 14.6613 5.83531 14.6213 5.73798C14.486 5.41331 14.198 5.33531 14.0027 5.31665ZM12.6707 12H12.6667H12H3.99999H3.336V8.66665H7.33599H8.66933H12.67L12.6707 12ZM7.33599 4.66665V7.33331H3.336V4.66665H7.33599ZM12.6693 4.66665V5.99865C12.6693 5.99931 12.6693 5.99931 12.6693 5.99998V7.33331H8.66933V4.66665H12.6693ZM4.66933 2.66665H11.336C11.8267 2.66665 12.2527 2.93665 12.484 3.33331H3.52133C3.75266 2.93665 4.17866 2.66665 4.66933 2.66665Z" fill="#F7F8FC" fill-opacity="0.54"/>
+                    <path d="M5 11.3333C5.55228 11.3333 6 10.8856 6 10.3333C6 9.78103 5.55228 9.33331 5 9.33331C4.44772 9.33331 4 9.78103 4 10.3333C4 10.8856 4.44772 11.3333 5 11.3333Z" fill="#F7F8FC" fill-opacity="0.54"/>
+                    <path d="M11 11.3333C11.5523 11.3333 12 10.8856 12 10.3333C12 9.78103 11.5523 9.33331 11 9.33331C10.4477 9.33331 10 9.78103 10 10.3333C10 10.8856 10.4477 11.3333 11 11.3333Z" fill="#F7F8FC" fill-opacity="0.54"/>
+                </svg>
+                <span>4 мин.</span>
             </div>
-            <div class="newBuildingsContainer">
-
-                <div class="newBuildingsContainerItem">
-                    <img src="/img/ribinsk.png" alt="ribinsk">
-                    <div class="newBuildingsContainerItemInfo">
-                        <h3>ЖК Рыбинская, 41</h3>
-                        <p>Вологда, Центр, Окружное шоссе 23</p>
-                        <div>
-                            <div></div>Красносельская
-                            <img src="/img/icon/bx-walk1.svg" alt="walk">
-                            <span>16 мин.</span>
-                        </div>
-                        <span>от 75 000 ₽ за м²</span>
-                    </div>
-                    <div class="newBuildingsContainerItemLike">
-                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
-                        </svg>                            
-                    </div>
+            <div class="greenCityContainerInformatiom">
+                <div class="greenCityContainerInformatiomItem">
+                    <span>1-комн.</span>
+                    <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
+                    <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
                 </div>
-
-                <div class="newBuildingsContainerItem">
-                    <img src="/img/resedentPark.png" alt="resedentPark">
-                    <div class="newBuildingsContainerItemInfo">
-                        <h3>ЖК Резеденция парк</h3>
-                        <p>Вологда, Центр, Окружное шоссе 23</p>
-                        <div>
-                            <div></div>Красносельская
-                            <img src="/img/icon/bx-walk1.svg" alt="walk">
-                            <span>16 мин.</span>
-                        </div>
-                        <span>от 48 000 ₽ за м²</span>
-                    </div>
-                    <div class="newBuildingsContainerItemLike">
-                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
-                        </svg>                            
-                    </div>
+                <div class="greenCityContainerInformatiomItem">
+                    <span>2-комн.</span>
+                    <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
+                    <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
                 </div>
-
-                <div class="newBuildingsContainerItem">
-                    <img src="/img/severna.png" alt="severna">
-                    <div class="newBuildingsContainerItemInfo">
-                        <h3>ЖК на Северной</h3>
-                        <p>Вологда, Центр, Окружное шоссе 23</p>
-                        <div>
-                            <div></div>Красносельская
-                            <img src="/img/icon/bx-walk1.svg" alt="walk">
-                            <span>16 мин.</span>
-                        </div>
-                        <span>от 43 000 ₽ за м²</span>
-                    </div>
-                    <div class="newBuildingsContainerItemLike">
-                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
-                        </svg>                            
-                    </div>
+                <div class="greenCityContainerInformatiomItem">
+                    <span>3-комн.</span>
+                    <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
+                    <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
                 </div>
-
-                <div class="newBuildingsContainerItem">
-                    <img src="/img/marschal.png" alt="marschal">
-                    <div class="newBuildingsContainerItemInfo">
-                        <h3>ЖК Маршал</h3>
-                        <p>Вологда, Центр, Окружное шоссе 23</p>
-                        <div>
-                            <div></div>Красносельская
-                            <img src="/img/icon/bx-walk1.svg" alt="walk">
-                            <span>16 мин.</span>
-                        </div>
-                        <span>от 51 000 ₽ за м²</span>
-                    </div>
-                    <div class="newBuildingsContainerItemLike">
-                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
-                        </svg>                            
-                    </div>
+                <div class="greenCityContainerInformatiomItem">
+                    <span>4+комн.</span>
+                    <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
+                    <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
                 </div>
-
-                <div class="newBuildingsContainerItem">
-                    <img src="/img/ribinsk.png" alt="ribinsk">
-                    <div class="newBuildingsContainerItemInfo">
-                        <h3>ЖК Рыбинская, 41</h3>
-                        <p>Вологда, Центр, Окружное шоссе 23</p>
-                        <div>
-                            <div></div>Красносельская
-                            <img src="/img/icon/bx-walk1.svg" alt="walk">
-                            <span>16 мин.</span>
-                        </div>
-                        <span>от 75 000 ₽ за м²</span>
-                    </div>
-                    <div class="newBuildingsContainerItemLike">
-                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
-                        </svg>                            
-                    </div>
+                <div class="greenCityContainerInformatiomItem" style="border: none;">
+                    <span>Студии</span>
+                    <span class="greenCityContainerInformatiomItemSize">от 32м²</span>
+                    <span class="greenCityContainerInformatiomItemPrice">от 3 100 000 ₽</span>
                 </div>
+            </div>
+            <div class="greenCityContainerContact">
+                <button class="greenCityContainerContactTel">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.3652 10.855L10.3165 8.08303C10.0172 7.81078 9.55525 7.82503 9.27325 8.11528L7.4785 9.96103C7.0465 9.87853 6.178 9.60778 5.284 8.71603C4.39 7.82128 4.11925 6.95053 4.039 6.52153L5.88325 4.72603C6.17425 4.44403 6.18775 3.98278 5.9155 3.68278L3.14425 0.63478C2.872 0.33403 2.40925 0.30553 2.101 0.56953L0.473498 1.96528C0.343748 2.09578 0.266498 2.26828 0.255998 2.45203C0.244748 2.63953 0.0302479 7.08103 3.47425 10.5265C6.47875 13.5303 10.2422 13.75 11.2787 13.75C11.4302 13.75 11.5232 13.7455 11.548 13.744C11.7317 13.7335 11.9042 13.6563 12.034 13.5258L13.429 11.8975C13.6945 11.5893 13.6652 11.1273 13.3652 10.855Z" fill="#38424E"/>
+                    </svg>
+                    Показать телефон
+                </button>
+                <button class="greenCityContainerContactDetail">Подробнее</button>
+            </div>
+        </div>
 
-                <div class="newBuildingsContainerItem">
-                    <img src="/img/severna.png" alt="severna">
-                    <div class="newBuildingsContainerItemInfo">
-                        <h3>ЖК на Северной</h3>
-                        <p>Вологда, Центр, Окружное шоссе 23</p>
-                        <div>
-                            <div></div>Красносельская
-                            <img src="/img/icon/bx-walk1.svg" alt="walk">
-                            <span>16 мин.</span>
-                        </div>
-                        <span>от 43 000 ₽ за м²</span>
+        <svg class="greenCityLogo" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="48" height="48" rx="4" fill="white"/>
+            <circle cx="24" cy="24" r="20" fill="url(#pattern0)"/>
+            <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0" transform="translate(0.0278808 0.234086) scale(0.00629492)"/>
+            </pattern>
+            <image id="image0" width="150" height="81" xlink:href="data:image/png;base64,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"/>
+            </defs>
+        </svg>
+        <div class="greenCityAd">
+            <div class="greenCityAdLink">
+                Реклама 
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.49998 1.5L8.14648 3.1465L4.64648 6.6465L5.35348 7.3535L8.85348 3.8535L10.5 5.5V1.5H6.49998Z" fill="white"/>
+                    <path d="M9.5 9.5H2.5V2.5H6L5 1.5H2.5C1.9485 1.5 1.5 1.9485 1.5 2.5V9.5C1.5 10.0515 1.9485 10.5 2.5 10.5H9.5C10.0515 10.5 10.5 10.0515 10.5 9.5V7L9.5 6V9.5Z" fill="white"/>
+                </svg>
+
+            </div>
+            <p>Проектная декларация на сайте наш.дом.рф <br> Застройщик ООО «Инвестцентр»</p>
+        </div>
+
+    </div>
+
+    <div class="newBuildings">
+        <div class="newBuildingsSearch">
+            <a href="#" class="active">Аккредитованные новостройки</a>
+            <a href="#" class="">Рекомендованные ЖК</a>
+            <a href="#" class="">Популярные новостройки</a>
+            <a href="#" class="">Самые обсуждаемые</a>
+        </div>
+        <div class="newBuildingsContainer">
+
+            <div class="newBuildingsContainerItem">
+                <img src="img/ribinsk.png" alt="ribinsk">
+                <div class="newBuildingsContainerItemInfo">
+                    <h3>ЖК Рыбинская, 41</h3>
+                    <p>Вологда, Центр, Окружное шоссе 23</p>
+                    <div>
+                        <div></div>Красносельская
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.66665 4C9.40303 4 9.99998 3.40304 9.99998 2.66667C9.99998 1.93029 9.40303 1.33333 8.66665 1.33333C7.93027 1.33333 7.33331 1.93029 7.33331 2.66667C7.33331 3.40304 7.93027 4 8.66665 4Z" fill="#78859B"/>
+                            <path d="M9.31869 8.18C9.48203 8.42533 9.72603 8.61133 10.006 8.70466L11.7894 9.29933L12.2114 8.03533L10.428 7.44066L9.31936 5.77733C9.19136 5.58533 9.01469 5.43 8.80669 5.32466L7.85069 4.84666C7.56736 4.70533 7.24203 4.66866 6.93203 4.74733L4.80336 5.27866C4.42603 5.37266 4.10869 5.626 3.93269 5.976L2.73669 8.36866L3.92936 8.96533L5.12536 6.57266L6.60736 6.202L5.40469 11.766L2.95536 13.4507L3.71069 14.5493L6.16069 12.864C6.44136 12.6707 6.63603 12.3807 6.70736 12.0473L7.05203 10.4553L8.73003 11.714L9.34669 14.7973L10.654 14.5353L10.0374 11.4507C9.97136 11.128 9.79136 10.842 9.52936 10.6467L8.08203 9.56133L8.51336 6.97133L9.31869 8.18Z" fill="#78859B"/>
+                        </svg>
+                        <span>16 мин.</span>
                     </div>
-                    <div class="newBuildingsContainerItemLike">
-                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
-                        </svg>                            
-                    </div>
+                    <span>от 75 000 ₽ за м²</span>
                 </div>
-
-                <div class="newBuildingsContainerItem">
-                    <img src="/img/marschal.png" alt="marschal">
-                    <div class="newBuildingsContainerItemInfo">
-                        <h3>ЖК Маршал</h3>
-                        <p>Вологда, Центр, Окружное шоссе 23</p>
-                        <div>
-                            <div></div>Красносельская
-                            <img src="/img/icon/bx-walk1.svg" alt="walk">
-                            <span>16 мин.</span>
-                        </div>
-                        <span>от 51 000 ₽ за м²</span>
-                    </div>
-                    <div class="newBuildingsContainerItemLike">
-                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
-                        </svg>                            
-                    </div>
+                <div class="newBuildingsContainerItemLike">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                    </svg>                            
                 </div>
+            </div>
 
-                <div class="newBuildingsContainerItem">
-                    <img src="/img/resedentPark.png" alt="resedentPark">
-                    <div class="newBuildingsContainerItemInfo">
-                        <h3>ЖК Резеденция парк</h3>
-                        <p>Вологда, Центр, Окружное шоссе 23</p>
-                        <div>
-                            <div></div>Красносельская
-                            <img src="/img/icon/bx-walk1.svg" alt="walk">
-                            <span>16 мин.</span>
-                        </div>
-                        <span>от 48 000 ₽ за м²</span>
+            <div class="newBuildingsContainerItem">
+                <img src="img/resedentPark.png" alt="resedentPark">
+                <div class="newBuildingsContainerItemInfo">
+                    <h3>ЖК Резеденция парк</h3>
+                    <p>Вологда, Центр, Окружное шоссе 23</p>
+                    <div>
+                        <div></div>Красносельская
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.66665 4C9.40303 4 9.99998 3.40304 9.99998 2.66667C9.99998 1.93029 9.40303 1.33333 8.66665 1.33333C7.93027 1.33333 7.33331 1.93029 7.33331 2.66667C7.33331 3.40304 7.93027 4 8.66665 4Z" fill="#78859B"/>
+                            <path d="M9.31869 8.18C9.48203 8.42533 9.72603 8.61133 10.006 8.70466L11.7894 9.29933L12.2114 8.03533L10.428 7.44066L9.31936 5.77733C9.19136 5.58533 9.01469 5.43 8.80669 5.32466L7.85069 4.84666C7.56736 4.70533 7.24203 4.66866 6.93203 4.74733L4.80336 5.27866C4.42603 5.37266 4.10869 5.626 3.93269 5.976L2.73669 8.36866L3.92936 8.96533L5.12536 6.57266L6.60736 6.202L5.40469 11.766L2.95536 13.4507L3.71069 14.5493L6.16069 12.864C6.44136 12.6707 6.63603 12.3807 6.70736 12.0473L7.05203 10.4553L8.73003 11.714L9.34669 14.7973L10.654 14.5353L10.0374 11.4507C9.97136 11.128 9.79136 10.842 9.52936 10.6467L8.08203 9.56133L8.51336 6.97133L9.31869 8.18Z" fill="#78859B"/>
+                        </svg>
+                        <span>16 мин.</span>
                     </div>
-                    <div class="newBuildingsContainerItemLike">
-                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
-                        </svg>                            
-                    </div>
+                    <span>от 48 000 ₽ за м²</span>
                 </div>
+                <div class="newBuildingsContainerItemLike">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                    </svg>                            
+                </div>
+            </div>
 
+            <div class="newBuildingsContainerItem">
+                <img src="img/severna.png" alt="severna">
+                <div class="newBuildingsContainerItemInfo">
+                    <h3>ЖК на Северной</h3>
+                    <p>Вологда, Центр, Окружное шоссе 23</p>
+                    <div>
+                        <div></div>Красносельская
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.66665 4C9.40303 4 9.99998 3.40304 9.99998 2.66667C9.99998 1.93029 9.40303 1.33333 8.66665 1.33333C7.93027 1.33333 7.33331 1.93029 7.33331 2.66667C7.33331 3.40304 7.93027 4 8.66665 4Z" fill="#78859B"/>
+                            <path d="M9.31869 8.18C9.48203 8.42533 9.72603 8.61133 10.006 8.70466L11.7894 9.29933L12.2114 8.03533L10.428 7.44066L9.31936 5.77733C9.19136 5.58533 9.01469 5.43 8.80669 5.32466L7.85069 4.84666C7.56736 4.70533 7.24203 4.66866 6.93203 4.74733L4.80336 5.27866C4.42603 5.37266 4.10869 5.626 3.93269 5.976L2.73669 8.36866L3.92936 8.96533L5.12536 6.57266L6.60736 6.202L5.40469 11.766L2.95536 13.4507L3.71069 14.5493L6.16069 12.864C6.44136 12.6707 6.63603 12.3807 6.70736 12.0473L7.05203 10.4553L8.73003 11.714L9.34669 14.7973L10.654 14.5353L10.0374 11.4507C9.97136 11.128 9.79136 10.842 9.52936 10.6467L8.08203 9.56133L8.51336 6.97133L9.31869 8.18Z" fill="#78859B"/>
+                        </svg>
+                        <span>16 мин.</span>
+                    </div>
+                    <span>от 43 000 ₽ за м²</span>
+                </div>
+                <div class="newBuildingsContainerItemLike">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                    </svg>                            
+                </div>
+            </div>
+
+            <div class="newBuildingsContainerItem">
+                <img src="img/marschal.png" alt="marschal">
+                <div class="newBuildingsContainerItemInfo">
+                    <h3>ЖК Маршал</h3>
+                    <p>Вологда, Центр, Окружное шоссе 23</p>
+                    <div>
+                        <div></div>Красносельская
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.66665 4C9.40303 4 9.99998 3.40304 9.99998 2.66667C9.99998 1.93029 9.40303 1.33333 8.66665 1.33333C7.93027 1.33333 7.33331 1.93029 7.33331 2.66667C7.33331 3.40304 7.93027 4 8.66665 4Z" fill="#78859B"/>
+                            <path d="M9.31869 8.18C9.48203 8.42533 9.72603 8.61133 10.006 8.70466L11.7894 9.29933L12.2114 8.03533L10.428 7.44066L9.31936 5.77733C9.19136 5.58533 9.01469 5.43 8.80669 5.32466L7.85069 4.84666C7.56736 4.70533 7.24203 4.66866 6.93203 4.74733L4.80336 5.27866C4.42603 5.37266 4.10869 5.626 3.93269 5.976L2.73669 8.36866L3.92936 8.96533L5.12536 6.57266L6.60736 6.202L5.40469 11.766L2.95536 13.4507L3.71069 14.5493L6.16069 12.864C6.44136 12.6707 6.63603 12.3807 6.70736 12.0473L7.05203 10.4553L8.73003 11.714L9.34669 14.7973L10.654 14.5353L10.0374 11.4507C9.97136 11.128 9.79136 10.842 9.52936 10.6467L8.08203 9.56133L8.51336 6.97133L9.31869 8.18Z" fill="#78859B"/>
+                        </svg>
+                        <span>16 мин.</span>
+                    </div>
+                    <span>от 51 000 ₽ за м²</span>
+                </div>
+                <div class="newBuildingsContainerItemLike">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                    </svg>                            
+                </div>
+            </div>
+
+            <div class="newBuildingsContainerItem">
+                <img src="img/ribinsk.png" alt="ribinsk">
+                <div class="newBuildingsContainerItemInfo">
+                    <h3>ЖК Рыбинская, 41</h3>
+                    <p>Вологда, Центр, Окружное шоссе 23</p>
+                    <div>
+                        <div></div>Красносельская
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.66665 4C9.40303 4 9.99998 3.40304 9.99998 2.66667C9.99998 1.93029 9.40303 1.33333 8.66665 1.33333C7.93027 1.33333 7.33331 1.93029 7.33331 2.66667C7.33331 3.40304 7.93027 4 8.66665 4Z" fill="#78859B"/>
+                            <path d="M9.31869 8.18C9.48203 8.42533 9.72603 8.61133 10.006 8.70466L11.7894 9.29933L12.2114 8.03533L10.428 7.44066L9.31936 5.77733C9.19136 5.58533 9.01469 5.43 8.80669 5.32466L7.85069 4.84666C7.56736 4.70533 7.24203 4.66866 6.93203 4.74733L4.80336 5.27866C4.42603 5.37266 4.10869 5.626 3.93269 5.976L2.73669 8.36866L3.92936 8.96533L5.12536 6.57266L6.60736 6.202L5.40469 11.766L2.95536 13.4507L3.71069 14.5493L6.16069 12.864C6.44136 12.6707 6.63603 12.3807 6.70736 12.0473L7.05203 10.4553L8.73003 11.714L9.34669 14.7973L10.654 14.5353L10.0374 11.4507C9.97136 11.128 9.79136 10.842 9.52936 10.6467L8.08203 9.56133L8.51336 6.97133L9.31869 8.18Z" fill="#78859B"/>
+                        </svg>
+                        <span>16 мин.</span>
+                    </div>
+                    <span>от 75 000 ₽ за м²</span>
+                </div>
+                <div class="newBuildingsContainerItemLike">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                    </svg>                            
+                </div>
+            </div>
+
+            <div class="newBuildingsContainerItem">
+                <img src="img/severna.png" alt="severna">
+                <div class="newBuildingsContainerItemInfo">
+                    <h3>ЖК на Северной</h3>
+                    <p>Вологда, Центр, Окружное шоссе 23</p>
+                    <div>
+                        <div></div>Красносельская
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.66665 4C9.40303 4 9.99998 3.40304 9.99998 2.66667C9.99998 1.93029 9.40303 1.33333 8.66665 1.33333C7.93027 1.33333 7.33331 1.93029 7.33331 2.66667C7.33331 3.40304 7.93027 4 8.66665 4Z" fill="#78859B"/>
+                            <path d="M9.31869 8.18C9.48203 8.42533 9.72603 8.61133 10.006 8.70466L11.7894 9.29933L12.2114 8.03533L10.428 7.44066L9.31936 5.77733C9.19136 5.58533 9.01469 5.43 8.80669 5.32466L7.85069 4.84666C7.56736 4.70533 7.24203 4.66866 6.93203 4.74733L4.80336 5.27866C4.42603 5.37266 4.10869 5.626 3.93269 5.976L2.73669 8.36866L3.92936 8.96533L5.12536 6.57266L6.60736 6.202L5.40469 11.766L2.95536 13.4507L3.71069 14.5493L6.16069 12.864C6.44136 12.6707 6.63603 12.3807 6.70736 12.0473L7.05203 10.4553L8.73003 11.714L9.34669 14.7973L10.654 14.5353L10.0374 11.4507C9.97136 11.128 9.79136 10.842 9.52936 10.6467L8.08203 9.56133L8.51336 6.97133L9.31869 8.18Z" fill="#78859B"/>
+                        </svg>
+                        <span>16 мин.</span>
+                    </div>
+                    <span>от 43 000 ₽ за м²</span>
+                </div>
+                <div class="newBuildingsContainerItemLike">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                    </svg>                            
+                </div>
+            </div>
+
+            <div class="newBuildingsContainerItem">
+                <img src="img/marschal.png" alt="marschal">
+                <div class="newBuildingsContainerItemInfo">
+                    <h3>ЖК Маршал</h3>
+                    <p>Вологда, Центр, Окружное шоссе 23</p>
+                    <div>
+                        <div></div>Красносельская
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.66665 4C9.40303 4 9.99998 3.40304 9.99998 2.66667C9.99998 1.93029 9.40303 1.33333 8.66665 1.33333C7.93027 1.33333 7.33331 1.93029 7.33331 2.66667C7.33331 3.40304 7.93027 4 8.66665 4Z" fill="#78859B"/>
+                            <path d="M9.31869 8.18C9.48203 8.42533 9.72603 8.61133 10.006 8.70466L11.7894 9.29933L12.2114 8.03533L10.428 7.44066L9.31936 5.77733C9.19136 5.58533 9.01469 5.43 8.80669 5.32466L7.85069 4.84666C7.56736 4.70533 7.24203 4.66866 6.93203 4.74733L4.80336 5.27866C4.42603 5.37266 4.10869 5.626 3.93269 5.976L2.73669 8.36866L3.92936 8.96533L5.12536 6.57266L6.60736 6.202L5.40469 11.766L2.95536 13.4507L3.71069 14.5493L6.16069 12.864C6.44136 12.6707 6.63603 12.3807 6.70736 12.0473L7.05203 10.4553L8.73003 11.714L9.34669 14.7973L10.654 14.5353L10.0374 11.4507C9.97136 11.128 9.79136 10.842 9.52936 10.6467L8.08203 9.56133L8.51336 6.97133L9.31869 8.18Z" fill="#78859B"/>
+                        </svg>
+                        <span>16 мин.</span>
+                    </div>
+                    <span>от 51 000 ₽ за м²</span>
+                </div>
+                <div class="newBuildingsContainerItemLike">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                    </svg>                            
+                </div>
+            </div>
+
+            <div class="newBuildingsContainerItem">
+                <img src="img/resedentPark.png" alt="resedentPark">
+                <div class="newBuildingsContainerItemInfo">
+                    <h3>ЖК Резеденция парк</h3>
+                    <p>Вологда, Центр, Окружное шоссе 23</p>
+                    <div>
+                        <div></div>Красносельская
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.66665 4C9.40303 4 9.99998 3.40304 9.99998 2.66667C9.99998 1.93029 9.40303 1.33333 8.66665 1.33333C7.93027 1.33333 7.33331 1.93029 7.33331 2.66667C7.33331 3.40304 7.93027 4 8.66665 4Z" fill="#78859B"/>
+                            <path d="M9.31869 8.18C9.48203 8.42533 9.72603 8.61133 10.006 8.70466L11.7894 9.29933L12.2114 8.03533L10.428 7.44066L9.31936 5.77733C9.19136 5.58533 9.01469 5.43 8.80669 5.32466L7.85069 4.84666C7.56736 4.70533 7.24203 4.66866 6.93203 4.74733L4.80336 5.27866C4.42603 5.37266 4.10869 5.626 3.93269 5.976L2.73669 8.36866L3.92936 8.96533L5.12536 6.57266L6.60736 6.202L5.40469 11.766L2.95536 13.4507L3.71069 14.5493L6.16069 12.864C6.44136 12.6707 6.63603 12.3807 6.70736 12.0473L7.05203 10.4553L8.73003 11.714L9.34669 14.7973L10.654 14.5353L10.0374 11.4507C9.97136 11.128 9.79136 10.842 9.52936 10.6467L8.08203 9.56133L8.51336 6.97133L9.31869 8.18Z" fill="#78859B"/>
+                        </svg>
+                        <span>16 мин.</span>
+                    </div>
+                    <span>от 48 000 ₽ за м²</span>
+                </div>
+                <div class="newBuildingsContainerItemLike">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.32645 2.56832L8.99999 3.18207L9.67353 2.56832C10.4122 1.89521 11.3472 1.53083 12.33 1.53083C13.3749 1.53083 14.3671 1.94116 15.1306 2.69981C16.7055 4.2832 16.7016 6.72988 15.1322 8.29858L15.1321 8.29873L8.99999 14.4308L2.86793 8.29873L2.86778 8.29858C1.29798 6.72944 1.29488 4.28276 2.86608 2.70313C3.63328 1.94081 4.62562 1.53083 5.66999 1.53083C6.65357 1.53083 7.58771 1.89515 8.32645 2.56832Z" stroke="#78859B" stroke-width="2"/>
+                    </svg>                            
+                </div>
             </div>
 
         </div>
 
-        <div class="linkBlock">
+    </div>
+
+    <div class="linkBlock">
+        <div class="linkBlockContainer">
             <span class="linkBlockItem">Кайли</span>
-            <img src="/img/icon/arrowRight.svg" alt="arrow">
+            <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.35348 5.85351L4.20698 3.00001L1.35348 0.146515L0.646484 0.853515L2.79298 3.00001L0.646484 5.14651L1.35348 5.85351Z" fill="#38424E"/>
+            </svg>
             <span class="linkBlockItem">Вологда</span>
-            <img src="/img/icon/arrowRight.svg" alt="arrow">
+            <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.35348 5.85351L4.20698 3.00001L1.35348 0.146515L0.646484 0.853515L2.79298 3.00001L0.646484 5.14651L1.35348 5.85351Z" fill="#38424E"/>
+            </svg>
             <span class="linkBlockItemEnd">Ипотека на новостройки</span>
         </div>
-
-    </main>
+    </div>
 
     <div class="apartmentsInfo">
         <div class="apartmentsInfoContainer">
@@ -713,6 +949,14 @@
                     <a href="#">Бизнес</a>
                     <a href="#">Элит</a>
                 </div>
+
+                <button class="footerListButton">
+                    Показать больше
+                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.244194 1.42247L5.00003 6.17831L9.75586 1.42247L8.57753 0.244141L5.00003 3.82164L1.42253 0.24414L0.244194 1.42247Z" fill="#5AB677"/>
+                    </svg>                        
+                </button>
+
             </div>
 
             <div class="footerInfo">
@@ -722,8 +966,18 @@
 
             <div class="footerContact">
                 <div class="footerContactLogo">
-                    <img src="/img/icon/Group6.svg" alt="logo">
-                    <img src="/img/icon/Qayli.svg" alt="qualy">
+                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 4.13892C0 1.92978 1.79086 0.138916 4 0.138916H24.0314C26.2406 0.138916 28.0314 1.92978 28.0314 4.13892V24.1704C28.0314 26.3795 26.2406 28.1704 24.0314 28.1704H4C1.79086 28.1704 0 26.3795 0 24.1704V4.13892Z" fill="#5AB677"/>
+                        <rect x="14.0159" y="19.4727" width="8.75982" height="17.5196" rx="2" transform="rotate(-45 14.0159 19.4727)" fill="#5AB677"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0236 12.2061C21.0236 12.2061 21.0236 12.2061 21.0236 12.2061L15.3997 6.9078C14.6306 6.18325 13.4306 6.18194 12.66 6.90481L7.00827 12.2061C7.00825 12.2061 7.00822 12.2061 7.00818 12.2061C7.00811 12.2061 7.00806 12.2062 7.00806 12.2063V12.2063V19.1679C7.00806 20.2725 7.90349 21.1679 9.00806 21.1679H19.0238C20.1283 21.1679 21.0238 20.2725 21.0238 19.1679V12.2063V12.2063C21.0238 12.2062 21.0237 12.2061 21.0236 12.2061Z" fill="white"/>
+                    </svg>                        
+                    <svg width="60" height="25" viewBox="0 0 60 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.2675 15.9109L19.115 18.8305L15.178 19.4243L13.7914 17.8408C12.4873 18.5501 11.0429 18.9047 9.45826 18.9047C6.553 18.9047 4.2585 17.9975 2.57476 16.1831C1.02309 14.5336 0.247253 12.546 0.247253 10.2202C0.247253 9.06554 0.4701 7.96039 0.915794 6.90472C1.37799 5.83255 2.00527 4.91708 2.79761 4.15832C4.51436 2.49234 6.69331 1.65935 9.33445 1.65935C10.556 1.65935 11.7445 1.87378 12.9 2.30265C14.0555 2.71502 15.0542 3.32533 15.8961 4.13358C17.5963 5.76657 18.4464 7.83668 18.4464 10.3439C18.4464 11.515 18.2236 12.6202 17.7779 13.6594C17.4147 14.5336 16.9112 15.2841 16.2675 15.9109ZM8.02213 11.9521L12.0581 11.4326L13.1971 12.6697C13.7089 11.9439 13.9647 11.1356 13.9647 10.2449C13.9647 9.73359 13.8409 9.1975 13.5933 8.63668C13.3622 8.07585 13.0403 7.58925 12.6276 7.17688C12.1984 6.74801 11.6785 6.41812 11.0677 6.18719C10.4734 5.93977 9.8957 5.81605 9.33445 5.81605C8.03039 5.81605 6.94091 6.26966 6.06603 7.17688C5.17464 8.10059 4.72895 9.20575 4.72895 10.4923C4.72895 11.6965 5.14163 12.6944 5.96699 13.4862C6.84187 14.3274 7.9561 14.748 9.30969 14.748C9.73888 14.748 10.1846 14.6903 10.6468 14.5748L8.02213 11.9521Z" fill="#F7F8FC"/>
+                        <path d="M28.9055 8.53771V7.47379H32.8672V18.5336H28.9055V17.3212C28.1462 18.3769 26.9989 18.9047 25.4638 18.9047C23.9121 18.9047 22.5833 18.3192 21.4773 17.148C20.4208 16.0264 19.8926 14.6738 19.8926 13.0903C19.8926 11.2759 20.4621 9.79956 21.6011 8.66142C22.641 7.62224 23.9699 7.10265 25.5876 7.10265C26.9412 7.10265 28.0471 7.58101 28.9055 8.53771ZM26.479 10.4676C25.8187 10.4676 25.2409 10.7068 24.7457 11.1851C24.2175 11.6965 23.9534 12.2985 23.9534 12.9913C23.9534 13.7171 24.2092 14.3192 24.7209 14.7975C25.2492 15.2924 25.8434 15.5398 26.5037 15.5398C27.1805 15.5398 27.7748 15.2841 28.2865 14.7728C28.7817 14.2779 29.0293 13.6841 29.0293 12.9913C29.0293 12.282 28.7735 11.68 28.2617 11.1851C27.75 10.7068 27.1558 10.4676 26.479 10.4676Z" fill="#F7F8FC"/>
+                        <path d="M35.3733 24.1996L39.0874 17.0243L33.7391 7.47379H38.3446L41.2911 13.1398L44.1634 7.47379H48.6946L39.8055 24.1996H35.3733Z" fill="#F7F8FC"/>
+                        <path d="M49.5492 0.49646H53.5109V18.5336H49.5492V0.49646Z" fill="#F7F8FC"/>
+                        <path d="M55.7036 7.47379H59.6653V18.5336H55.7036V7.47379ZM56.0998 4.45523C55.6706 4.00987 55.456 3.48203 55.456 2.87172C55.456 2.26141 55.6706 1.74182 56.0998 1.31296C56.5455 0.867594 57.0737 0.644913 57.6845 0.644913C58.2952 0.644913 58.8152 0.867594 59.2444 1.31296C59.6901 1.74182 59.9129 2.26141 59.9129 2.87172C59.9129 3.48203 59.6901 4.00987 59.2444 4.45523C58.8152 4.88409 58.2952 5.09853 57.6845 5.09853C57.0737 5.09853 56.5455 4.88409 56.0998 4.45523Z" fill="#F7F8FC"/>
+                    </svg>
                 </div>
                 <div class="footerContactInfo">
                     <a href="#">Застройщикам</a>
@@ -731,12 +985,17 @@
                     <a href="#">Реклама на сайте</a>
                 </div>
                 <button class="footerContactChat">
-                    <img src="/img/icon/bx-chat.svg" alt="chat"> Связаться с нами
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.91296 18.0005V21.7665L7.42796 20.8575L12.19 18.0005H16.913C18.016 18.0005 18.913 17.1035 18.913 16.0005V8.00049C18.913 6.89749 18.016 6.00049 16.913 6.00049H4.91296C3.80996 6.00049 2.91296 6.89749 2.91296 8.00049V16.0005C2.91296 17.1035 3.80996 18.0005 4.91296 18.0005H5.91296ZM4.91296 8.00049H16.913V16.0005H11.636L7.91296 18.2345V16.0005H4.91296V8.00049Z" fill="#F7F8FC"/>
+                        <path d="M20.913 2.00049H19.913H17.911H8.91296C7.80996 2.00049 6.91296 2.89749 6.91296 4.00049H17.499H18.913C20.016 4.00049 20.913 4.89749 20.913 6.00049V7.41449V12.0005V14.0005C22.016 14.0005 22.913 13.1035 22.913 12.0005V7.00049V5.00049V4.00049C22.913 2.89749 22.016 2.00049 20.913 2.00049Z" fill="#F7F8FC"/>
+                    </svg> Связаться с нами
                 </button>
             </div>
 
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script src="/script/script.js"></script>
 

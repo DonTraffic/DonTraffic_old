@@ -27,9 +27,13 @@ $colorTextHeader: #38424E;
     -webkit-transition: .4s ease;
     -o-transition: .4s ease;
     transition: .4s ease;
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
 }
 
 body{
+    
     background-color: #F7F8FC;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -44,6 +48,8 @@ body{
 }
 
 header{
+    max-width: 1140px;
+    margin: 0 auto;
     background-color: $colorBackground;
     border-bottom: 1px solid rgba(205, 211, 221, 0.32);
     width: 100%;
@@ -68,9 +74,7 @@ header{
                 cursor: pointer;
             }
 
-            img{
-                height: 31.722082138061523px;
-                width: 32.59829330444336px;
+            svg{
                 margin-right: 6px;
         
             }
@@ -119,9 +123,7 @@ header{
                 cursor: pointer;
             }
 
-            img{
-                width: 20px;
-                height: 19px;
+            svg{
                 margin-right: 6px;
             }
             span{
@@ -142,7 +144,7 @@ header{
                 cursor: pointer;
             }
 
-            img{
+            svg{
                 width: 20px;
                 height: 20px;
                 margin-right: 6px;
@@ -157,297 +159,11 @@ header{
 
         }
 
-    }
-
-
-
-}
-
-main{
-    max-width: 1140px;
-    margin: 0 auto;
-
-    .mortgage{
-        font-family: Roboto;
-        text-align: center;
-        margin-top: 25px;
-
-        h1{
-            font-weight: bold;
-            font-size: 28px;
-            line-height: 120%;
-            color: #0F0208;
-            margin-bottom: 12px;
-        }
-
-        h2{
-            font-size: 18px;
-            line-height: 160%;
-            color: #38424E;
-            font-weight: 400;
-            margin-bottom: 24px;
-        }
-
-        .mortgageParametrs{
+        .headerMenuButton{
             @include flexCenter;
-            color: #38424E;
-            font-family: Roboto;
-
-            div{
-                background-color: white;
-                border: 1px solid #CDD3DD;
-                border-radius: 4px;
-                @include flexCenter;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                    -ms-flex-direction: column;
-                        flex-direction: column;
-                -webkit-box-align: start;
-                    -ms-flex-align: start;
-                        align-items: flex-start;
-                width: 300px;
-                height: 60px;
-
-                span{
-                    font-weight: 500;
-                    font-size: 12px;
-                    line-height: 100%;
-                    color: #38424E;
-                }
-
-                input{
-                    font-weight: normal;
-                    font-size: 16px;
-                    line-height: 20px;
-                    margin-top: 5px;
-                    border: none;
-                    width: 100%;
-                    background-color: rgba(0, 0, 0, 0);
-
-                }
-
-            }
-
-            .mortgageParametrsPrice{
-                padding: 0px 12px;
-                margin-right: 15px;
-            }
-
-            .mortgageParametrsContribution{
-                padding: 0px 12px;
-                margin-right: 15px;
-                @include flexCenter();
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                    -ms-flex-direction: row;
-                        flex-direction: row;
-                padding-right: 0;
-
-                .mortgageParametrsContributionInput{
-                    border: none;
-                    color: black;
-                    width: 100%;
-                    background-color: rgba(255, 255, 255, 0);
-
-                }
-
-                .mortgageParametrsContributionSelect{
-                    width: 100px;
-                    height: 100%;
-                    border: none;
-
-                    select{
-                        border-left: 1px solid #CDD3DD;
-                        padding-left: 10px;
-
-                    }
-
-                }
-
-            }
-
-            .mortgageParametrsAge{
-                padding-top: 12px;
-                width: 170px;
-                margin-right: 15px;
-
-                span{
-                    margin-left: 12px;
-                }
-
-                select{
-                    padding-left: 12px;
-                }
-
-            }
-
-            .mortgageParametrsSelect{
-                position: relative;
-
-                &:after {
-                    content: url("/img/icon/arrovSelect.svg");
-                    width: 10px;
-                    height: 25px;
-                    top: 17px;
-                    right: 6px;
-                    background: #F7F8FC;
-                    border-radius: 50%;
-                    padding: 0 8px;
-                    position: absolute;
-                }
-
-                select{
-                    width: 100%;
-                    height: 100%;
-                    border: none;
-                    background-color: rgba(0, 0, 0, 0);
-                    -webkit-appearance: none;
-                       -moz-appearance: none;
-                            appearance: none;
-
-                    &:hover{
-                        cursor: pointer;
-                    }
-
-                }
-
-            }
-
-            .mortgageSearchButoon{
-                width: 170px;
-                height: 60px;
-                background-color: #5AB677;
-                border: none;
-                border-radius: 5px;
-
-                &:hover{
-                    cursor: pointer;
-                }
-
-                .mortgageSearchButoonText{
-                    font-family: Roboto;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 20px;
-                    color: #FFFFFF;
-                }
-
-                .mortgageSearchButoonNumber{
-                    padding: 4px;
-                    background: rgba(255, 255, 255, 0.32);
-                    border-radius: 4px;
-
-                }
-
-            }
-
-        }
-
-    }
-
-    .informationMortgage{
-        margin-top: 30px;
-        width: 100%;
-        @include flexCenter();
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-
-        .informationMortgageContainer{
-            width: 100%;
-        }
-
-        .informationMortgageBlock{
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 0.5fr 0.4fr 0.4fr;
-            padding: 15px;
-            background-color: white;
-            margin-bottom: 12px;
-
-            h3{
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 120%;
-                color: #38424E;
-                margin-bottom: 8px;
-            }
-
-            .informationMortgageBlockFlex{
-                @include flexCenter();
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                    -ms-flex-direction: column;
-                        flex-direction: column;
-                -webkit-box-align: start;
-                    -ms-flex-align: start;
-                        align-items: flex-start;
-            }
-
-            .informationMortgageBlockFirst{
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                    -ms-flex-align: center;
-                        align-items: center;
-
-                img{
-                    border-radius: 4px;
-                    margin-right: 12px;
-                }
-
-            }
-
-            span{
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 12px;
-                line-height: 100%;
-                color: #78859B;
-            }
-
-            .informationMortgageBlockButton{
-                -webkit-box-align: center;
-                    -ms-flex-align: center;
-                        align-items: center;
-                width: 100px;
-                height: 30px;
-                border: 1px solid #38424E;
-                border-radius: 4px;
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 120%;
-                color: #38424E;
-                background-color: white;
-
-                &:hover{
-                    cursor: pointer;
-                }
-
-            }
-
-        }
-
-        .informationMortgageButton{
-            padding: 12px 24px;
-            border: 1px solid #38424E;
-            border-radius: 4px;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 120%;
-            color: #38424E;
-            background-color: rgba(255, 255, 255, 0);
-            margin-bottom: 50px;
+            background-color: $colorBackground;
+            border: none;
+            display: none;
 
             &:hover{
                 cursor: pointer;
@@ -457,392 +173,243 @@ main{
 
     }
 
-    .mortgageBank{
-        margin-bottom: 50px;
-
-        h2{
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 900;
-            font-size: 24px;
-            line-height: 120%;
-            color: #0F0208;
-
-        }
-
-        .mortgageBankContainer{
-            width: 100%;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                    justify-content: space-between;
-
-            .mortgageBankItem{
-                width: 180px;
-                height: 100%;
-                position: relative;
-                margin-top: 44px;
-                padding-top: 44px;
-                background-color: $colorBackground;
-                border-radius: 8px;
-
-                img{
-                    border-radius: 50%;
-                    position: absolute;
-                    top: -32px;
-                    left: 58px;
-                    height: 64px;
-                }
-
-                .mortgageBankItemContainer{
-                    height: 130px;
-                    text-align: center;
-                    font-family: Roboto;
-                    font-style: normal;
-                    color: #38424E;
-                    padding: 0 16px 16px 16px;
-                    position: relative;
-
-                    h3{
-                        font-weight: 700;
-                        font-size: 18px;
-                        line-height: 120%;
-                        margin-bottom: 8px;
-                    }
-
-                    span{
-                        font-weight: normal;
-                        font-size: 14px;
-                        line-height: 120%;
-                    }
-
-                    button{
-                        position: absolute;
-                        bottom: 16px;
-                        right: 39px;
-                        margin-top: 16px;
-                        font-weight: 500;
-                        font-size: 14px;
-                        line-height: 120%;
-                        border: 1px solid #38424E;
-                        border-radius: 4px;
-                        padding: 6px 14px;
-                        background-color: rgba(255, 255, 255, 0);
-
-                        &:hover{
-                            cursor: pointer;
-                        }
-
-                    }
-
-                }
-
+    @media screen and (max-width: 720px) {
+        .headerContainer{
+            .headerLogo{
+                -webkit-box-pack: start;
+                    -ms-flex-pack: start;
+                        justify-content: flex-start;
+                -webkit-box-flex: 1;
+                    -ms-flex-positive: 1;
+                        flex-grow: 1;
             }
-
+            .headerAccountButton{
+                display: none;
+            }
+            .headerMenuButton{
+                display: block;
+            }
+            .headerMenu{
+                display: none;
+            }
         }
-
     }
 
-    .greenCity{
-        width: 100%;
-        height: 540px;
-        background-image: url(/img/greenCity.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        @include flexCenter();
 
-        .greenCityContainer{
-            color: #F7F8FC;
-            font-family: Roboto;
-            width: 360px;
-            font-style: normal;
+
+}
+
+.mortgage, .informationMortgage, .mortgageBank, .greenCity, .newBuildings, .linkBlockContainer {
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 1140px) {
+    .mortgage, .informationMortgage, .mortgageBank, .greenCity, .newBuildings, .linkBlockContainer{
+        padding: 0px 16px;
+    }
+}
+
+.informationMortgageButton{
+    padding: 12px 24px;
+    border: 1px solid #38424E;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #38424E;
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 50px;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+}
+
+.mortgage{
+    font-family: Roboto;
+    text-align: center;
+    margin-top: 25px;
+
+    h1{
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 120%;
+        color: #0F0208;
+        margin-bottom: 12px;
+    }
+
+    h2{
+        font-size: 18px;
+        line-height: 160%;
+        color: #38424E;
+        font-weight: 400;
+        margin-bottom: 24px;
+    }
+
+    .mortgageParametrs{
+        @include flexCenter;
+        color: #38424E;
+        font-family: Roboto;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+        div{
+            background-color: white;
+            border: 1px solid #CDD3DD;
+            border-radius: 4px;
+            @include flexCenter;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            width: 300px;
+            height: 60px;
 
             span{
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 120%;
-                
-            }
-
-            h2{
-                color: white;
-                margin-bottom: 8px;
-                font-weight: bold;
-                font-size: 32px;
-                line-height: 120%;
-            }
-
-            .greenCityContainerGPS{
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                    -ms-flex-align: center;
-                        align-items: center;
-                margin-top: 4px;
-
-                .greenCityContainerCircle{
-                    width: 8px;
-                    height: 8px;
-                    background-color: #DA4233;
-                    display: inline-block;
-                    margin-right: 5px;
-                    border-radius: 50%;
-                }
-
-                img{
-                    margin: 0 0px 0 5px;
-                }
-
-                span{
-                    color: rgba(247, 248, 252, 0.54);
-                }
-
-            }
-
-            .greenCityContainerInformatiom{
-                width: 100%;
-                margin-top: 16px;
-
-                .greenCityContainerInformatiomItem{
-                    display: grid;
-                    grid-template-columns: 0.7fr 1fr 1fr;
-                    border-bottom: 1px solid rgba(247, 248, 252, 0.32);
-                    padding: 4px 0;
-                    margin-top: 8px;
-
-                    .greenCityContainerInformatiomItemSize{
-                        text-align: center;
-                    }
-                    .greenCityContainerInformatiomItemPrice{
-                        text-align: right;
-                    }
-
-                }
-
-            }
-
-            .greenCityContainerContact{
-                width: 100%;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
                 font-weight: 500;
-                margin-top: 25px;
-
-                .greenCityContainerContactTel{
-                    width: 60%;
-                    background: #EFD678;
-                    border-radius: 4px;
-                    padding: 12px 0;
-                    margin-right: 12px;
-                    border: none;
-                    font-size: 14px;
-                    line-height: 18px;
-                    color: #38424E;
-                }
-
-                .greenCityContainerContactDetail{
-                    width: 40%;
-                    font-size: 16px;
-                    line-height: 120%;
-                    color: #F7F8FC;
-                    background-color: rgba(255, 255, 255, 0);
-                    border: 1px solid #F7F8FC;
-                    border-radius: 4px;
-                }
-
-            }
-
-        }
-
-        .greenCityLogo{
-            position: absolute;
-            top: 24px;
-            left: 24px;
-        }
-
-        .greenCityAd{
-            position: absolute;
-            bottom: 24px;
-            left: 24px;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-
-            .greenCityAdLink{
-                background: rgba(255, 255, 255, 0.24);
-                border-radius: 2px;
-                font-size: 14px;
+                font-size: 12px;
                 line-height: 100%;
-                color: #FFFFFF;
-                padding: 4px;
-                display: inline-block;
-                margin-bottom: 8px;
+                color: #38424E;
             }
+
+            input{
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 20px;
+                margin-top: 5px;
+                border: none;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0);
+
+            }
+
+        }
+
+        .mortgageParametrsPrice{
+            padding: 0px 12px;
+            margin-right: 15px;
+        }
+
+        .mortgageParametrsContribution{
+            padding: 0px 12px;
+            margin-right: 15px;
+            @include flexCenter();
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            padding-right: 0;
+
+            .mortgageParametrsContributionInput{
+                border: none;
+                color: black;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0);
+
+            }
+
+            .mortgageParametrsContributionSelect{
+                width: 100px;
+                height: 100%;
+                border: none;
+
+                select{
+                    border-left: 1px solid #CDD3DD;
+                    padding-left: 10px;
+
+                }
+
+            }
+
+        }
+
+        .mortgageParametrsSelectContainer{
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            border: none;
+        }
+
+        .mortgageParametrsAge{
+            padding-top: 12px;
+            width: 170px;
+            margin-right: 15px;
 
             span{
-                font-size: 9px;
-                line-height: 120%;
-                color: #F7F8FC;
-                opacity: 0.72;
+                margin-left: 12px;
+            }
+
+            select{
+                padding-left: 12px;
             }
 
         }
 
-    }
+        .mortgageParametrsSelect{
+            position: relative;
 
-    .newBuildings{
-        width: 100%;
-        margin-top: 47px;
+            &:after {
+                content: url('/img/svg/arrowSelect.svg');
+                width: 10px;
+                height: 25px;
+                top: 17px;
+                right: 6px;
+                background: #F7F8FC;
+                border-radius: 50%;
+                padding: 0 8px;
+                position: absolute;
+            }
 
-        .newBuildingsSearch{
-            width: 100%;
-            border-bottom: 1px solid #CED3DD;
-            padding-bottom: 18px;
-            margin-bottom: 16px;
+            select{
+                width: 100%;
+                height: 100%;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                -webkit-appearance: none;
+                    -moz-appearance: none;
+                        appearance: none;
 
-            a{
-                margin-right: 24px;
-                padding-bottom: 16px;
-                text-decoration: none;
+                &:hover{
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+        .mortgageSearchButoon{
+            width: 170px;
+            height: 60px;
+            background-color: #5AB677;
+            border: none;
+            border-radius: 5px;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            .mortgageSearchButoonText{
                 font-family: Roboto;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 16px;
-                line-height: 100%;
-                color: #38424E;
-                opacity: 0.72;
-
-                &:hover{
-                    opacity: 1;
-                }
-
+                line-height: 20px;
+                color: #FFFFFF;
             }
 
-            .active{
-                border-bottom: 4px solid #38424E;
-                opacity: 1;
-            }
-
-        }
-
-        .newBuildingsContainer{
-            width: 100%;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                    justify-content: space-between;
-
-            .newBuildingsContainerItem{
-                width: 270px;
-                position: relative;
-                margin-bottom: 12px;
-
-                &:hover{
-                    background: #FFFFFF;
-                    -webkit-box-shadow: 0px 16px 24px -16px rgba(0, 0, 0, 0.12);
-                            box-shadow: 0px 16px 24px -16px rgba(0, 0, 0, 0.12);
-                    border-radius: 4px;
-                    cursor: pointer;
-
-                    .newBuildingsContainerItemLike{
-                        opacity: 1;
-                    }
-
-                }
-
-                img{
-                    width: 100%;
-                    border-radius: 4px;
-                }
-
-                .newBuildingsContainerItemInfo{
-                    width: 100%;
-                    font-family: Roboto;
-                    font-style: normal;
-                    padding: 0 12px 12px 12px;
-
-                    h3{
-                        font-weight: 600;
-                        font-size: 16px;
-                        line-height: 120%;
-                        color: #38424E;
-                        margin: 8px 0;
-                    }
-
-                    p{
-                        font-weight: normal;
-                        font-size: 14px;
-                        line-height: 120%;
-                        color: #78859B;
-                    }
-
-                    div{
-                        font-weight: normal;
-                        font-size: 14px;
-                        line-height: 16px;
-                        color: #38424E;
-                        display: -webkit-box;
-                        display: -ms-flexbox;
-                        display: flex;
-                        -webkit-box-align: center;
-                            -ms-flex-align: center;
-                                align-items: center;
-                        margin: 4px 0px 8px 0;
-
-                        div{
-                            width: 8px;
-                            height: 8px;
-                            border-radius: 50%;
-                            background-color: #DA4233;
-                            display: inline-block;
-                            margin-right: 4px;
-                        }
-
-                        img{
-                            width: 16px;
-                            margin: 0px 2px 0px 4px;
-                        }
-
-                        span{
-                            font-size: 14px;
-                            line-height: 16px;
-                            color: #78859B;
-                        }
-
-                    }
-
-                    span{
-                        font-weight: bold;
-                        font-size: 18px;
-                        line-height: 120%;
-                        color: #38424E;
-                    }
-
-                }
-
-                .newBuildingsContainerItemLike{
-                    position: absolute;
-                    height: 32px;
-                    width: 32px;
-                    border-radius: 50%;
-                    background: #F7F8FC;
-                    @include flexCenter();
-                    opacity: 0;
-                    top: 4px;
-                    right: 4px;
-                }
+            .mortgageSearchButoonNumber{
+                padding: 4px;
+                background: rgba(255, 255, 255, 0.32);
+                border-radius: 4px;
 
             }
 
@@ -850,35 +417,935 @@ main{
 
     }
 
-    .linkBlock{
-        margin-top: 70px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 120%;
-
-        img{
-            margin: 0px 6px;
+    @media screen and (max-width: 930px) {
+        .mortgageParametrs{
+            .mortgageParametrsContribution{
+                margin-right: 0px;
+            }
+            .mortgageParametrsSelectContainer{
+                margin-top: 15px;
+            }
         }
+    }
 
-        .linkBlockItem{
-            color: #38424E;
-        }
+    @media screen and (max-width: 647px) {
+        .mortgageParametrs{
+            .mortgageParametrsPrice{
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+            .mortgageParametrsContribution{
+                margin-right: 0px;
+            }
+            .mortgageParametrsSelectContainer{
+                margin-top: 12px;
+            }
 
-        .linkBlockItemEnd{
-            color: #78859B;
         }
 
     }
 
 }
 
+.informationMortgage{
+    margin-top: 30px;
+    width: 100%;
+    @include flexCenter();
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    .informationMortgageBlock{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr 0.4fr 0.4fr;
+        padding: 15px;
+        background-color: white;
+        margin-bottom: 12px;
+
+        h3{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            color: #38424E;
+            margin-bottom: 8px;
+        }
+
+        .informationMortgageBlockFlex{
+            @include flexCenter();
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+
+            h4{
+                display: none;
+            }
+
+        }
+
+        .informationMortgageBlockFirst{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+
+            svg{
+                border-radius: 4px;
+                min-height: 48px;
+                min-width: 48px;
+                margin-right: 12px;
+            }
+
+        }
+
+        span{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 100%;
+            color: #78859B;
+            display: flex;
+
+            .informationMortgageBlockInfoContainer{
+                display: grid;
+                position: relative;
+
+                .informationMortgageBlockInfo{
+                    position: absolute;
+                    height: 100px;
+                    width: 150px;
+                    display: flex;
+                    left: 20px;
+                    top: -10px;
+                    opacity: 0;
+
+                    .informationMortgageBlockInfoArrow{
+                        width: 16px;
+                        height: 16px;
+                        background-color: #ffffff;
+                        transform: rotate(45deg);
+                        margin-top: 7px;
+                        box-shadow: 0px 0px 12px rgba(120, 133, 155, 0.24);
+                        border-radius: 4px;
+                    }
+
+                    .informationMortgageBlockInfoContent{
+                        width: 100%;
+                        height: 100%;
+                        background-color: #ffffff;
+                        position: absolute;
+                        left: 8px;
+                        box-shadow: 0px 0px 12px rgba(120, 133, 155, 0.24);
+                        border-radius: 4px;
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: #38424E;
+                        padding: 8px;
+                    }
+
+                }
+
+                &:hover{
+                    .informationMortgageBlockInfo{
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+        }
+
+        .informationMortgageBlockButton{
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            width: 100px;
+            height: 30px;
+            border: 1px solid #38424E;
+            border-radius: 4px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+            color: #38424E;
+            background-color: white;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+    .informationMortgageAd{
+        width: 100%;
+        height: 320px;
+        background-image: url(/img/adFon.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        font-family: Roboto;
+        font-style: normal;
+        color: #FFFFFF;
+
+        .informationMortgageAdLink{
+            font-family: Roboto;
+            position: absolute;
+            top: 28px;
+            left: 28px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            div{
+                padding: 4px 2px;
+                background: rgba(255, 255, 255, 0.24);
+                border-radius: 2px;
+                font-size: 12px;
+                line-height: 100%;
+                text-align: left;
+                color: #FFFFFF;
+            }
+
+            p{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 9px;
+                line-height: 120%;
+                color: #F7F8FC;
+                opacity: 0.72;
+                margin-top: 5px;
+                display: none;
+            }
+        
+        }
+
+        .informationMortgageAdInfo{
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+
+            h3{
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 120%;
+                margin-bottom: 4px;
+            }
+
+            p{
+                font-size: 16px;
+                line-height: 140%;
+                color: #FFFFFF;
+            }
+
+            span{
+                display: block;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 120%;
+                color: #FFFFFF;
+                margin-top: 16px;
+
+            }
+
+        }
+
+        .informationMortgageAdArrowContainer{
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            display: flex;
+
+            .informationMortgageAdArrow{
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                background-color: #FFFFFF;
+                @include flexCenter();
+                margin-left: 8px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+        .informationMortgageAdButton{
+            font-family: Roboto;
+            position: absolute;
+            bottom: 24px;
+            right: 24px;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+
+            button{
+                padding: 10px 38px;
+                background: #FFFFFF;
+                border-radius: 4px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 120%;
+                color: #38424E;
+                border: none;
+                margin-bottom: 4px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+            }
+
+            p{
+                font-weight: normal;
+                font-size: 9px;
+                line-height: 120%;
+                text-align: right;
+                color: #FFFFFF;
+                opacity: 0.72;
+            }
+            
+        }
+
+        @media screen and (max-width: 670px){
+            .informationMortgageAdButton{
+                display: none;
+            }
+            .informationMortgageAdLink{
+                p{
+                    display: block;
+                }
+            }
+        }
+        
+    }
+
+
+    @media screen and (max-width: 760px) {
+        .informationMortgageBlock{
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr; 
+            grid-template-areas: 
+                "informationMortgageBlockFirst informationMortgageBlockFirst informationMortgageBlockFirst"
+                "informationMortgageBlockBet informationMortgageBlockCredit informationMortgageBlockPayment"; 
+
+            .informationMortgageBlockFirst {
+                grid-area: informationMortgageBlockFirst;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: reverse;
+                    -ms-flex-direction: row-reverse;
+                        flex-direction: row-reverse;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+
+                span{
+                    display: block;
+                }
+
+            }
+            .informationMortgageBlockCredit {
+                grid-area: informationMortgageBlockCredit;
+            }
+            .informationMortgageBlockBet { grid-area: informationMortgageBlockBet; }
+            .informationMortgageBlockPayment { grid-area: informationMortgageBlockPayment; }
+            .informationMortgageBlockButton{
+                display: none;
+            }
+
+            .informationMortgageBlockFlex{
+                h4{
+                    display: block;
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 100%;
+                    color: #78859B;
+                }
+            }
+
+            span{
+                display: none;
+            }
+
+        }
+
+    }
+
+}
+
+.mortgageBank{
+    margin-bottom: 50px;
+
+    h2{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 120%;
+        color: #0F0208;
+
+    }
+
+    .mortgageBankContainer{
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+
+        .mortgageBankItem{
+            width: 180px;
+            height: 100%;
+            position: relative;
+            margin-top: 44px;
+            padding-top: 44px;
+            background-color: $colorBackground;
+            border-radius: 8px;
+
+            svg{
+                border-radius: 50%;
+                position: absolute;
+                top: -32px;
+                left: 58px;
+                height: 64px;
+                width: 64px;
+            }
+
+            .mortgageBankItemContainer{
+                height: 130px;
+                text-align: center;
+                font-family: Roboto;
+                font-style: normal;
+                color: #38424E;
+                padding: 0 16px 16px 16px;
+                position: relative;
+
+                h3{
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 120%;
+                    margin-bottom: 8px;
+                }
+
+                span{
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 120%;
+                }
+
+                button{
+                    position: absolute;
+                    bottom: 16px;
+                    right: 39px;
+                    margin-top: 16px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 120%;
+                    border: 1px solid #38424E;
+                    border-radius: 4px;
+                    padding: 6px 14px;
+                    background-color: rgba(255, 255, 255, 0);
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .informationMortgageButton{
+        display: none;
+    }
+
+}
+// media mortgageBank
+@media screen and (max-width: 1080px) {
+    .mortgageBank{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        h2{
+            width: 100%;
+        }
+        .mortgageBankContainer{
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin: 8px 0;
+            .mortgageBankItem{
+                @include flexCenter();
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                padding: 8px 8px 12px 8px;
+                width: 160px;
+                height: auto;
+                margin: 0;
+                margin-bottom: 16px;
+                svg{
+                    border-radius: 4px;
+                    height: 48px;
+                    width: 48px;
+                    position: static;
+                    margin-bottom: 8px;
+                }
+                .mortgageBankItemContainer{
+                    padding: 0;
+                    height: auto;
+                    h3{
+                        font-size: 14px;
+                    }
+                    span{
+                        font-size: 12px;
+                    }
+                    button{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .informationMortgageButton{
+            display: block;
+        }
+    }
+}
+
+.greenCity{
+    width: 100%;
+    height: 540px;
+    background-image: url(../img/greenCity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include flexCenter();
+
+    .greenCityContainer{
+        color: #F7F8FC;
+        font-family: Roboto;
+        width: 360px;
+        font-style: normal;
+
+        span{
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 120%;
+            
+        }
+
+        h2{
+            color: white;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 120%;
+        }
+
+        .greenCityContainerGPS{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            margin-top: 4px;
+
+            .greenCityContainerCircle{
+                width: 8px;
+                height: 8px;
+                background-color: #DA4233;
+                display: inline-block;
+                margin-right: 5px;
+                border-radius: 50%;
+            }
+
+            svg{
+                margin: 0 5px 0 5px;
+            }
+
+            span{
+                color: rgba(247, 248, 252, 0.54);
+            }
+
+        }
+
+        .greenCityContainerInformatiom{
+            width: 100%;
+            margin-top: 16px;
+
+            .greenCityContainerInformatiomItem{
+                display: grid;
+                grid-template-columns: 0.7fr 1fr 1fr;
+                border-bottom: 1px solid rgba(247, 248, 252, 0.32);
+                padding: 4px 0;
+                margin-top: 8px;
+
+                .greenCityContainerInformatiomItemSize{
+                    text-align: center;
+                }
+                .greenCityContainerInformatiomItemPrice{
+                    text-align: right;
+                }
+
+            }
+
+        }
+
+        .greenCityContainerContact{
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            font-weight: 500;
+            margin-top: 25px;
+
+            .greenCityContainerContactTel{
+                width: 60%;
+                background: #EFD678;
+                border-radius: 4px;
+                padding: 12px 0;
+                margin-right: 12px;
+                border: none;
+                font-size: 14px;
+                line-height: 18px;
+                color: #38424E;
+            }
+
+            .greenCityContainerContactDetail{
+                width: 40%;
+                font-size: 16px;
+                line-height: 120%;
+                color: #F7F8FC;
+                background-color: rgba(255, 255, 255, 0);
+                border: 1px solid #F7F8FC;
+                border-radius: 4px;
+            }
+
+        }
+
+    }
+
+    .greenCityLogo{
+        position: absolute;
+        top: 24px;
+        left: 24px;
+    }
+
+    .greenCityAd{
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+
+        .greenCityAdLink{
+            background: rgba(255, 255, 255, 0.24);
+            border-radius: 2px;
+            font-size: 14px;
+            line-height: 100%;
+            color: #FFFFFF;
+            padding: 4px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        p{
+            font-size: 9px;
+            line-height: 120%;
+            color: #F7F8FC;
+            opacity: 0.72;
+        }
+
+    }
+
+}
+// media greenCity
+@media screen and (max-width: 600px) {
+    .greenCity{
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        padding-bottom: 24px;
+
+        .greenCityContainer{
+            width: auto;
+        }
+
+        .greenCityLogo{
+            top: 16px;
+            left: 16px;
+        }
+    
+        .greenCityAd{
+            top: 16px;
+            right: 16px;
+            left: auto;
+            bottom: auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: end;
+                -ms-flex-align: end;
+                    align-items: flex-end;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+
+            p{
+                text-align: right;
+            }
+
+        }
+    }
+}
+
+.newBuildings{
+    width: 100%;
+    margin-top: 47px;
+
+    .newBuildingsSearch{
+        width: 100%;
+        border-bottom: 1px solid #CED3DD;
+        padding-bottom: 18px;
+        margin-bottom: 16px;
+        white-space: nowrap;
+
+        a{
+            margin-right: 24px;
+            padding-bottom: 16px;
+            text-decoration: none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            color: #38424E;
+            opacity: 0.72;
+
+            &:hover{
+                opacity: 1;
+            }
+
+        }
+
+        .active{
+            border-bottom: 4px solid #38424E;
+            opacity: 1;
+        }
+
+    }
+
+    .newBuildingsContainer{
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+
+        .newBuildingsContainerItem{
+            width: 270px;
+            position: relative;
+            margin-bottom: 12px;
+
+            &:hover{
+                background: #FFFFFF;
+                -webkit-box-shadow: 0px 16px 24px -16px rgba(0, 0, 0, 0.12);
+                        box-shadow: 0px 16px 24px -16px rgba(0, 0, 0, 0.12);
+                border-radius: 4px;
+                cursor: pointer;
+
+                .newBuildingsContainerItemLike{
+                    opacity: 1;
+                }
+
+            }
+
+            img{
+                width: 100%;
+                border-radius: 4px;
+            }
+
+            .newBuildingsContainerItemInfo{
+                width: 100%;
+                font-family: Roboto;
+                font-style: normal;
+                padding: 0 12px 12px 12px;
+
+                h3{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 120%;
+                    color: #38424E;
+                    margin: 8px 0;
+                }
+
+                p{
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 120%;
+                    color: #78859B;
+                }
+
+                div{
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #38424E;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
+                    margin: 4px 0px 8px 0;
+
+                    div{
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: #DA4233;
+                        display: inline-block;
+                        margin-right: 4px;
+                    }
+
+                    svg{
+                        width: 16px;
+                        margin-left: 4px;
+                    }
+
+                    span{
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #78859B;
+                    }
+
+                }
+
+                span{
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 120%;
+                    color: #38424E;
+                }
+
+            }
+
+            .newBuildingsContainerItemLike{
+                position: absolute;
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                background: #F7F8FC;
+                @include flexCenter();
+                opacity: 0;
+                top: 4px;
+                right: 4px;
+            }
+
+        }
+
+    }
+
+    @media screen and (max-width: 1090px) {
+        .newBuildingsContainer{
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
+        }
+    }
+
+    @media screen and (max-width: 570px) {
+        .newBuildingsContainer{
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
+            .newBuildingsContainerItem{
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+.linkBlock{
+    margin-top: 70px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 120%;
+
+    img{
+        margin: 0px 6px;
+    }
+
+    .linkBlockItem{
+        color: #38424E;
+    }
+
+    .linkBlockItemEnd{
+        color: #78859B;
+    }
+
+}
+// media linkBlock
+@media screen and (max-width: 570px) {
+    .linkBlock{
+        display: none;
+    }
+    
+}
+
+
 .apartmentsInfo{
     width: 100%;
     border-top: 1px solid rgba(120, 133, 155, 0.32);
     margin-top: 24px;
-    padding: 40px 0;
+    padding: 40px 16px;
 
     .apartmentsInfoContainer{
         max-width: 1140px;
@@ -907,13 +1374,14 @@ main{
 
 footer{
     background-color: #353535;
-    padding: 55px 0;
+    padding: 32px 16px;
     width: 100%;
     font-family: Roboto;
     font-style: normal;
 
     .footerContainer{
-        width: 1140px;
+        padding-top: 24px;
+        max-width: 1140px;
         margin: 0 auto;
 
         .footerTop{
@@ -983,6 +1451,11 @@ footer{
 
             }
 
+            button{
+                display: none;
+                margin-bottom: 32px;
+            }
+
         }
 
         .footerInfo{
@@ -1047,6 +1520,79 @@ footer{
 
         }
 
+    }
+
+    @media screen and (max-width: 660px) {
+        .footerContainer{
+            padding-top: 0px;
+            .footerTop{
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                padding-bottom: 19px;
+                .footerTopMenu{
+                    margin-top: 16px;
+                    a{
+                        margin: 0 16px 0 0;
+                    }
+                }
+            }
+            .footerList{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+               -webkit-box-align: start;
+                   -ms-flex-align: start;
+                       align-items: flex-start;
+                .footerListItem{
+                    margin-bottom: 24px;
+                }
+                button{
+                    display: inline-block;
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 150%;
+                    color: #5AB677;
+                    border: none;
+                    background-color: rgba(15, 2, 8,0);
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+
+                }
+            }
+            .footerContact{
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-box-align: start;
+                    -ms-flex-align: start;
+                        align-items: flex-start;
+                .footerContactInfo{
+                    margin: 19px 0px 12px 0px;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
+                    -webkit-box-align: start;
+                        -ms-flex-align: start;
+                            align-items: flex-start;
+                    a{
+                        margin: 6px 0;
+                    }
+                }
+            }
+        }
+        
     }
 
 }

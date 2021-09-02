@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s ease;
+}
+
+body {
+  background-color: #87FF00;
+  height: 100vh;
+}
+
+main {
+  position: relative;
+  height: 100%;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #131315;
+}
+main .mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: 1;
+  flex-basis: 95%;
+  flex-shrink: 1;
+}
+main header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+main header .headerContent svg {
+  margin: 32px 0px;
+}
+main header .headerContent h1 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #131315;
+}
+main p {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #131315;
+  display: block;
+  width: 419px;
+  margin: 20px 0px 32px 0px;
+}
+main p b {
+  font-weight: normal;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+main .buttonContainer {
+  margin-bottom: 96px;
+}
+main .buttonContainer button {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #131315;
+}
+main .buttonContainer .testFreeBtn {
+  padding: 12px 24px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #000000;
+  border-radius: 6px;
+  margin-right: 16px;
+}
+main .buttonContainer .testFreeBtn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+main .buttonContainer .configureBtn {
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 6px;
+}
+main .buttonContainer .configureBtn:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+main footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 40px;
+}
+main footer .footerLeft a {
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #131315;
+  text-decoration: none;
+  margin-right: 24px;
+}
+main footer .footerLeft a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+main footer .footerExtrance {
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #131315;
+  text-decoration: none;
+  opacity: 0.22;
+}
+main footer .footerExtrance:hover {
+  opacity: 1;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+main .logoPolitics {
+  margin-top: 40px;
+  display: block;
+}
+main .h1Politics {
+  margin: 32px 0px 0 0;
+  font-size: 40px;
+}
+main ol {
+  line-height: 110%;
+}
+main ol li {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 110%;
+  margin-top: 32px;
+}
+main ol li ol p {
+  font-weight: normal;
+  font-size: 20px;
+  display: inline-block;
+  width: 100%;
+  margin: 16px 0 0 0;
+}
+main ol li ol li {
+  font-weight: normal;
+  font-size: 20px;
+  margin: 16px 0;
+  line-height: 132%;
+}
+main ol {
+  list-style: none;
+  counter-reset: li;
+}
+main ol li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+main .footerPolitics {
+  margin-top: 96px;
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 820px) {
+  main {
+    padding: 0px 16px;
+  }
+  main .mainContainer header {
+    display: block;
+    position: relative;
+  }
+  main .mainContainer header .headerContent {
+    width: 56%;
+    padding-top: 100px;
+  }
+  main .mainContainer header .headerContent h1 {
+    font-size: 28px;
+  }
+  main .mainContainer header .headerMassage {
+    position: absolute;
+    display: block;
+    right: 0px;
+    top: -25px;
+  }
+  main .mainContainer header .headerMassage svg {
+    width: 260px;
+  }
+  main .mainContainer p {
+    font-size: 16px;
+  }
+  main .mainContainer .buttonContainer {
+    display: block;
+  }
+  main .mainContainer .buttonContainer button {
+    display: block;
+    font-size: 16px;
+    margin: 0 0 12px 0;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #000000;
+  }
+  main .mainContainer .buttonContainer .configureBtn {
+    width: 225.28px;
+  }
+  main .mainContainer .buttonContainer .configureBtn:hover {
+    background-color: black;
+    color: white;
+  }
+  main footer {
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 510px) {
+  main {
+    padding-bottom: 20px;
+  }
+  main .buttonContainer {
+    margin-bottom: 48px;
+  }
+  main footer {
+    align-items: flex-end;
+  }
+  main footer .footerLeft a:nth-child(1) {
+    display: block;
+    margin-bottom: 10px;
+  }
+  main .h1Politics {
+    font-size: 28px;
+    line-height: 110%;
+  }
+  main ol li {
+    font-size: 20px;
+    line-height: 110%;
+  }
+  main ol li ol p {
+    font-size: 16px;
+    line-height: 120%;
+  }
+  main ol li ol li {
+    font-size: 16px;
+    line-height: 120%;
+  }
+  main .footerPolitics {
+    margin-top: 48px;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 460px) {
+  main .mainContainer header .headerContent {
+    width: 85%;
+    padding: 0;
+  }
+  main .mainContainer header .headerContent svg {
+    margin-bottom: 0;
+    margin-top: 90px;
+  }
+  main .mainContainer header .headerMassage {
+    top: -76px;
+  }
+  main .mainContainer header .headerMassage svg {
+    width: 200px;
+  }
+  main .mainContainer p {
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .mainContainer header .headerContent svg {
+    width: 100px;
+    margin-top: 70px;
+  }
+  main .mainContainer header .headerMassage svg {
+    width: 160px;
+  }
+}
+@media screen and (max-width: 360px) {
+  main .mainContainer header .headerContent svg {
+    width: 100px;
+    margin-top: 70px;
+  }
+  main .mainContainer header .headerContent h1 {
+    font-size: 20px;
+  }
+  main .mainContainer header .headerMassage {
+    top: -84px;
+  }
+  main .mainContainer header .headerMassage svg {
+    width: 160px;
+  }
+}/*# sourceMappingURL=style.css.map */
