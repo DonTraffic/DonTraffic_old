@@ -1,30 +1,39 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="main">
+    <StartWindow />
   </div>
-  <router-view/>
 </template>
 
+<script>
+import StartWindow from "./components/startWindow.vue";
+
+export default {
+  name: "App",
+  components: {StartWindow}
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
-#nav {
-  padding: 30px;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
   }
+</style>
+
+<style lang="scss" scoped>
+.main {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(59, 59, 59);
+  margin: 0 auto;
+  overflow: hidden;
 }
 </style>
