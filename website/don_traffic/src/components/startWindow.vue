@@ -16,7 +16,7 @@
       <div class="textDropped-bottom">进入投资组合</div>
     </button>
     <div class="startWindow_eggsMongen" v-on:click="eggsMongen()">
-      <img src="./../assets/startWindow/eggsMongen.png" alt="ebalo">
+      <img src="./../assets/img/startWindow/eggsMongen.png" alt="ebalo">
     </div>
   </div>
 </template>
@@ -53,7 +53,8 @@ export default {
     },
     // при клике на кнопку, поднимаем стартовый экран
     windowMove(){
-      document.getElementById('startWindow_container').classList.toggle('active')
+      this.$emit('windowMove', true)
+      $('#startWindow_container').addClass('active')
     },
 
     eggsMongen(){
@@ -66,13 +67,14 @@ export default {
 <style scoped lang="scss">
   #startWindow_container{
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     transition: transform 1s;
     overflow: hidden;
+    z-index: 100;
 
     background-color: rgb(129, 129, 129);
-    background: url('../assets/startWindow/startWindowBackground.jpg') center no-repeat;
+    background: url('../assets/img/startWindow/startWindowBackground.jpg') center no-repeat;
     background-size: cover;
 
     display: flex;

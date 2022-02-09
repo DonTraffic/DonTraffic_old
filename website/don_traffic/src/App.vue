@@ -1,115 +1,83 @@
 <template>
-  <div class="main">
-    <StartWindow />
-    <div class="container main_grid">
-      <div class="main_person">
-        <img src="./assets/persona.png" alt="person">
-      </div>
-      <div class="main_content">
-        <div class="main_content-prof">
-          Привет, я
-          <div class="content_prof-container">Web-программист</div>
-        </div>
-        <div class="main_content-name">
-          Меня зовут Уханов Дмитрий
-        </div>
-        <button class="main_content-button">Почему именно я?</button>
-      </div>
-    </div>
+  <div class="mainPage">
+    <StartWindow @windowMove="windowMove"/>
+    <MainPage v-if="start" :startAnimMain = startAnimMain />
   </div>
 </template>
 
 <script>
 import StartWindow from "./components/startWindow.vue";
+import MainPage from "./components/mainPage.vue"
 
 export default {
   name: "App",
-  components: {StartWindow}
+  data() {
+    return {
+      start: false,
+      startAnimMain: false
+    }
+  },
+  mounted() {
+    setTimeout(this.funStart, 2000)
+  },
+  methods: {
+    funStart() {
+      this.start = true
+    },
+    windowMove(value) {
+      this.startAnimMain = value
+    }
+  },
+  components: {StartWindow, MainPage}
 };
 </script>
 
 <style lang="scss">
+
+  @font-face {
+    font-family: Kashima; 
+    src: url(./assets/fonts/Kashima.otf); 
+  }
+
   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    font-family: Montserrat;
+
+  }
+
+*::-webkit-scrollbar,
+  html *::-webkit-scrollbar {
+    width: 0px;
+  }
+  *::-webkit-scrollbar-track,
+  html *::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+    height: 100px;
+  }
+  *::-webkit-scrollbar-thumb,
+  html *::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
 
   }
 </style>
 
-<style lang="scss">
-
-.container{
-  // width: 100vw;
-  margin: 0px auto;
-  max-width: 1366px;
-  width: 100%;
-  transition: .4s ease;
-  // background-color: aqua;
-}
-
-.main {
+<style lang="scss" scoped>
+.mainPage {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #000;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .main_grid{
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    color: #fff;
-
-    .main_person{
-      img{
-        width: 100%;
-      }
-    }
-
-    .main_content{
-      .main_content-prof{
-        font-size: 31.25px;
-        .content_prof-container{
-          display: inline-block;
-          color: #000;
-          background: #FF7514;
-          border: 1px solid #000;
-          box-sizing: border-box;
-          border-radius: 4px;
-          padding: 4px;
-        }
-      }
-      .main_content-name{
-        font-size: 31.25px;
-      }
-      .main_content-button{
-        font-size: 20px;
-        color: #FF7514;
-        background: #000;
-        border: 1px solid #FF7514;
-        box-sizing: border-box;
-        border-radius: 6px;
-        padding: 8px 16px;
-        transition: .8s ease;
-
-        &:hover{
-          color: #000;
-          background: #FF7514;
-          border: 1px solid #000;
-          cursor: pointer;
-          transition: .4s ease;
-        }
-
-      }
-
-    }
-
-  }
-
 }
 </style>
+
+
