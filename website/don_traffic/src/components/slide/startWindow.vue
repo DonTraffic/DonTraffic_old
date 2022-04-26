@@ -1,23 +1,21 @@
 <template>
-  <div id="startWindow_container">
+  <div id="startWindow">
+    <div id="startWindow_container">
+      <div id="startWindow_heading" class="textDropped">
+        <h1 class="textDropped-top">DonTraffic.ru</h1>
+        <div class="textDropped-bottom">唐特拉菲克</div>
+      </div>
+      <div id="startWindow_subtitle" class="textDropped">
+        <h2 class="textDropped-top">Если программировать, то с любовью</h2>
+        <div class="textDropped-bottom">如果你编程，那么用爱</div>
+      </div>
+      <button id="startWindow_button" class="textDropped" @click="windowMove()">
+        <h2 class="textDropped-top">Перейти к портфолио</h2>
+        <div class="textDropped-bottom">进入投资组合</div>
+      </button>
+    </div>
 
     <div id="startWindow_screensaver"></div>
-
-    <div id="startWindow_heading" class="textDropped">
-      <h1 class="textDropped-top">DonTraffic.ru</h1>
-      <div class="textDropped-bottom">唐特拉菲克</div>
-    </div>
-    <div id="startWindow_subtitle" class="textDropped">
-      <h2 class="textDropped-top">Если программировать, то с любовью</h2>
-      <div class="textDropped-bottom">如果你编程，那么用爱</div>
-    </div>
-    <button id="startWindow_button" class="textDropped" @click="windowMove()">
-      <h2 class="textDropped-top">Перейти к портфолио</h2>
-      <div class="textDropped-bottom">进入投资组合</div>
-    </button>
-    <div class="startWindow_eggsMongen" v-on:click="eggsMongen()">
-      <img src="./../assets/img/startWindow/eggsMongen.png" alt="ebalo">
-    </div>
   </div>
 </template>
 
@@ -54,49 +52,43 @@ export default {
     // при клике на кнопку, поднимаем стартовый экран
     windowMove(){
       this.$emit('windowMove', true)
-      $('#startWindow_container').addClass('active')
+      $('#startWindow').addClass('active')
     },
 
-    eggsMongen(){
-      console.log('mongen eggs')
-    },
   }
 }
 </script>
 
 <style scoped lang="scss">
+#startWindow{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  transition: transform 1s;
+
+  background-color: rgb(0, 0, 0);
+  background-image: url('../../assets/img/startWindow/startWindowBackground.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (max-width: 1024px) {
+    background-size: 150%;
+  }
+  @media screen and (max-width: 768px) {
+    background-size: 200%;
+  }
+
   #startWindow_container{
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: transform 1s;
-    overflow: hidden;
-    z-index: 100;
-
-    background-color: rgb(129, 129, 129);
-    background: url('../assets/img/startWindow/startWindowBackground.jpg') center no-repeat;
-    background-size: cover;
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    #startWindow_screensaver{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgb(0, 0, 0);
-      z-index: 10;
-      animation: screensaverOf 3s ease;
-      animation-fill-mode: forwards;
-    }
-
-    @keyframes screensaverOf {
-      to{
-        opacity: 0;
-      }
-    }
 
     #startWindow_heading{
       width: 405px;
@@ -219,8 +211,20 @@ export default {
 
   }
 
-  .active{
-    transform: translateY(-100%);
+  #startWindow_screensaver{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 10;
+    animation: screensaverOf 3s ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes screensaverOf {
+    to{
+      opacity: 0;
+    }
   }
 
   @keyframes animTextDroppedTop {
@@ -236,5 +240,10 @@ export default {
       opacity: 0;
     }
   }
+}
+
+.active{
+  transform: translateY(-100%);
+}
 
 </style>

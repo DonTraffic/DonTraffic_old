@@ -1,13 +1,13 @@
 <template>
   <div class="mainPage">
-    <StartWindow @windowMove="windowMove"/>
+    <!-- <StartWindow @windowMove="windowMove"/> -->
     <MainPage v-if="start" :startAnimMain = startAnimMain />
   </div>
 </template>
 
 <script>
-import StartWindow from "./components/startWindow.vue";
-import MainPage from "./components/mainPage.vue"
+import StartWindow from "./components/slide/startWindow.vue";
+import MainPage from "./components/slide/mainPage.vue"
 
 export default {
   name: "App",
