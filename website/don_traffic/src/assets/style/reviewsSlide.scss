@@ -1,0 +1,30 @@
+.reviewsSlide{
+    // bottom: -120%;
+
+    .reviewsSlide-content{
+        .reviewsSlide_review{
+            width: 700px;
+
+            border: 1px solid #FFFFFF;
+            border-radius: 4px;
+
+            padding: 8px;
+            margin-top: 32px;
+
+            .reviewsSlide_review-img{
+                width: 64px;
+                height: 100%;
+
+            }
+
+            .reviewsSlide_review-details{
+                width: 64px;
+                height: 100%;
+                
+            }
+
+        }
+
+    }
+
+}
